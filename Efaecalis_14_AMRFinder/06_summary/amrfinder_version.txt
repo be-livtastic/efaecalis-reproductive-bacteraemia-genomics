@@ -1,0 +1,4 @@
+Software directory: '/home/belivtastic/miniforge3/envs/efaecalis_amr/bin/'
+Software version: 4.2.7
+Database directory: '/home/belivtastic/miniforge3/envs/efaecalis_amr/share/amrfinderplus/data/2026-05-15.1'
+Database version: 2026-05-15.1

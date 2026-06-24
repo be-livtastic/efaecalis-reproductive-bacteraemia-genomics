@@ -1,0 +1,82 @@
+# Install and set up Mamba
+
+cd ~
+wget <https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh>
+bash Miniforge3-Linux-x86_64.sh
+source ~/.bashrc
+mamba --version
+
+## Create environmemnt
+
+mamba create -n efaecalis_amr -c conda-forge -c bioconda ncbi-datasets-cli ncbi-amrfinderplus unzip pandas
+
+## Activate environment
+
+mamba activate efaecalis_amr
+
+## Create folder for AMR finder
+
+mkdir Efaecalis_14_AMRFinder
+cd Efaecalis_14_AMRFinder
+
+mkdir 00_accessions
+mkdir 01_ncbi_download
+mkdir 02_genomes_fna
+mkdir 03_proteins_faa
+mkdir 04_gff
+mkdir 05_amrfinder_results
+mkdir 06_summary
+
+## Download genomes and unzip
+
+datasets download genome accession \
+  --inputfile 00_accessions/assemblies.txt \
+  --include genome,protein,gff3,seq-report \
+  --filename 01_ncbi_download/efaecalis_genomes.zip
+unzip 01_ncbi_download/efaecalis_genomes.zip -d 01_ncbi_download/efaecalis_genomes
+
+## Copy in different folders
+
+find 01_ncbi_download/efaecalis_genomes -name "*_genomic.fna" -exec cp {} 02_genomes_fna/ \;
+find 01_ncbi_download/efaecalis_genomes -name "*_protein.faa" -exec cp {} 03_proteins_faa/ \;
+find 01_ncbi_download/efaecalis_genomes -name "*_genomic.gff" -exec cp {} 04_gff/ \;
+
+## Rename files using python script
+
+python "../rename files.py"
+
+## Loop to run the AMRFinder on each genome
+
+for genome in 02_genomes_fna/*.fna
+do
+    base=$(basename "$genome" .fna)
+
+    amrfinder \
+      -n "$genome" \
+      --organism "Enterococcus faecalis" \
+      --plus \
+      --threads 2 \
+      --name "$base" \
+      -o "05_amrfinder_results/${base}.amrfinder.tsv"
+
+done
+
+## Combine the outputs
+
+first_file=$(ls 05_amrfinder_results/*.amrfinder.tsv | head -n 1)
+
+head -n 1 "$first_file" > 06_summary/amrfinder_all.tsv
+
+for file in 05_amrfinder_results/*.amrfinder.tsv
+do
+    tail -n +2 "$file" >> 06_summary/amrfinder_all.tsv
+done
+
+## Check results
+
+head 06_summary/amrfinder_all.tsv
+tail -n +2 06_summary/amrfinder_all.tsv | wc -l
+
+## Create csv using python script
+
+python "../isolate_summary.py"
