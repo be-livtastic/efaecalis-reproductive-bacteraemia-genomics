@@ -1,0 +1,13 @@
+check,value
+Rows imported,1607
+Reproductive rows imported,188
+Bacteraemia rows imported,1419
+Unique genome IDs detected,75
+Reproductive genome IDs detected,15
+Bacteraemia genome IDs detected,60
+Functional AMR hits,1597
+INTERNAL_STOP hits excluded from functional counts,10
+Low-coverage hits below 80%,0
+Rows with missing method,0
+Rows with missing reference coverage,1607
+Rows with missing gene label,0

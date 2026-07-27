@@ -1,0 +1,9 @@
+dataset,gene_category,genomes_with_category,total_genomes,prevalence_pct
+Bacteraemia,Aminoglycoside,30,60,50
+Bacteraemia,Gentamicin-related,26,60,43.333333333333336
+Bacteraemia,Streptogramin / lincosamide,60,60,100
+Bacteraemia,Tetracycline,46,60,76.66666666666667
+Reproductive,Aminoglycoside,10,15,66.66666666666667
+Reproductive,Gentamicin-related,6,15,40
+Reproductive,Streptogramin / lincosamide,15,15,100
+Reproductive,Tetracycline,13,15,86.66666666666667
