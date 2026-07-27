@@ -1,0 +1,9 @@
+# Portable example only. Do not commit config/paths.yml if it contains local or
+# private paths. Relative paths are resolved from the repository root.
+project_root: "."
+accession_manifest: "data/accession_lists/selected_72_accessions.tsv"
+raw_genomes: "data/raw/ncbi_genomes"
+amrfinder_inputs: "data/interim/amrfinder"
+amrfinder_results: "results/amr"
+metadata: "data/metadata/curated_metadata_72_genomes.csv"
+

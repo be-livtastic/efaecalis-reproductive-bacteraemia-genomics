@@ -1,0 +1,87 @@
+# Local archives and original/private source material
+/local_archive/
+human_e_faecalis_complete_genomes.xlsx
+**/human_e_faecalis_complete_genomes.xlsx
+
+# Raw and regenerable biological data
+/data/raw/**
+/data/interim/**
+*.fna
+*.fa
+*.fasta
+*.faa
+*.ffn
+*.fsa
+*.gff
+*.gff3
+*.gbk
+*.sqn
+*.tbl
+*.zip
+
+# Bulk pipeline intermediates
+**/ncbi_dataset/
+**/01_ncbi_download/
+**/prokka*/
+**/panaroo*/
+**/phylogeny_work/
+**/iqtree_work/
+*.ckp.gz
+*.model.gz
+*.mldist
+*.bionj
+*.splits.nex
+*.uniqueseq.phy
+
+# Current phylogeny work is deliberately local-only until revised
+/scripts/06_phylogenomics/*
+/results/phylogeny/*
+/results/figures/preliminary_rpob/*
+!/scripts/06_phylogenomics/.gitkeep
+!/results/phylogeny/.gitkeep
+!/results/figures/preliminary_rpob/.gitkeep
+
+# Environments, caches and editor state
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+*.code-workspace
+
+# Local agent/tool state
+/.agents/
+/.codex/
+
+# Logs and temporary files
+*.log
+*.out
+*.err
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+~$*
+.DS_Store
+Thumbs.db
+
+# Private configuration and institutional records
+/config/paths.yml
+/config/private*
+**/*signed*
+**/*signature*
+**/*ethics*
+**/*risk_assessment*
+**/*student_number*
+

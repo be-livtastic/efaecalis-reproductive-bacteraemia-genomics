@@ -1,0 +1,11 @@
+component	version	status
+NCBI Datasets CLI	18.31.0	available in recorded AMR environment
+Python	3.14.6	available in recorded AMR environment
+pandas	3.0.3	available in recorded AMR environment
+R	4.5.2	recorded from AMR analysis session
+AMRFinderPlus	4.2.7	recorded from completed run
+AMRFinderPlus database	2026-05-15.1	recorded from completed run
+Prokka	1.15.6	recorded from completed annotation run
+Panaroo	not yet run	future core-genome stage
+Recombination filtering tool	not selected	future optional stage
+IQ-TREE	2.0.7	recorded only for archived preliminary rpoB work; final stage not yet run
