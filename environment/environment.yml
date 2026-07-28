@@ -1,15 +1,36 @@
-name: efaecalis_genomics
+name: efaecalis_phylogeny
 channels:
   - conda-forge
   - bioconda
 dependencies:
-  - python=3.14
-  - pandas=3.0.3
+  - python=3.12
+  - mamba
+  - samtools
+  - mafft
+  - iqtree
+  - seqkit
+  - biopython
+  - pandas
+  - numpy
+  - scipy
+  - openpyxl
   - ncbi-datasets-cli=18.31.0
   - ncbi-amrfinderplus=4.2.7
   - prokka=1.15.6
-  - r-base=4.5.2
-  - r-tidyverse=2.0.0
-  - r-janitor=2.2.1
-  - r-fs=2.1.0
-  - r-scales=1.4.0
+  - r-base
+  - r-ape
+  - r-tidyverse
+  - r-ggplot2
+  - r-dplyr
+  - r-readr
+  - r-tidyr
+  - bioconductor-treeio
+  - bioconductor-ggtree
+  - r-phangorn
+  - r-devtools
+  - r-janitor
+  - r-fs
+  - r-scales
+  - pip
+  - pip:
+      - gffutils

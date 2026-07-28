@@ -33,13 +33,33 @@ human_e_faecalis_complete_genomes.xlsx
 *.splits.nex
 *.uniqueseq.phy
 
-# Current phylogeny work is deliberately local-only until revised
-/scripts/06_phylogenomics/*
+# Ten-locus scripts are reviewed source; bulk generated work remains local
+/analysis/phylogenomics/10_locus/**
+!/analysis/phylogenomics/10_locus/.gitkeep
 /results/phylogeny/*
 /results/figures/preliminary_rpob/*
-!/scripts/06_phylogenomics/.gitkeep
 !/results/phylogeny/.gitkeep
+!/results/phylogeny/10_locus/
+!/results/phylogeny/10_locus/*.treefile
+!/results/phylogeny/10_locus/*.contree
+!/results/phylogeny/10_locus/*.iqtree
 !/results/figures/preliminary_rpob/.gitkeep
+
+# Reviewable compact ten-locus outputs; bulky or restart-only files stay ignored
+/results/figures/phylogeny_10_locus/*
+!/results/figures/phylogeny_10_locus/*.png
+!/results/figures/phylogeny_10_locus/*.pdf
+!/results/figures/phylogeny_10_locus/captions/
+!/results/figures/phylogeny_10_locus/captions/*.txt
+*.ckp.gz
+*.model.gz
+*.mldist
+
+# Container build/runtime caches
+.docker/
+docker-cache/
+*.sif
+*.img
 
 # Environments, caches and editor state
 .Rproj.user/
@@ -84,4 +104,3 @@ Thumbs.db
 **/*ethics*
 **/*risk_assessment*
 **/*student_number*
-

@@ -50,11 +50,27 @@ method is approved.
 No recombination-filtering tool has been selected. Whether to apply filtering,
 and with which tool and parameters, remains a scientific-method decision.
 
-## 8. IQ-TREE — preliminary work archived; final stage future
+## 8. IQ-TREE — preliminary work archived; ten-locus workflow implemented
 
 Earlier IQ-TREE 2.0.7 results were based on a single `rpoB` gene and are
-archived. They are not the final core-genome phylogeny. Revised scripts and
-outputs will be reviewed before repository inclusion.
+archived. A replacement workflow now implements a defined ten-locus concatenated
+housekeeping-gene analysis. Candidate annotations must pass a manual review gate
+before sequence extraction, and IQ-TREE is not run automatically during initial
+inspection.
+
+### Ten-locus concatenated housekeeping-gene phylogeny
+
+The analysis uses the seven established *E. faecalis* MLST loci (`gdh`, `gyd`,
+`pstS`, `gki`, `aroE`, `xpt`, and `yqiL`) plus three conserved markers (`pyrC`,
+`groEL`, and `recA`). Complete annotated CDSs are aligned independently and
+concatenated in that fixed order. MLST primer and reference evidence supports
+annotation disambiguation but does not define the extracted sequence span.
+
+This multilocus analysis is more informative than the archived single-gene
+`rpoB` exploration, but it is not equivalent to a pangenome-derived core-genome
+phylogeny. It provides a defined, reproducible view that should be interpreted
+alongside curated metadata and AMR findings. Phylogenetic proximity does not
+demonstrate pathogenicity, transmission, or epidemiological linkage.
 
 ## 9. Statistical analysis — partial/future
 
@@ -66,4 +82,3 @@ handling and multiple-testing policy require explicit scientific approval.
 Selected AMR figures and an exploratory dataset-overview script are retained.
 Figures should be regenerated from canonical tables and labelled according to
 the completion status of their underlying analysis.
-
