@@ -1,0 +1,73 @@
+assembly_accession	in_tree	biosample_accession	source_group	reproductive_bacteraemia_category	country	year	amr_gene_count	hlgr_gentamicin_marker_status	hlgr_gentamicin_markers	in_metadata	qc_status
+GCA_029011255.1	TRUE	SAMN33275456	Vaginal swab	Reproductive	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCA_029011395.1	TRUE	SAMN33275452	Vaginal swab	Reproductive	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCA_029011745.1	TRUE	SAMN33275436	Vaginal swab	Reproductive	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCA_050475565.1	TRUE	SAMN44727039	Clinical laboratory	Bacteraemia	USA	NA	1	Present	GCA_050475565.1	TRUE	MATCH
+GCF_906464925.1	TRUE	SAMEA6595201	Semen sample	Reproductive	United Kingdon	NA	1	Not detected	NA	TRUE	MATCH
+GCA_050506775.1	TRUE	SAMN44727109	Clinical laboratory	Bacteraemia	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCA_029011535.1	TRUE	SAMN33275446	Vaginal swab	Reproductive	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCA_050506915.1	TRUE	SAMN44727100	Clinical laboratory	Bacteraemia	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCA_050506985.1	TRUE	SAMN44727097	Clinical laboratory	Bacteraemia	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCA_050506935.1	TRUE	SAMN44727098	Clinical laboratory	Bacteraemia	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCA_050506925.1	TRUE	SAMN44727099	Clinical laboratory	Bacteraemia	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCA_050476085.1	TRUE	SAMN44727037	Clinical laboratory	Bacteraemia	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCA_050473355.1	TRUE	SAMN44727047	Clinical laboratory	Bacteraemia	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCA_050473345.1	TRUE	SAMN44727048	Clinical laboratory	Bacteraemia	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCF_049262565.1	TRUE	SAMN47264607	Vaginal swab	Reproductive	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCA_050474485.1	TRUE	SAMN44727044	Clinical laboratory	Bacteraemia	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCA_050485635.1	TRUE	SAMN44727002	Clinical laboratory	Bacteraemia	USA	NA	1	Present	GCA_050485635.1	TRUE	MATCH
+GCA_050469755.1	TRUE	SAMN44727059	Clinical laboratory	Bacteraemia	USA	NA	1	Present	GCA_050469755.1	TRUE	MATCH
+GCA_050507105.1	TRUE	SAMN44727093	Clinical laboratory	Bacteraemia	USA	NA	1	Present	GCA_050507105.1	TRUE	MATCH
+GCA_050481695.1	TRUE	SAMN44727016	Clinical laboratory	Bacteraemia	USA	NA	1	Present	GCA_050481695.1	TRUE	MATCH
+GCA_050473905.1	TRUE	SAMN44727046	Clinical laboratory	Bacteraemia	USA	NA	1	Present	GCA_050473905.1	TRUE	MATCH
+GCA_050507075.1	TRUE	SAMN44727094	Clinical laboratory	Bacteraemia	USA	NA	1	Present	GCA_050507075.1	TRUE	MATCH
+GCA_050482265.1	TRUE	SAMN44727015	Clinical laboratory	Bacteraemia	USA	NA	1	Present	GCA_050482265.1	TRUE	MATCH
+GCA_050492135.1	TRUE	SAMN44727061	Clinical laboratory	Bacteraemia	USA	NA	1	Present	GCA_050492135.1	TRUE	MATCH
+GCA_050492125.1	TRUE	SAMN44727062	Clinical laboratory	Bacteraemia	USA	NA	1	Present	GCA_050492125.1	TRUE	MATCH
+GCA_050506745.1	TRUE	SAMN44727112	Clinical laboratory	Bacteraemia	USA	NA	1	Present	GCA_050506745.1	TRUE	MATCH
+GCA_050506755.1	TRUE	SAMN44727111	Clinical laboratory	Bacteraemia	USA	NA	1	Present	GCA_050506755.1	TRUE	MATCH
+GCA_050485045.1	TRUE	SAMN44727005	Clinical laboratory	Bacteraemia	USA	NA	1	Present	GCA_050485045.1	TRUE	MATCH
+GCA_050472745.1	TRUE	SAMN44727050	Clinical laboratory	Bacteraemia	USA	NA	1	Present	GCA_050472745.1	TRUE	MATCH
+GCA_050485625.1	TRUE	SAMN44727003	Clinical laboratory	Bacteraemia	USA	NA	1	Present	GCA_050485625.1	TRUE	MATCH
+GCA_050506885.1	TRUE	SAMN44727103	Clinical laboratory	Bacteraemia	USA	NA	1	Present	GCA_050506885.1	TRUE	MATCH
+GCA_050474495.1	TRUE	SAMN44727043	Clinical laboratory	Bacteraemia	USA	NA	1	Present	GCA_050474495.1	TRUE	MATCH
+GCA_050506905.1	TRUE	SAMN44727101	Clinical laboratory	Bacteraemia	USA	NA	1	Present	GCA_050506905.1	TRUE	MATCH
+GCF_053117695.1	TRUE	SAMN46230708	Semen sample	Reproductive	Italy	NA	1	Present	GCF_053117695.1	TRUE	MATCH
+GCA_050471105.1	TRUE	SAMN44727056	Clinical laboratory	Bacteraemia	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCA_050481115.1	TRUE	SAMN44727018	Clinical laboratory	Bacteraemia	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCA_050481685.1	TRUE	SAMN44727017	Clinical laboratory	Bacteraemia	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCA_050481105.1	TRUE	SAMN44727019	Clinical laboratory	Bacteraemia	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCA_050480515.1	TRUE	SAMN44727020	Clinical laboratory	Bacteraemia	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCA_050486705.1	TRUE	SAMN44726999	Clinical laboratory	Bacteraemia	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCA_050506725.1	TRUE	SAMN44727114	Clinical laboratory	Bacteraemia	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCA_050506735.1	TRUE	SAMN44727113	Clinical laboratory	Bacteraemia	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCF_053117665.1	TRUE	SAMN46230711	Semen sample	Reproductive	Italy	NA	1	Not detected	NA	TRUE	MATCH
+GCA_050506765.1	TRUE	SAMN44727110	Clinical laboratory	Bacteraemia	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCA_050506825.1	TRUE	SAMN44727106	Clinical laboratory	Bacteraemia	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCA_050516645.1	TRUE	SAMN44727145	Clinical laboratory	Bacteraemia	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCA_050516655.1	TRUE	SAMN44727144	Clinical laboratory	Bacteraemia	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCA_050475575.1	TRUE	SAMN44727038	Clinical laboratory	Bacteraemia	USA	NA	1	Present	GCA_050475575.1	TRUE	MATCH
+GCF_053117685.1	TRUE	SAMN46230709	Semen sample	Reproductive	Italy	NA	1	Present	GCF_053117685.1	TRUE	MATCH
+GCF_053117705.1	TRUE	SAMN46230707	Semen sample	Reproductive	Italy	NA	1	Present	GCF_053117705.1	TRUE	MATCH
+GCA_050506695.1	TRUE	SAMN44727117	Clinical laboratory	Bacteraemia	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCA_050506815.1	TRUE	SAMN44727107	Clinical laboratory	Bacteraemia	USA	NA	1	Present	GCA_050506815.1	TRUE	MATCH
+GCA_050516665.1	TRUE	SAMN44727143	Clinical laboratory	Bacteraemia	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCA_050507065.1	TRUE	SAMN44727095	Clinical laboratory	Bacteraemia	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCF_053117575.1	TRUE	SAMN46230713	Semen sample	Reproductive	Italy	NA	1	Present	GCF_053117575.1	TRUE	MATCH
+GCA_050506995.1	TRUE	SAMN44727096	Clinical laboratory	Bacteraemia	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCF_053117655.1	TRUE	SAMN46230712	Vaginal swab	Reproductive	Italy	NA	1	Not detected	NA	TRUE	MATCH
+GCA_050506685.1	TRUE	SAMN44727118	Clinical laboratory	Bacteraemia	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCA_050516675.1	TRUE	SAMN44727142	Clinical laboratory	Bacteraemia	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCA_050485055.1	TRUE	SAMN44727004	Clinical laboratory	Bacteraemia	USA	NA	1	Present	GCA_050485055.1	TRUE	MATCH
+GCA_050506675.1	TRUE	SAMN44727119	Clinical laboratory	Bacteraemia	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCF_053117585.1	TRUE	SAMN46230714	Semen sample	Reproductive	Italy	NA	1	Present	GCF_053117585.1	TRUE	MATCH
+GCA_050506865.1	TRUE	SAMN44727105	Clinical laboratory	Bacteraemia	USA	NA	1	Present	GCA_050506865.1	TRUE	MATCH
+GCA_050506665.1	TRUE	SAMN44727120	Clinical laboratory	Bacteraemia	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCA_050505635.1	TRUE	SAMN44727072	Clinical laboratory	Bacteraemia	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCA_050505645.1	TRUE	SAMN44727073	Clinical laboratory	Bacteraemia	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCA_050486715.1	TRUE	SAMN44726998	Clinical laboratory	Bacteraemia	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCA_050491675.1	TRUE	SAMN44727064	Clinical laboratory	Bacteraemia	USA	NA	1	Present	GCA_050491675.1	TRUE	MATCH
+GCA_050491685.1	TRUE	SAMN44727063	Clinical laboratory	Bacteraemia	USA	NA	1	Present	GCA_050491685.1	TRUE	MATCH
+GCF_053117675.1	TRUE	SAMN46230710	Vaginal swab	Reproductive	Italy	NA	1	Not detected	NA	TRUE	MATCH
+GCA_050472755.1	TRUE	SAMN44727049	Clinical laboratory	Bacteraemia	USA	NA	1	Not detected	NA	TRUE	MATCH
+GCA_050506875.1	TRUE	SAMN44727104	Clinical laboratory	Bacteraemia	USA	NA	1	Not detected	NA	TRUE	MATCH

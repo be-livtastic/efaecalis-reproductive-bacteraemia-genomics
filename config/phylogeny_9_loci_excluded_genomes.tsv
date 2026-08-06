@@ -1,0 +1,3 @@
+assembly_accession	decision	failure_codes	rationale
+GCA_029011395.1	SUPERSEDED_NOT_ACTIVE	SPLIT_ANNOTATION;ASSEMBLY_INDEL	Historical exclusion proposal only. The final primary policy retains this genome and its exact observed yqiL and recA genomic spans without imputation; exclusion is used only for the documented sensitivity analysis.
+GCA_029011535.1	SUPERSEDED_NOT_ACTIVE	APPROVED_TERMINAL_VARIANT	Historical exclusion proposal only. The final primary policy retains the observed 1488-nt gdh allele because its alignment gap burden is below the configured locus-specific limit.

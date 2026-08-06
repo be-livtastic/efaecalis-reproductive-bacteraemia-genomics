@@ -1,0 +1,1 @@
+Nine-locus concatenated housekeeping-gene maximum-likelihood phylogeny of 72 genomes. Colours distinguish dataset categories. Midpoint rooting is used only for display; the inferred unrooted topology is retained. Genomic proximity does not establish pathogenicity, transmission, or epidemiological linkage.

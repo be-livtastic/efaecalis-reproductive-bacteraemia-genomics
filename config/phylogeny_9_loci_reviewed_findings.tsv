@@ -1,0 +1,6 @@
+sample_id	canonical_gene	severity	code	evidence
+GCA_029011395.1	yqiL	FAIL	SPLIT_ANNOTATION	The FNA has an extra A at MAFFT --auto column 1226; Prokka calls thlA and mvaA instead of the cohort fusion.
+GCA_029011395.1	yqiL	FAIL	ASSEMBLY_INDEL	A complete fusion cannot be recovered without deleting a nucleotide present in the FNA.
+GCA_029011395.1	recA	FAIL	SPLIT_ANNOTATION	The 942-nt recA and adjacent 108-nt feature span the expected locus but the genomic union is only 1046 nt.
+GCA_029011395.1	recA	FAIL	ASSEMBLY_INDEL	The FNA lacks C at homologous alignment column 894; correction would require adding sequence.
+GCA_029011535.1	gdh	REVIEW	POSSIBLE_FRAMESHIFT	MAFFT --auto shows a two-base deletion at columns 1427-1428 followed by 34 terminal gaps.

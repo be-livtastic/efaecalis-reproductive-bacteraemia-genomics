@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 
-usage() { echo "Usage: $0 --coordinates FILE --output-root DIR [--force-run-id ID]"; }
-coordinates=""; output_root=""
+usage() { echo "Usage: $0 --coordinates FILE --output-root DIR [--expected-samples N]"; }
+coordinates=""; output_root=""; expected_samples=72
 while (($#)); do
   case "$1" in
     --coordinates) coordinates=$2; shift 2 ;;
     --output-root) output_root=$2; shift 2 ;;
+    --expected-samples) expected_samples=$2; shift 2 ;;
     --force-run-id) echo "Versioned run identifier: $2"; shift 2 ;;
     *) usage >&2; exit 2 ;;
   esac
@@ -35,7 +36,7 @@ while IFS=$'\t' read -r sample accession group gene matched_attribute matched_va
   region="${contig}:${start}-${end}"
   echo "+ samtools faidx $fna $region"
   if [[ "$strand" == "-" ]]; then
-    samtools faidx "$fna" "$region" | seqkit seq --quiet -r -p |
+    samtools faidx "$fna" "$region" | seqkit seq --quiet --seq-type dna -r -p |
       awk -v id="$accession" 'BEGIN{print ">" id} !/^>/{printf "%s",$0} END{print ""}' > "$destination"
   elif [[ "$strand" == "+" ]]; then
     samtools faidx "$fna" "$region" |
@@ -45,16 +46,16 @@ while IFS=$'\t' read -r sample accession group gene matched_attribute matched_va
   fi
 done
 
-for gene in gdh gyd pstS gki aroE xpt yqiL pyrC groEL recA; do
-  destination="$by_gene/${gene}_72_sequences.fasta"
+for gene in gdh gyd pstS gki xpt yqiL pyrC groEL recA; do
+  destination="$by_gene/${gene}_${expected_samples}_sequences.fasta"
   [[ ! -e "$destination" ]] || { echo "Refusing to overwrite $destination" >&2; exit 4; }
   mapfile -t files < <(find "$by_sample" -mindepth 2 -maxdepth 2 -type f -name "${gene}.fasta" | sort)
-  [[ ${#files[@]} -eq 72 ]] || { echo "$gene: expected 72 individual sequences; found ${#files[@]}" >&2; exit 5; }
+  [[ ${#files[@]} -eq "$expected_samples" ]] || { echo "$gene: expected $expected_samples individual sequences; found ${#files[@]}" >&2; exit 5; }
   for file in "${files[@]}"; do
     sed -n '1,2p' "$file"
   done > "$destination"
   count=$(grep -c '^>' "$destination")
   unique=$(grep '^>' "$destination" | sort -u | wc -l)
-  [[ "$count" -eq 72 && "$unique" -eq 72 ]] || { echo "$gene identifiers failed validation" >&2; exit 5; }
+  [[ "$count" -eq "$expected_samples" && "$unique" -eq "$expected_samples" ]] || { echo "$gene identifiers failed validation" >&2; exit 5; }
   echo "$gene: sequences=$count unique_ids=$unique"
 done

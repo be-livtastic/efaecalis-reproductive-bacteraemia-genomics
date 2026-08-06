@@ -33,9 +33,15 @@ human_e_faecalis_complete_genomes.xlsx
 *.splits.nex
 *.uniqueseq.phy
 
-# Ten-locus scripts are reviewed source; bulk generated work remains local
+# Multilocus scripts are reviewed source; bulk generated work remains local
 /analysis/phylogenomics/10_locus/**
 !/analysis/phylogenomics/10_locus/.gitkeep
+/analysis/phylogenomics/9_locus/**
+!/analysis/phylogenomics/9_locus/.gitkeep
+/analysis/phylogenomics/72_genomes_9_locus_observed_indels/**
+/analysis/phylogenomics/72_genomes_7_locus/**
+/analysis/phylogenomics/sensitivity/**
+/analysis/phylogenomics/failed_runs/**
 /results/phylogeny/*
 /results/figures/preliminary_rpob/*
 !/results/phylogeny/.gitkeep
@@ -43,14 +49,23 @@ human_e_faecalis_complete_genomes.xlsx
 !/results/phylogeny/10_locus/*.treefile
 !/results/phylogeny/10_locus/*.contree
 !/results/phylogeny/10_locus/*.iqtree
+!/results/phylogeny/9_locus/
+!/results/phylogeny/9_locus/*.treefile
+!/results/phylogeny/9_locus/*.contree
+!/results/phylogeny/9_locus/*.iqtree
 !/results/figures/preliminary_rpob/.gitkeep
 
-# Reviewable compact ten-locus outputs; bulky or restart-only files stay ignored
+# Reviewable compact multilocus outputs; bulky or restart-only files stay ignored
 /results/figures/phylogeny_10_locus/*
 !/results/figures/phylogeny_10_locus/*.png
 !/results/figures/phylogeny_10_locus/*.pdf
 !/results/figures/phylogeny_10_locus/captions/
 !/results/figures/phylogeny_10_locus/captions/*.txt
+/results/figures/phylogeny_9_locus/*
+!/results/figures/phylogeny_9_locus/*.png
+!/results/figures/phylogeny_9_locus/*.pdf
+!/results/figures/phylogeny_9_locus/captions/
+!/results/figures/phylogeny_9_locus/captions/*.txt
 *.ckp.gz
 *.model.gz
 *.mldist

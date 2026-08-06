@@ -50,21 +50,30 @@ method is approved.
 No recombination-filtering tool has been selected. Whether to apply filtering,
 and with which tool and parameters, remains a scientific-method decision.
 
-## 8. IQ-TREE — preliminary work archived; ten-locus workflow implemented
+## 8. IQ-TREE — preliminary work archived; nine-locus workflow implemented
 
 Earlier IQ-TREE 2.0.7 results were based on a single `rpoB` gene and are
-archived. A replacement workflow now implements a defined ten-locus concatenated
+archived. A replacement workflow now implements a defined nine-locus concatenated
 housekeeping-gene analysis. Candidate annotations must pass a manual review gate
 before sequence extraction, and IQ-TREE is not run automatically during initial
 inspection.
 
 ### Ten-locus concatenated housekeeping-gene phylogeny
 
-The analysis uses the seven established *E. faecalis* MLST loci (`gdh`, `gyd`,
-`pstS`, `gki`, `aroE`, `xpt`, and `yqiL`) plus three conserved markers (`pyrC`,
-`groEL`, and `recA`). Complete annotated CDSs are aligned independently and
+The analysis uses six established *E. faecalis* MLST loci (`gdh`, `gyd`,
+`pstS`, `gki`, `xpt`, and `yqiL`) plus three conserved markers (`pyrC`, `groEL`,
+and `recA`). `aroE` is excluded consistently because reference-guided review
+found a one-base deletion in one underlying assembly and no defensible intact
+whole CDS. Complete annotated CDSs are aligned independently and
 concatenated in that fixed order. MLST primer and reference evidence supports
 annotation disambiguation but does not define the extracted sequence span.
+
+The revised nine-locus dataset has passed the mechanical 648-record coordinate
+gate, but it has not passed the biological sequence-QC gate. The remaining two
+length failures and one additional short-CDS caveat are detailed in
+`docs/decisions/phylogeny_9_locus_annotation_review.md`. Alignment and tree
+inference must not proceed until the truncated records are resolved or a
+revised analysis policy is explicitly approved and documented.
 
 This multilocus analysis is more informative than the archived single-gene
 `rpoB` exploration, but it is not equivalent to a pangenome-derived core-genome

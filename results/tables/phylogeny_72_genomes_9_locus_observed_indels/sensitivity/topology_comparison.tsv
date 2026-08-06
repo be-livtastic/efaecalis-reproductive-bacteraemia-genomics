@@ -1,0 +1,2 @@
+comparison	taxa	robinson_foulds_distance	maximum_rf	normalized_rf	identical_topology
+primary_pruned_vs_refit_without_GCA_029011395.1	71	48	136	0.352941176470588	FALSE

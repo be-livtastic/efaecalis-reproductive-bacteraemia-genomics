@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Discover and validate the 72 local Prokka GFF/FNA annotation pairs."""
+"""Discover and validate a policy-defined set of local Prokka annotations."""
 from __future__ import annotations
 
 import argparse
@@ -33,9 +33,14 @@ def main() -> int:
     parser.add_argument("--accessions", type=Path, default=Path("data/accession_lists/selected_72_accessions.tsv"))
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--expected", type=int, default=72)
+    parser.add_argument("--exclude-accessions", type=Path)
     args = parser.parse_args()
 
     expected_rows = read_tsv(args.accessions)
+    excluded = set()
+    if args.exclude_accessions:
+        excluded = {r["assembly_accession"].strip() for r in read_tsv(args.exclude_accessions)}
+        expected_rows = [r for r in expected_rows if r["assembly_accession"].strip() not in excluded]
     expected = {r["assembly_accession"].strip(): r["dataset_category"].strip() for r in expected_rows}
     if len(expected) != args.expected or len(expected_rows) != args.expected:
         raise SystemExit(f"Expected {args.expected} unique accessions; found {len(expected)} unique in {len(expected_rows)} rows")
@@ -49,7 +54,7 @@ def main() -> int:
     rows: list[dict] = []
     unmatched: list[str] = []
     valid = 0
-    for accession in sorted(set(expected) | set(discovered)):
+    for accession in sorted(set(expected) | (set(discovered) - excluded)):
         directories = discovered.get(accession, [])
         if accession not in expected:
             unmatched.append(accession)
@@ -96,7 +101,7 @@ def main() -> int:
     print(f"Unexpected accessions: {','.join(unmatched) or 'none'}")
     print(f"Counts by group: reproductive={group_counts['reproductive']}; bacteraemia={group_counts['bacteraemia']}")
     if valid != args.expected or missing or duplicates or unmatched:
-        print("ERROR: input discovery did not satisfy the 72-genome invariant", file=sys.stderr)
+        print(f"ERROR: input discovery did not satisfy the {args.expected}-genome invariant", file=sys.stderr)
         return 2
     return 0
 

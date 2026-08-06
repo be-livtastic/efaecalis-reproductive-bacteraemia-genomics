@@ -1,0 +1,8 @@
+canonical_gene	expected_length_nt	pass_min_nt	pass_max_nt	review_min_nt	review_max_nt	maximum_gap_proportion	maximum_pairwise_divergence	notes
+gdh	1524	1488	1540	1450	1560	0.03	0.02	The 1488-nt terminal variant is approved with an explicit reported caveat; 2.36% gap burden is below 3%.
+gyd	1002	990	1020	960	1050	0.03	0.02	Selected MLST-supported paralog is 1002 nt.
+pstS	891	880	905	850	930	0.03	0.03	Selected MLST-supported PstS1 ortholog is 891 nt.
+gki	972	960	985	930	1010	0.03	0.03	Whole-CDS cohort expectation.
+xpt	582	570	595	540	620	0.04	0.04	Whole-CDS cohort expectation.
+pyrC	1284	1270	1300	1230	1330	0.03	0.03	Whole-CDS cohort expectation.
+groEL	1626	1610	1640	1570	1680	0.03	0.02	Highly conserved chaperonin whole CDS.

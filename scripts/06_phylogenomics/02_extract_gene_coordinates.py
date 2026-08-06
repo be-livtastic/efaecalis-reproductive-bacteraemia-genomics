@@ -35,14 +35,17 @@ def exact_evidence(attrs: dict[str, str], config: dict[str, str]) -> list[tuple[
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--manifest", type=Path, required=True)
-    parser.add_argument("--genes", type=Path, default=Path("config/phylogeny_10_loci_genes.tsv"))
+    parser.add_argument("--genes", type=Path, default=Path("config/phylogeny_9_loci_genes.tsv"))
     parser.add_argument("--overrides", type=Path)
     parser.add_argument("--all-candidates", type=Path, required=True)
     parser.add_argument("--selected", type=Path, required=True)
+    parser.add_argument("--expected-samples", type=int, default=72)
+    parser.add_argument("--expected-loci", type=int, default=9)
     args = parser.parse_args()
     manifest, genes = read_tsv(args.manifest), read_tsv(args.genes)
-    if len(manifest) != 72 or len(genes) != 10:
-        raise SystemExit(f"Expected 72 manifest rows and 10 genes; found {len(manifest)} and {len(genes)}")
+    expected_records = len(manifest) * len(genes)
+    if len(manifest) != args.expected_samples or len(genes) != args.expected_loci:
+        raise SystemExit(f"Expected {args.expected_samples} manifest rows and {args.expected_loci} genes; found {len(manifest)} and {len(genes)}")
 
     overrides = {}
     if args.overrides and args.overrides.exists():
@@ -114,11 +117,11 @@ def main() -> int:
     write_tsv(args.selected, selected, SELECTED_FIELDS)
     counts = Counter(r["canonical_gene"] for r in all_rows)
     print("Candidate counts: " + "; ".join(f"{g['canonical_gene']}={counts[g['canonical_gene']]}" for g in genes))
-    print(f"Selected records: {len(selected)}/720")
+    print(f"Selected records: {len(selected)}/{expected_records}")
     print(f"Unresolved sample/locus combinations: {len(unresolved)}")
     for sample, gene, count in unresolved[:30]:
         print(f"REVIEW_REQUIRED\t{sample}\t{gene}\tcandidates={count}")
-    if unresolved or len(selected) != 720:
+    if unresolved or len(selected) != expected_records:
         print("REVIEW GATE: downstream extraction is blocked. Copy the override example, document decisions, and rerun.", file=sys.stderr)
         return 3
     return 0

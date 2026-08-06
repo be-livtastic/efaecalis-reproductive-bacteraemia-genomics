@@ -1,0 +1,8 @@
+canonical_gene	expected	observed	qc_reviews	qc_failures
+gdh	72	72	1	0
+gyd	72	72	0	0
+pstS	72	72	0	0
+gki	72	72	0	0
+xpt	72	72	0	0
+pyrC	72	72	0	0
+groEL	72	72	0	0

@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Shared, dependency-light helpers for the ten-locus phylogeny pipeline."""
+"""Shared, dependency-light helpers for the nine-locus phylogeny pipeline."""
 from __future__ import annotations
 
 import csv
 import io
 import re
+import tempfile
 from pathlib import Path
 from urllib.parse import unquote
 
@@ -27,10 +28,21 @@ def read_tsv(path: Path) -> list[dict[str, str]]:
 
 def write_tsv(path: Path, rows: list[dict], fields: list[str]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("x", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fields, delimiter="\t", extrasaction="ignore")
-        writer.writeheader()
-        writer.writerows(rows)
+    if path.exists():
+        raise FileExistsError(f"Refusing to overwrite existing file: {path}")
+    temporary: Path | None = None
+    try:
+        with tempfile.NamedTemporaryFile("w", newline="", encoding="utf-8", dir=path.parent,
+                                         prefix=f".{path.name}.", suffix=".tmp", delete=False) as handle:
+            temporary = Path(handle.name)
+            writer = csv.DictWriter(handle, fieldnames=fields, delimiter="\t", extrasaction="ignore")
+            writer.writeheader()
+            writer.writerows(rows)
+        temporary.rename(path)
+    except BaseException:
+        if temporary is not None:
+            temporary.unlink(missing_ok=True)
+        raise
 
 
 def parse_attributes(text: str) -> dict[str, str]:
@@ -84,8 +96,14 @@ def atomic_text(path: Path, content: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     if path.exists():
         raise FileExistsError(f"Refusing to overwrite existing file: {path}")
-    temporary = path.with_name(f".{path.name}.tmp")
-    if temporary.exists():
-        raise FileExistsError(f"Temporary path already exists: {temporary}")
-    temporary.write_text(content, encoding="utf-8")
-    temporary.rename(path)
+    temporary: Path | None = None
+    try:
+        with tempfile.NamedTemporaryFile("w", encoding="utf-8", dir=path.parent,
+                                         prefix=f".{path.name}.", suffix=".tmp", delete=False) as handle:
+            temporary = Path(handle.name)
+            handle.write(content)
+        temporary.rename(path)
+    except BaseException:
+        if temporary is not None:
+            temporary.unlink(missing_ok=True)
+        raise

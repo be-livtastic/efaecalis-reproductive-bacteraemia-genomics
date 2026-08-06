@@ -1,0 +1,4 @@
+tree	taxa	total_tree_length	median_terminal_branch	maximum_terminal_branch	terminal_outliers_robust_z_gt_3	supported_internal_splits	supported_major_splits
+primary_72genome_9locus	72	0.0875068705	1e-06	0.0067979732	18	13	6
+sensitivity_71genome_9locus	71	0.0875857208	1e-06	0.0068034649	19	14	6
+reduced_72genome_7locus	72	0.0764159522	0	0.006059872	0	14	6

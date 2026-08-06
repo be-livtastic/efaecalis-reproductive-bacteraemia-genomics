@@ -1,0 +1,4 @@
+sample_id	canonical_gene	severity	code	evidence
+GCA_029011395.1	yqiL	INFO	OBSERVED_DISRUPTED_LOCUS	The exact 2413-nt thlA-mvaA genomic union is retained; the assembly's one-base insertion is not corrected or imputed.
+GCA_029011395.1	recA	INFO	OBSERVED_DISRUPTED_LOCUS	The exact 1046-nt recA-adjacent-fragment genomic union is retained; the missing base is not imputed.
+GCA_029011535.1	gdh	INFO	APPROVED_TERMINAL_VARIANT	The observed 1488-nt allele is retained; its 2.36% terminal gap burden remains below the configured 3% locus limit.

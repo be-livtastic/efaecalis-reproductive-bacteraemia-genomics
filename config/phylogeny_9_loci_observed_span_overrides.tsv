@@ -1,0 +1,3 @@
+sample_id	canonical_gene	contig	start	end	strand	observed_length_nt	policy_code	rationale
+GCA_029011395.1	yqiL	CP118057.1	1809498	1811910	-	2413	OBSERVED_DISRUPTED_LOCUS	Exact FNA span joining the overlapping mvaA and thlA predictions; retains the observed one-base insertion and imputes nothing.
+GCA_029011395.1	recA	CP118057.1	2790482	2791527	-	1046	OBSERVED_DISRUPTED_LOCUS	Exact FNA span joining the 108-nt hypothetical feature and recA prediction; retains the observed one-base deletion and imputes nothing.

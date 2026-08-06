@@ -1,0 +1,10 @@
+canonical_gene	accession	source	retrieved	role
+gdh	WP_002355906.1	NCBI RefSeq GCF_000007785.1	2026-08-06	V583 glucose-6-phosphate dehydrogenase
+gyd	WP_002357093.1	NCBI RefSeq GCF_000007785.1	2026-08-06	V583 MLST-supported GAPDH paralog
+pstS	WP_002357425.1	NCBI RefSeq GCF_000007785.1	2026-08-06	V583 MLST-supported PstS paralog
+gki	WP_002387212.1	NCBI RefSeq GCF_000007785.1	2026-08-06	V583 glucokinase
+xpt	WP_002356804.1	NCBI RefSeq GCF_000007785.1	2026-08-06	V583 xanthine phosphoribosyltransferase
+yqiL	WP_002382276.1	NCBI RefSeq GCF_000007785.1	2026-08-06	V583 acetyl-CoA acetyltransferase/HMG-CoA reductase fusion
+pyrC	WP_002357412.1	NCBI RefSeq GCF_000007785.1	2026-08-06	V583 dihydroorotase
+groEL	WP_002362559.1	NCBI RefSeq GCF_000007785.1	2026-08-06	V583 chaperonin GroEL
+recA	WP_002354860.1	NCBI RefSeq GCF_000007785.1	2026-08-06	V583 recombinase RecA

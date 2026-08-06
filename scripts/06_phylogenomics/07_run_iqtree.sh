@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
-alignment=""; partitions=""; output_dir=""; threads="AUTO"
+alignment=""; partitions=""; output_dir=""; threads="AUTO"; output_prefix="efaecalis_72_genomes_9_locus_observed_indels"
 while (($#)); do
   case "$1" in
     --alignment) alignment=$2; shift 2 ;;
     --partitions) partitions=$2; shift 2 ;;
     --output-dir) output_dir=$2; shift 2 ;;
     --threads) threads=$2; shift 2 ;;
+    --output-prefix) output_prefix=$2; shift 2 ;;
     *) echo "Unknown argument: $1" >&2; exit 2 ;;
   esac
 done
@@ -22,7 +23,7 @@ for option in '-p' '-m' '-B' '-alrt' '-T'; do
   grep -q -- "$option" <<<"$help" || { echo "Installed IQ-TREE does not advertise required option $option" >&2; exit 3; }
 done
 mkdir -p "$output_dir"
-prefix="$output_dir/efaecalis_72_10_locus"
+prefix="$output_dir/$output_prefix"
 for suffix in treefile contree iqtree log best_scheme.nex mldist ckp.gz; do
   [[ ! -e "${prefix}.${suffix}" ]] || { echo "Refusing to overwrite ${prefix}.${suffix}" >&2; exit 4; }
 done
