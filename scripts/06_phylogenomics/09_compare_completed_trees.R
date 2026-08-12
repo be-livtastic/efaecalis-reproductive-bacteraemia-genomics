@@ -76,13 +76,18 @@ for (nm in names(trees)) {
       robust_z = if (madv > 0) (terminal[tip] - med) / madv else NA_real_, stringsAsFactors = FALSE)
   }
   supported <- splits[splits$tree == nm & splits$supported, ]
+  full_supported_sides <- list()
+  for (node in seq_len(tr$Nnode) + Ntip(tr)) {
+    sp <- support_pair(tr$node.label[node - Ntip(tr)])
+    if (is.na(sp[1]) || sp[1] < 80 || sp[2] < 95) next
+    side <- tr$tip.label[descendant_tips(tr, node)]
+    if (length(side) >= 2) full_supported_sides[[length(full_supported_sides) + 1]] <- side
+    complement <- setdiff(tr$tip.label, side)
+    if (length(complement) >= 2) full_supported_sides[[length(full_supported_sides) + 1]] <- complement
+  }
   reps <- intersect(names(group)[group == "Reproductive"], tr$tip.label)
   for (tip in reps) {
-    candidates <- lapply(supported$split_key, function(k) {
-      a <- strsplit(k, ";", fixed = TRUE)[[1]]
-      if (tip %in% a) a else setdiff(shared, a)
-    })
-    candidates <- candidates[vapply(candidates, function(x) tip %in% x && length(x) >= 2, logical(1))]
+    candidates <- full_supported_sides[vapply(full_supported_sides, function(x) tip %in% x, logical(1))]
     local <- if (length(candidates)) candidates[[which.min(vapply(candidates, length, integer(1)))]] else character()
     distances <- d[tip, setdiff(tr$tip.label, tip)]
     nearest <- names(which.min(distances))
@@ -105,8 +110,9 @@ write.table(branches, file.path(output_dir, "terminal_branch_lengths.tsv"), sep 
 tree_summary <- do.call(rbind, lapply(names(trees), function(nm) {
   tr <- trees[[nm]]; b <- branches[branches$tree == nm, ]
   data.frame(tree = nm, taxa = Ntip(tr), total_tree_length = sum(tr$edge.length),
-    median_terminal_branch = median(b$terminal_branch), maximum_terminal_branch = max(b$terminal_branch),
-    terminal_outliers_robust_z_gt_3 = sum(b$robust_z > 3, na.rm = TRUE),
+    zero_terminal_branches = sum(b$terminal_branch == 0),
+    terminal_branch_95th_percentile = unname(quantile(b$terminal_branch, 0.95)),
+    maximum_terminal_branch = max(b$terminal_branch),
     supported_internal_splits = sum(splits$tree == nm & splits$supported),
     supported_major_splits = sum(major$tree == nm), stringsAsFactors = FALSE)
 }))

@@ -1,0 +1,2 @@
+genomes	alignment_length_nt	variable_sites	sites_excluded_below_minimum_allele_count	encoded_features	minimum_allele_count	ambiguous_or_gap_calls	missing_value_numeric_policy
+72	11341	320	67	253	2	108	feature mean (zero after centring); source alignment unchanged

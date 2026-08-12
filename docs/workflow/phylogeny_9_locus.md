@@ -192,3 +192,17 @@ study/geographic bias, incomplete public metadata, genotype–phenotype
 limitations, and repeated or epidemiologically linked isolates constrain
 interpretation. Genomic proximity to a bacteraemia-associated isolate does not
 prove pathogenicity or clinical risk.
+
+## Downstream topology comparison and PCA
+
+`09_compare_completed_trees.R` compares jointly supported bipartitions,
+reproductive-isolate neighbourhoods, and terminal branch lengths across the
+primary 72-genome nine-locus tree, the 71-genome exclusion sensitivity tree,
+and the 72-genome seven-locus sensitivity tree.
+
+`run_9_locus_pca.sh` runs a reproducible PCA of the primary concatenated
+alignment. `10_run_alignment_pca.py` validates identifiers, encodes observed
+alternative alleles occurring in at least two genomes, standardises features,
+and performs SVD. `10_plot_alignment_pca.R` creates labelled PC1-PC2 and
+PC1-PC3 plots. Missing numeric values are assigned the feature mean after
+centring solely for matrix decomposition; no sequence file is changed.
