@@ -15,6 +15,7 @@ FIELDS = ["sample_id", "assembly_accession", "dataset_group", "prokka_directory"
           "fna_exists", "basename_match", "notes"]
 
 
+# --- Read contig identifiers represented in one GFF ---
 def gff_contigs(path: Path) -> set[str]:
     contigs: set[str] = set()
     with path.open(encoding="utf-8", errors="replace") as handle:
@@ -27,6 +28,7 @@ def gff_contigs(path: Path) -> set[str]:
     return contigs
 
 
+# --- Discover annotations and enforce the 72-genome contract ---
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--prokka-root", type=Path, required=True)

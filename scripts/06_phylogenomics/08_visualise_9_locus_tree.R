@@ -4,6 +4,7 @@ suppressPackageStartupMessages({
   library(dplyr); library(readr); library(tidyr); library(phangorn)
 })
 
+# --- Parse file paths and validation thresholds ---
 args <- commandArgs(trailingOnly = TRUE)
 value <- function(flag) {
   i <- match(flag, args)
@@ -20,6 +21,7 @@ dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 dir.create(file.path(output_dir, "captions"), recursive = TRUE, showWarnings = FALSE)
 dir.create(tables_dir, recursive = TRUE, showWarnings = FALSE)
 
+# --- Join tree tips to canonical metadata ---
 tree <- read.tree(tree_path)
 metadata <- read_csv(metadata_path, show_col_types = FALSE)
 required <- c("assembly_accession", "reproductive_bacteraemia_category")
@@ -37,6 +39,7 @@ if (length(tree$tip.label) != expected_tips ||
 
 plot_data <- tree_metadata %>% rename(label = assembly_accession)
 rooted <- midpoint(tree)
+# --- Reusable publication plot helpers ---
 base_plot <- function(x, layout = "rectangular") {
   ggtree(x, layout = layout) %<+% plot_data +
     geom_tippoint(aes(colour = reproductive_bacteraemia_category), size = 2) +
@@ -48,6 +51,7 @@ save_plot <- function(plot, stem, width = 11, height = 9) {
   ggsave(file.path(output_dir, paste0(stem, ".png")), plot, width=width, height=height, dpi=300)
   ggsave(file.path(output_dir, paste0(stem, ".pdf")), plot, width=width, height=height)
 }
+# --- Save full and dataset-specific tree views ---
 save_plot(base_plot(tree), "combined_rectangular_unrooted")
 save_plot(base_plot(rooted), "combined_rectangular_midpoint_rooted")
 save_plot(base_plot(tree, "fan"), "combined_fan", 10, 10)

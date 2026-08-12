@@ -1,73 +1,73 @@
-assembly_accession,biosample_accession,source_group,reproductive_bacteraemia_category,country,year,amr_gene_count,hlgr_gentamicin_marker_status,hlgr_gentamicin_markers
-GCA_050469755.1,SAMN44727059,Clinical laboratory,Bacteraemia,USA,,1,Present,GCA_050469755.1
-GCA_050471105.1,SAMN44727056,Clinical laboratory,Bacteraemia,USA,,1,Not detected,
-GCA_050472745.1,SAMN44727050,Clinical laboratory,Bacteraemia,USA,,1,Present,GCA_050472745.1
-GCA_050472755.1,SAMN44727049,Clinical laboratory,Bacteraemia,USA,,1,Not detected,
-GCA_050473345.1,SAMN44727048,Clinical laboratory,Bacteraemia,USA,,1,Not detected,
-GCA_050473355.1,SAMN44727047,Clinical laboratory,Bacteraemia,USA,,1,Not detected,
-GCA_050473905.1,SAMN44727046,Clinical laboratory,Bacteraemia,USA,,1,Present,GCA_050473905.1
-GCA_050474485.1,SAMN44727044,Clinical laboratory,Bacteraemia,USA,,1,Not detected,
-GCA_050474495.1,SAMN44727043,Clinical laboratory,Bacteraemia,USA,,1,Present,GCA_050474495.1
-GCA_050475565.1,SAMN44727039,Clinical laboratory,Bacteraemia,USA,,1,Present,GCA_050475565.1
-GCA_050475575.1,SAMN44727038,Clinical laboratory,Bacteraemia,USA,,1,Present,GCA_050475575.1
-GCA_050476085.1,SAMN44727037,Clinical laboratory,Bacteraemia,USA,,1,Not detected,
-GCA_050480515.1,SAMN44727020,Clinical laboratory,Bacteraemia,USA,,1,Not detected,
-GCA_050481105.1,SAMN44727019,Clinical laboratory,Bacteraemia,USA,,1,Not detected,
-GCA_050481115.1,SAMN44727018,Clinical laboratory,Bacteraemia,USA,,1,Not detected,
-GCA_050481685.1,SAMN44727017,Clinical laboratory,Bacteraemia,USA,,1,Not detected,
-GCA_050481695.1,SAMN44727016,Clinical laboratory,Bacteraemia,USA,,1,Present,GCA_050481695.1
-GCA_050482265.1,SAMN44727015,Clinical laboratory,Bacteraemia,USA,,1,Present,GCA_050482265.1
-GCA_050485045.1,SAMN44727005,Clinical laboratory,Bacteraemia,USA,,1,Present,GCA_050485045.1
-GCA_050485055.1,SAMN44727004,Clinical laboratory,Bacteraemia,USA,,1,Present,GCA_050485055.1
-GCA_050485625.1,SAMN44727003,Clinical laboratory,Bacteraemia,USA,,1,Present,GCA_050485625.1
-GCA_050485635.1,SAMN44727002,Clinical laboratory,Bacteraemia,USA,,1,Present,GCA_050485635.1
-GCA_050486705.1,SAMN44726999,Clinical laboratory,Bacteraemia,USA,,1,Not detected,
-GCA_050486715.1,SAMN44726998,Clinical laboratory,Bacteraemia,USA,,1,Not detected,
-GCA_050491675.1,SAMN44727064,Clinical laboratory,Bacteraemia,USA,,1,Present,GCA_050491675.1
-GCA_050491685.1,SAMN44727063,Clinical laboratory,Bacteraemia,USA,,1,Present,GCA_050491685.1
-GCA_050492125.1,SAMN44727062,Clinical laboratory,Bacteraemia,USA,,1,Present,GCA_050492125.1
-GCA_050492135.1,SAMN44727061,Clinical laboratory,Bacteraemia,USA,,1,Present,GCA_050492135.1
-GCA_050505635.1,SAMN44727072,Clinical laboratory,Bacteraemia,USA,,1,Not detected,
-GCA_050505645.1,SAMN44727073,Clinical laboratory,Bacteraemia,USA,,1,Not detected,
-GCA_050506665.1,SAMN44727120,Clinical laboratory,Bacteraemia,USA,,1,Not detected,
-GCA_050506675.1,SAMN44727119,Clinical laboratory,Bacteraemia,USA,,1,Not detected,
-GCA_050506685.1,SAMN44727118,Clinical laboratory,Bacteraemia,USA,,1,Not detected,
-GCA_050506695.1,SAMN44727117,Clinical laboratory,Bacteraemia,USA,,1,Not detected,
-GCA_050506725.1,SAMN44727114,Clinical laboratory,Bacteraemia,USA,,1,Not detected,
-GCA_050506735.1,SAMN44727113,Clinical laboratory,Bacteraemia,USA,,1,Not detected,
-GCA_050506745.1,SAMN44727112,Clinical laboratory,Bacteraemia,USA,,1,Present,GCA_050506745.1
-GCA_050506755.1,SAMN44727111,Clinical laboratory,Bacteraemia,USA,,1,Present,GCA_050506755.1
-GCA_050506765.1,SAMN44727110,Clinical laboratory,Bacteraemia,USA,,1,Not detected,
-GCA_050506775.1,SAMN44727109,Clinical laboratory,Bacteraemia,USA,,1,Not detected,
-GCA_050506815.1,SAMN44727107,Clinical laboratory,Bacteraemia,USA,,1,Present,GCA_050506815.1
-GCA_050506825.1,SAMN44727106,Clinical laboratory,Bacteraemia,USA,,1,Not detected,
-GCA_050506865.1,SAMN44727105,Clinical laboratory,Bacteraemia,USA,,1,Present,GCA_050506865.1
-GCA_050506875.1,SAMN44727104,Clinical laboratory,Bacteraemia,USA,,1,Not detected,
-GCA_050506885.1,SAMN44727103,Clinical laboratory,Bacteraemia,USA,,1,Present,GCA_050506885.1
-GCA_050506905.1,SAMN44727101,Clinical laboratory,Bacteraemia,USA,,1,Present,GCA_050506905.1
-GCA_050506915.1,SAMN44727100,Clinical laboratory,Bacteraemia,USA,,1,Not detected,
-GCA_050506925.1,SAMN44727099,Clinical laboratory,Bacteraemia,USA,,1,Not detected,
-GCA_050506935.1,SAMN44727098,Clinical laboratory,Bacteraemia,USA,,1,Not detected,
-GCA_050506985.1,SAMN44727097,Clinical laboratory,Bacteraemia,USA,,1,Not detected,
-GCA_050506995.1,SAMN44727096,Clinical laboratory,Bacteraemia,USA,,1,Not detected,
-GCA_050507065.1,SAMN44727095,Clinical laboratory,Bacteraemia,USA,,1,Not detected,
-GCA_050507075.1,SAMN44727094,Clinical laboratory,Bacteraemia,USA,,1,Present,GCA_050507075.1
-GCA_050507105.1,SAMN44727093,Clinical laboratory,Bacteraemia,USA,,1,Present,GCA_050507105.1
-GCA_050516645.1,SAMN44727145,Clinical laboratory,Bacteraemia,USA,,1,Not detected,
-GCA_050516655.1,SAMN44727144,Clinical laboratory,Bacteraemia,USA,,1,Not detected,
-GCA_050516665.1,SAMN44727143,Clinical laboratory,Bacteraemia,USA,,1,Not detected,
-GCA_050516675.1,SAMN44727142,Clinical laboratory,Bacteraemia,USA,,1,Not detected,
-GCA_029011255.1,SAMN33275456,Vaginal swab,Reproductive,USA,,1,Not detected,
-GCA_029011395.1,SAMN33275452,Vaginal swab,Reproductive,USA,,1,Not detected,
-GCA_029011535.1,SAMN33275446,Vaginal swab,Reproductive,USA,,1,Not detected,
-GCA_029011745.1,SAMN33275436,Vaginal swab,Reproductive,USA,,1,Not detected,
-GCF_049262565.1,SAMN47264607,Vaginal swab,Reproductive,USA,,1,Not detected,
-GCF_053117575.1,SAMN46230713,Semen sample,Reproductive,Italy,,1,Present,GCF_053117575.1
-GCF_053117585.1,SAMN46230714,Semen sample,Reproductive,Italy,,1,Present,GCF_053117585.1
-GCF_053117655.1,SAMN46230712,Vaginal swab,Reproductive,Italy,,1,Not detected,
-GCF_053117665.1,SAMN46230711,Semen sample,Reproductive,Italy,,1,Not detected,
-GCF_053117675.1,SAMN46230710,Vaginal swab,Reproductive,Italy,,1,Not detected,
-GCF_053117685.1,SAMN46230709,Semen sample,Reproductive,Italy,,1,Present,GCF_053117685.1
-GCF_053117695.1,SAMN46230708,Semen sample,Reproductive,Italy,,1,Present,GCF_053117695.1
-GCF_053117705.1,SAMN46230707,Semen sample,Reproductive,Italy,,1,Present,GCF_053117705.1
-GCF_906464925.1,SAMEA6595201,Semen sample,Reproductive,United Kingdon,,1,Not detected,
+"assembly_accession","biosample_accession","bioproject_accession","strain","reproductive_bacteraemia_category","source_group","sample_type","country","geographic_location","year","host","study_title","amr_gene_count","hlgr_gentamicin_marker_status","hlgr_gentamicin_markers"
+"GCF_053117705.1","SAMN46230707","PRJNA1209846","2819","Reproductive","Semen sample","Cell culture","Italy","Italy:Siena",2009,"Homo sapiens","Sequencing of infertility-associated Enterococcus faecalis isolates",1,"Present","GCF_053117705.1"
+"GCF_053117695.1","SAMN46230708","PRJNA1209846","4153","Reproductive","Semen sample","Cell culture","Italy","Italy:Siena",2011,"Homo sapiens","Sequencing of infertility-associated Enterococcus faecalis isolates",1,"Present","GCF_053117695.1"
+"GCF_053117685.1","SAMN46230709","PRJNA1209846","4638","Reproductive","Semen sample","Cell culture","Italy","Italy:Siena",2011,"Homo sapiens","Sequencing of infertility-associated Enterococcus faecalis isolates",1,"Present","GCF_053117685.1"
+"GCF_053117675.1","SAMN46230710","PRJNA1209846","4774","Reproductive","Vaginal swab","Cell culture","Italy","Italy:Siena",2011,"Homo sapiens","Sequencing of infertility-associated Enterococcus faecalis isolates",1,"Not detected",
+"GCF_053117665.1","SAMN46230711","PRJNA1209846","4953","Reproductive","Semen sample","Cell culture","Italy","Italy:Siena",2012,"Homo sapiens","Sequencing of infertility-associated Enterococcus faecalis isolates",1,"Not detected",
+"GCF_053117655.1","SAMN46230712","PRJNA1209846","5034","Reproductive","Vaginal swab","Cell culture","Italy","Italy:Siena",2012,"Homo sapiens","Sequencing of infertility-associated Enterococcus faecalis isolates",1,"Not detected",
+"GCF_053117575.1","SAMN46230713","PRJNA1209846","5245","Reproductive","Semen sample","Cell culture","Italy","Italy:Siena",2012,"Homo sapiens","Sequencing of infertility-associated Enterococcus faecalis isolates",1,"Present","GCF_053117575.1"
+"GCF_053117585.1","SAMN46230714","PRJNA1209846","5410","Reproductive","Semen sample","Cell culture","Italy","Italy:Siena",2012,"Homo sapiens","Sequencing of infertility-associated Enterococcus faecalis isolates",1,"Present","GCF_053117585.1"
+"GCF_049262565.1","SAMN47264607","PRJNA316969","UMB6935B","Reproductive","Vaginal swab","Human bacterial culture","USA","USA: Maywood, IL",2016,"Homo sapiens","Female Urinary Microbiota Genome Sequencing",1,"Not detected",
+"GCA_029011255.1","SAMN33275456","PRJNA934404","VSI48","Reproductive","Vaginal swab",,"USA","USA: Houston, TX",2021,"Homo sapiens","Human vaginal bacterial isolates genome sequencing and assembly",1,"Not detected",
+"GCA_029011535.1","SAMN33275446","PRJNA934404","VSI19","Reproductive","Vaginal swab",,"USA","USA: Houston, TX",2020,"Homo sapiens","Human vaginal bacterial isolates genome sequencing and assembly",1,"Not detected",
+"GCA_029011395.1","SAMN33275452","PRJNA934404","VSI36","Reproductive","Vaginal swab",,"USA","USA: Houston, TX",2020,"Homo sapiens","Human vaginal bacterial isolates genome sequencing and assembly",1,"Not detected",
+"GCA_029011745.1","SAMN33275436","PRJNA934404","VSI09","Reproductive","Vaginal swab",,"USA","USA: Houston, TX",2020,"Homo sapiens","Human vaginal bacterial isolates genome sequencing and assembly",1,"Not detected",
+"GCF_906464925.1","SAMEA6595201","PRJEB36950","BX5936","Reproductive","Semen sample",,"United Kingdom","Edinburgh",2017,"Homo sapiens","Hybrid assembly of optrA Positive Enterococcus faecalis",1,"Not detected",
+"GCA_050516675.1","SAMN44727142","PRJNA1185791","C6696","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Not detected",
+"GCA_050516665.1","SAMN44727143","PRJNA1185791","C6697","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Not detected",
+"GCA_050516655.1","SAMN44727144","PRJNA1185791","C5819","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Not detected",
+"GCA_050516645.1","SAMN44727145","PRJNA1185791","C5822","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Not detected",
+"GCA_050492135.1","SAMN44727061","PRJNA1185791","C1551","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Present","GCA_050492135.1"
+"GCA_050492125.1","SAMN44727062","PRJNA1185791","C1552","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Present","GCA_050492125.1"
+"GCA_050491685.1","SAMN44727063","PRJNA1185791","C1574","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Present","GCA_050491685.1"
+"GCA_050491675.1","SAMN44727064","PRJNA1185791","C1576","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Present","GCA_050491675.1"
+"GCA_050486715.1","SAMN44726998","PRJNA1185791","C1226","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Not detected",
+"GCA_050486705.1","SAMN44726999","PRJNA1185791","C1228","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Not detected",
+"GCA_050482265.1","SAMN44727015","PRJNA1185791","C1224","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Present","GCA_050482265.1"
+"GCA_050481695.1","SAMN44727016","PRJNA1185791","C1225","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Present","GCA_050481695.1"
+"GCA_050481685.1","SAMN44727017","PRJNA1185791","C2194","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Not detected",
+"GCA_050481115.1","SAMN44727018","PRJNA1185791","C2195","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Not detected",
+"GCA_050481105.1","SAMN44727019","PRJNA1185791","C8810","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Not detected",
+"GCA_050480515.1","SAMN44727020","PRJNA1185791","C8814","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Not detected",
+"GCA_050485635.1","SAMN44727002","PRJNA1185791","C2196","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Present","GCA_050485635.1"
+"GCA_050485625.1","SAMN44727003","PRJNA1185791","C2198","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Present","GCA_050485625.1"
+"GCA_050485055.1","SAMN44727004","PRJNA1185791","C8811","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Present","GCA_050485055.1"
+"GCA_050485045.1","SAMN44727005","PRJNA1185791","C8816","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Present","GCA_050485045.1"
+"GCA_050473905.1","SAMN44727046","PRJNA1185791","C1539","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Present","GCA_050473905.1"
+"GCA_050473355.1","SAMN44727047","PRJNA1185791","C1554","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Not detected",
+"GCA_050473345.1","SAMN44727048","PRJNA1185791","C1555","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Not detected",
+"GCA_050472755.1","SAMN44727049","PRJNA1185791","C1577","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Not detected",
+"GCA_050472745.1","SAMN44727050","PRJNA1185791","C1578","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Present","GCA_050472745.1"
+"GCA_050476085.1","SAMN44727037","PRJNA1185791","C1321","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Not detected",
+"GCA_050475575.1","SAMN44727038","PRJNA1185791","C1329","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Present","GCA_050475575.1"
+"GCA_050475565.1","SAMN44727039","PRJNA1185791","C1336","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Present","GCA_050475565.1"
+"GCA_050471105.1","SAMN44727056","PRJNA1185791","H815","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Not detected",
+"GCA_050469755.1","SAMN44727059","PRJNA1185791","H820","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Present","GCA_050469755.1"
+"GCA_050474495.1","SAMN44727043","PRJNA1185791","C1472","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Present","GCA_050474495.1"
+"GCA_050474485.1","SAMN44727044","PRJNA1185791","C1473","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Not detected",
+"GCA_050506885.1","SAMN44727103","PRJNA1185791","C5858","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Present","GCA_050506885.1"
+"GCA_050506875.1","SAMN44727104","PRJNA1185791","C6375","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Not detected",
+"GCA_050506865.1","SAMN44727105","PRJNA1185791","C6388","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Present","GCA_050506865.1"
+"GCA_050506825.1","SAMN44727106","PRJNA1185791","C6389","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Not detected",
+"GCA_050506815.1","SAMN44727107","PRJNA1185791","C6391","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Present","GCA_050506815.1"
+"GCA_050506775.1","SAMN44727109","PRJNA1185791","C6409","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Not detected",
+"GCA_050506765.1","SAMN44727110","PRJNA1185791","C6411","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Not detected",
+"GCA_050506755.1","SAMN44727111","PRJNA1185791","C5844","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Present","GCA_050506755.1"
+"GCA_050506745.1","SAMN44727112","PRJNA1185791","C5846","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Present","GCA_050506745.1"
+"GCA_050506735.1","SAMN44727113","PRJNA1185791","C5873","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Not detected",
+"GCA_050506725.1","SAMN44727114","PRJNA1185791","C5874","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Not detected",
+"GCA_050506695.1","SAMN44727117","PRJNA1185791","C5881","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Not detected",
+"GCA_050506685.1","SAMN44727118","PRJNA1185791","C5882","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Not detected",
+"GCA_050506675.1","SAMN44727119","PRJNA1185791","C6504","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Not detected",
+"GCA_050506665.1","SAMN44727120","PRJNA1185791","C6489","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Not detected",
+"GCA_050505645.1","SAMN44727073","PRJNA1185791","H813","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",2018,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Not detected",
+"GCA_050505635.1","SAMN44727072","PRJNA1185791","H797","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Not detected",
+"GCA_050507105.1","SAMN44727093","PRJNA1185791","C1468","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Present","GCA_050507105.1"
+"GCA_050507075.1","SAMN44727094","PRJNA1185791","C1469","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Present","GCA_050507075.1"
+"GCA_050507065.1","SAMN44727095","PRJNA1185791","C1337","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Not detected",
+"GCA_050506995.1","SAMN44727096","PRJNA1185791","C1335","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Not detected",
+"GCA_050506985.1","SAMN44727097","PRJNA1185791","C1538","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Not detected",
+"GCA_050506935.1","SAMN44727098","PRJNA1185791","C1542","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Not detected",
+"GCA_050506925.1","SAMN44727099","PRJNA1185791","C1544","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Not detected",
+"GCA_050506915.1","SAMN44727100","PRJNA1185791","C1545","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Not detected",
+"GCA_050506905.1","SAMN44727101","PRJNA1185791","C5845","Bacteraemia","Clinical laboratory",,"USA","USA: Jackson, Mississippi",,"Homo sapiens","Enterococcus faecium and Enterococcus faecalis hybrid assemblies",1,"Present","GCA_050506905.1"

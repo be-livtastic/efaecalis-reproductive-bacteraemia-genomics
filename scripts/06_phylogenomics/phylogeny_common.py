@@ -12,6 +12,7 @@ from urllib.parse import unquote
 ACCESSION_RE = re.compile(r"(GC[AF]_\d+\.\d+)")
 
 
+# --- Identifier and tabular I/O helpers ---
 def accession_from_text(value: str) -> str | None:
     match = ACCESSION_RE.search(value)
     return match.group(1) if match else None
@@ -45,6 +46,7 @@ def write_tsv(path: Path, rows: list[dict], fields: list[str]) -> None:
         raise
 
 
+# --- GFF attribute parsing and normalization ---
 def parse_attributes(text: str) -> dict[str, str]:
     """Parse GFF3 attributes without assuming attribute order."""
     result: dict[str, str] = {}
@@ -61,6 +63,7 @@ def normalize(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", " ", value.casefold()).strip()
 
 
+# --- FASTA readers shared by validation stages ---
 def fasta_lengths(path: Path) -> dict[str, int]:
     lengths: dict[str, int] = {}
     current: str | None = None
@@ -91,6 +94,7 @@ def read_fasta(path: Path) -> dict[str, str]:
     return {key: "".join(parts) for key, parts in records.items()}
 
 
+# --- Atomic text output for interruption-safe results ---
 def atomic_text(path: Path, content: str) -> None:
     """Create a new file atomically; never replace an existing destination."""
     path.parent.mkdir(parents=True, exist_ok=True)

@@ -5,5 +5,6 @@ accession_manifest: "data/accession_lists/selected_72_accessions.tsv"
 raw_genomes: "data/raw/ncbi_genomes"
 amrfinder_inputs: "data/interim/amrfinder"
 amrfinder_results: "results/amr"
+annotations: "data/processed/annotations"
 metadata: "data/metadata/curated_metadata_72_genomes.csv"
-
+supplementary_table: "manuscript/supplementary/table_s1_sample_metadata.tsv"

@@ -6,6 +6,7 @@ human_e_faecalis_complete_genomes.xlsx
 # Raw and regenerable biological data
 /data/raw/**
 /data/interim/**
+/data/processed/annotations/**
 *.fna
 *.fa
 *.fasta

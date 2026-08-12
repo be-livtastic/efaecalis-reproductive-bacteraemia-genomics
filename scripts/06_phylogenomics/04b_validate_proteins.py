@@ -13,6 +13,7 @@ from Bio import SeqIO
 from phylogeny_common import read_fasta, read_tsv, write_tsv
 
 
+# --- Compare translated loci with reviewed RefSeq proteins ---
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--sequence-root", type=Path, required=True)

@@ -11,6 +11,7 @@ from phylogeny_common import read_fasta, write_tsv
 LOCI = ["gdh", "gyd", "pstS", "gki", "xpt", "yqiL"]
 
 
+# --- Check MLST loci against the frozen PubMLST snapshot ---
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--sequence-root", type=Path, required=True)

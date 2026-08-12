@@ -3,13 +3,14 @@ set -Eeuo pipefail
 
 repo_root=$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)
 cd "$repo_root"
+# --- Resolve tools and parse run options ---
 if command -v python >/dev/null; then python_cmd=python
 elif command -v python3 >/dev/null; then python_cmd=python3
 else echo "Python is required" >&2; exit 127
 fi
 threads=2; dry_run=false; force=false; requested_stage="all"
 expected_samples=72; expected_loci=9; expected_records=648; output_prefix="efaecalis_72_genomes_9_locus_observed_indels"
-prokka_root="local_archive/large_outputs/Phylogeny_project/phylogeny_work/01_annotations"
+prokka_root="data/processed/annotations"
 while (($#)); do
   case "$1" in
     --threads) threads=$2; shift 2 ;;
@@ -22,6 +23,7 @@ while (($#)); do
   esac
 done
 [[ "$threads" =~ ^[1-9][0-9]*$ ]] || { echo "--threads must be a positive integer" >&2; exit 2; }
+# --- Define versioned analysis, table and figure locations ---
 timestamp=$(date -u +%Y%m%dT%H%M%SZ)
 base="analysis/phylogenomics/72_genomes_9_locus_observed_indels"
 tables_dir="results/tables/phylogeny_72_genomes_9_locus_observed_indels"
@@ -32,6 +34,7 @@ mkdir -p "$log_root"
 summary="$log_root/run_summary.tsv"
 printf 'stage\tcommand\tstart_utc\tfinish_utc\truntime_seconds\texit_status\tinputs\toutputs\n' > "$summary"
 
+# --- Execute one logged, auditable pipeline stage ---
 run_stage() {
   local stage=$1 inputs=$2 outputs=$3; shift 3
   local command_string start finish elapsed status
@@ -60,6 +63,7 @@ ensure_new() { [[ ! -e "$1" ]] || { echo "Refusing to overwrite $1 (use --force 
 echo "Nine-locus concatenated housekeeping-gene phylogeny (72 genomes; observed disrupted spans; no imputation)"
 echo "Start: $timestamp; work root: $work_root; threads: $threads; dry-run: $dry_run"
 
+# --- Policy and software provenance ---
 if want policy || [[ "$requested_stage" == all ]]; then
   run_stage 00_policy_consistency "active nine-locus scripts and configuration" "$log_root/00_policy_consistency.complete" \
     "$python_cmd" scripts/06_phylogenomics/00_validate_9_locus_policy.py
@@ -70,6 +74,7 @@ if want versions; then
   run_stage versions "environment/environment.yml" "$versions_target" bash -c \
     '{ "$2" --version; samtools --version; mafft --version; (iqtree2 --version || iqtree --version); seqkit version; R --version; } > "$1"' _ "$versions_target" "$python_cmd"
 fi
+# --- Annotation discovery and reviewed coordinate selection ---
 manifest="$work_root/manifests/prokka_annotation_manifest.tsv"
 if want discovery || [[ "$requested_stage" == all ]]; then
   ensure_new "$manifest"
@@ -96,6 +101,7 @@ if want candidates || [[ "$requested_stage" == all ]]; then
       --coordinates "$raw_coordinates" --overrides config/phylogeny_9_loci_observed_span_overrides.tsv \
       --output "$coordinates"
 fi
+# --- Sequence extraction and biological QC ---
 sequence_root="$work_root/extracted_sequences"
 if want extraction || [[ "$requested_stage" == all ]]; then
   [[ $(($(wc -l < "$coordinates") - 1)) -eq "$expected_records" ]] || { echo "Extraction requires exactly $expected_records reviewed coordinates" >&2; exit 3; }
@@ -128,6 +134,7 @@ if want reference_qc || [[ "$requested_stage" == all ]]; then
       --findings config/phylogeny_9_loci_primary_findings.tsv \
       --output "$tables_dir/protein_reference_qc.tsv" --expected-samples "$expected_samples"
 fi
+# --- Alignment, concatenation and phylogenetic inference ---
 if want alignment || [[ "$requested_stage" == all ]]; then
   [[ -s "$work_root/qc/sequence_qc.tsv" && -s "$work_root/qc/sequence_qc_failures.tsv" ]] || {
     echo "Completed sequence QC outputs are required before alignment" >&2; exit 3;
@@ -154,6 +161,7 @@ if want iqtree; then
       --partitions "$work_root/concatenated/${output_prefix}_partitions.nex" \
       --output-dir "$work_root/iqtree" --threads "$threads" --output-prefix "$output_prefix"
 fi
+# --- Metadata-aware publication figures ---
 if want visualisation; then
   tree="$work_root/iqtree/${output_prefix}.treefile"
   run_stage 11_metadata_join_and_visualisation "$tree;data/metadata/curated_metadata_72_genomes.csv" "$figures_dir" \

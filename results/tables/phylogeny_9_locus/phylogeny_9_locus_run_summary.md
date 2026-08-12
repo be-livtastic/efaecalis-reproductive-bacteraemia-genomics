@@ -34,8 +34,8 @@ Status: **Sequence QC blocked; inference not run.**
 ## Warnings and limitations
 
 This is a **nine-locus concatenated housekeeping-gene phylogeny** containing six
-established MLST loci and three additional conserved markers. It is neither a
-pangenome-derived core-genome phylogeny nor standard seven-locus MLST. The
+established MLST loci and three additional conserved markers. It is not a
+pangenome-derived core-genome phylogeny. The
 excluded `aroE` locus and all remaining sequence caveats must be reported with
 any eventual tree.
 

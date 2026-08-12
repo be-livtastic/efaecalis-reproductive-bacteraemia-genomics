@@ -17,6 +17,7 @@ CANDIDATE_FIELDS = ["sample_id", "assembly_accession", "dataset_group", "canonic
 SELECTED_FIELDS = CANDIDATE_FIELDS + ["gff_path", "fna_path", "selection_source"]
 
 
+# --- Rank exact annotation evidence for one configured locus ---
 def exact_evidence(attrs: dict[str, str], config: dict[str, str]) -> list[tuple[int, str, str, str]]:
     aliases = {normalize(x) for x in config["aliases"].split(";") if x}
     products = {normalize(x) for x in config["search_terms"].split(";") if x}
@@ -32,6 +33,7 @@ def exact_evidence(attrs: dict[str, str], config: dict[str, str]) -> list[tuple[
     return evidence
 
 
+# --- Select one reviewed coordinate set per genome and locus ---
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--manifest", type=Path, required=True)

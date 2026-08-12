@@ -10,6 +10,7 @@ import numpy as np
 from Bio import SeqIO
 
 
+# --- Command-line interface ---
 def arguments() -> argparse.Namespace:
     p = argparse.ArgumentParser()
     p.add_argument("--alignment", required=True, type=Path)
@@ -21,6 +22,7 @@ def arguments() -> argparse.Namespace:
     return p.parse_args()
 
 
+# --- Small deterministic TSV writer ---
 def write_tsv(path: Path, fields: list[str], rows: list[dict]) -> None:
     tmp = path.with_suffix(path.suffix + ".tmp")
     with tmp.open("w", newline="", encoding="utf-8") as handle:
@@ -29,6 +31,7 @@ def write_tsv(path: Path, fields: list[str], rows: list[dict]) -> None:
     tmp.replace(path)
 
 
+# --- Encode observed alleles and run the alignment PCA ---
 def main() -> int:
     a = arguments()
     records = list(SeqIO.parse(a.alignment, "fasta"))
@@ -89,11 +92,19 @@ def main() -> int:
     if set(ids) != set(metadata):
         raise SystemExit(f"Metadata mismatch: tree-only={len(set(ids)-set(metadata))}, metadata-only={len(set(metadata)-set(ids))}")
     a.output_dir.mkdir(parents=True, exist_ok=True)
-    score_fields = ["assembly_accession", "reproductive_bacteraemia_category"] + [f"PC{i}" for i in range(1, ncomp + 1)]
+    score_fields = [
+        "assembly_accession", "biosample_accession", "strain",
+        "reproductive_bacteraemia_category"
+    ] + [f"PC{i}" for i in range(1, ncomp + 1)]
     score_rows = []
     for i, sample in enumerate(ids):
-        row = {"assembly_accession": sample,
-               "reproductive_bacteraemia_category": metadata[sample]["reproductive_bacteraemia_category"]}
+        strain = metadata[sample].get("strain", "").strip() or sample
+        row = {
+            "assembly_accession": sample,
+            "biosample_accession": metadata[sample].get("biosample_accession", ""),
+            "strain": strain,
+            "reproductive_bacteraemia_category": metadata[sample]["reproductive_bacteraemia_category"],
+        }
         row.update({f"PC{k+1}": scores[i, k] for k in range(ncomp)})
         score_rows.append(row)
     write_tsv(a.output_dir / "pca_scores.tsv", score_fields, score_rows)

@@ -1,2 +1,0 @@
-sample_id	canonical_gene	severity	code	evidence
-GCA_029011535.1	gdh	INFO	APPROVED_TERMINAL_VARIANT	The 1488-nt allele is 97.6% of the cohort length, translates cleanly, and produces 2.36% terminal alignment gaps below the configured 3% limit; retain with reporting caveat.

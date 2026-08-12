@@ -12,6 +12,7 @@ from phylogeny_common import atomic_text, read_fasta, read_tsv, write_tsv
 LOCI = ["gdh", "gyd", "pstS", "gki", "xpt", "yqiL", "pyrC", "groEL", "recA"]
 
 
+# --- Count variable and parsimony-informative sites ---
 def site_counts(records: dict[str, str]) -> tuple[int, int]:
     variable = informative = 0
     for column in zip(*records.values()):
@@ -24,11 +25,13 @@ def site_counts(records: dict[str, str]) -> tuple[int, int]:
     return variable, informative
 
 
+# --- Calculate pairwise divergence while ignoring gaps ---
 def divergence(first: str, second: str) -> float:
     comparable = [(a, b) for a, b in zip(first, second) if a in "ACGT" and b in "ACGT"]
     return sum(a != b for a, b in comparable) / max(1, len(comparable))
 
 
+# --- Validate, concatenate and partition locus alignments ---
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--alignment-dir", type=Path, required=True)

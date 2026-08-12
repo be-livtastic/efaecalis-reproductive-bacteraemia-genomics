@@ -10,6 +10,7 @@ PROJECT_ROOT="$(cd -- "$SCRIPT_DIR/../.." && pwd)"
 ACCESSIONS="${1:-$PROJECT_ROOT/data/accession_lists/selected_72_accessions.tsv}"
 OUTPUT_ROOT="${2:-$PROJECT_ROOT/data/raw/ncbi_genomes}"
 
+# --- Validate tools and inputs before creating output ---
 if ! command -v datasets >/dev/null 2>&1; then
     echo "ERROR: NCBI Datasets CLI is not available on PATH." >&2
     exit 1
@@ -24,12 +25,14 @@ if [[ -e "$OUTPUT_ROOT" ]]; then
 fi
 
 mkdir -p "$OUTPUT_ROOT"
+# --- Download each comparison group independently ---
 for category in Reproductive Bacteraemia; do
     category_lower="${category,,}"
     accession_file="$OUTPUT_ROOT/${category_lower}_accessions.txt"
     archive="$OUTPUT_ROOT/${category_lower}_genomes.zip"
     extract_dir="$OUTPUT_ROOT/${category_lower}"
 
+    # Derive the download list from the canonical two-column manifest.
     awk -F $'\t' -v category="$category" \
         'NR > 1 && $2 == category {print $1}' "$ACCESSIONS" > "$accession_file"
     expected=14
@@ -40,6 +43,7 @@ for category in Reproductive Bacteraemia; do
         exit 1
     fi
 
+    # Retain sequence and annotation inputs needed by downstream stages.
     datasets download genome accession \
         --inputfile "$accession_file" \
         --include genome,protein,gff3,seq-report \
@@ -49,4 +53,3 @@ for category in Reproductive Bacteraemia; do
 done
 
 echo "NCBI genome retrieval completed under: $OUTPUT_ROOT"
-

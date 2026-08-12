@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
+# --- Parse tree-inference inputs ---
 alignment=""; partitions=""; output_dir=""; threads="AUTO"; output_prefix="efaecalis_72_genomes_9_locus_observed_indels"
 while (($#)); do
   case "$1" in
@@ -16,6 +17,7 @@ if command -v iqtree2 >/dev/null; then iqtree_cmd=iqtree2
 elif command -v iqtree >/dev/null; then iqtree_cmd=iqtree
 else echo "IQ-TREE 2 is required" >&2; exit 127
 fi
+# --- Detect supported options across IQ-TREE versions ---
 version=$("$iqtree_cmd" --version 2>&1 | head -n 2)
 grep -Eq 'IQ-TREE.*version 2|IQ-TREE multicore version 2' <<<"$version" || { echo "Detected command is not IQ-TREE 2: $version" >&2; exit 3; }
 help=$("$iqtree_cmd" -h 2>&1)
@@ -27,6 +29,7 @@ prefix="$output_dir/$output_prefix"
 for suffix in treefile contree iqtree log best_scheme.nex mldist ckp.gz; do
   [[ ! -e "${prefix}.${suffix}" ]] || { echo "Refusing to overwrite ${prefix}.${suffix}" >&2; exit 4; }
 done
+# --- Infer the partition-aware maximum-likelihood tree ---
 echo "+ $iqtree_cmd -s $alignment -p $partitions -m MFP+MERGE -B 1000 -alrt 1000 -T $threads --prefix $prefix"
 "$iqtree_cmd" -s "$alignment" -p "$partitions" -m MFP+MERGE -B 1000 -alrt 1000 -T "$threads" --prefix "$prefix"
 [[ -s "${prefix}.treefile" && -s "${prefix}.iqtree" ]] || { echo "IQ-TREE did not produce required final files" >&2; exit 5; }

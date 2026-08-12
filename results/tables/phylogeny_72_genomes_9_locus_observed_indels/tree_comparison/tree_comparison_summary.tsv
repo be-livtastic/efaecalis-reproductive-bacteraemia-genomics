@@ -1,4 +1,0 @@
-tree	taxa	total_tree_length	zero_terminal_branches	terminal_branch_95th_percentile	maximum_terminal_branch	supported_internal_splits	supported_major_splits
-primary_72genome_9locus	72	0.0875068705	32	0.003831393945	0.0067979732	13	6
-sensitivity_71genome_9locus	71	0.0875857208	32	0.00413210985	0.0068034649	14	6
-reduced_72genome_7locus	72	0.0764159522	37	0.0026993631	0.006059872	14	6

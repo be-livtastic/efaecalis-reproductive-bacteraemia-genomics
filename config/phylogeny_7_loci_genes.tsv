@@ -1,8 +1,0 @@
-gene_order	canonical_gene	expected_product	aliases	search_terms	expected_copy_number	validation_notes
-1	gdh	Glucose-6-phosphate 1-dehydrogenase	zwf	Glucose-6-phosphate 1-dehydrogenase	1	E. faecalis MLST gdh is commonly annotated zwf; terminal variants up to the configured gap limit require documented review.
-2	gyd	Glyceraldehyde-3-phosphate dehydrogenase	gap;gapA	Glyceraldehyde-3-phosphate dehydrogenase	1	Multiple GAPDH-like CDSs may occur; require MLST reference support or a reviewed override.
-3	pstS	Phosphate-binding protein PstS	pstS;pstS1	Phosphate-binding protein PstS;Phosphate-binding protein PstS 1	1	Multiple PstS-like CDSs may occur; require MLST reference support or a reviewed override.
-4	gki	Glucokinase	glcK	Glucokinase	1	MLST symbol differs from the common Prokka symbol glcK.
-5	xpt	Xanthine phosphoribosyltransferase	xpt	Xanthine phosphoribosyltransferase	1	Require one complete CDS.
-6	pyrC	Dihydroorotase	pyrC	Dihydroorotase	1	Additional conserved marker; require one complete CDS.
-7	groEL	Chaperonin GroEL	groEL;groL	Chaperonin GroEL;Chaperonin 60	1	Accept only exact normalized symbol or product evidence.

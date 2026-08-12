@@ -7,8 +7,7 @@ analysis of 14 reproductive-associated and 58 bacteraemia-associated
 *Enterococcus faecalis* assemblies. It is not a core-genome phylogeny.
 
 The fixed locus order is `gdh`, `gyd`, `pstS`, `gki`, `xpt`, `yqiL`, `pyrC`,
-`groEL`, and `recA`. The first six are retained from the seven-locus
-*E. faecalis* MLST scheme; `aroE` is excluded consistently from all genomes
+`groEL`, and `recA`. `aroE` is excluded consistently from all genomes
 because one assembly contains a confirmed one-base deletion and no defensible
 intact whole CDS. The additional three markers are conserved loci selected for
 a defined multilocus analysis. Complete Prokka CDS coordinates are normally
@@ -181,9 +180,8 @@ sensitivity must accompany biological interpretation.
 
 ## Limitations
 
-The result is a **nine-locus concatenated housekeeping-gene phylogeny**. It is
-not a core-genome phylogeny and, because whole CDSs and two additional markers
-are used, it is not a standard seven-locus MLST phylogeny.
+The result is a **nine-locus concatenated housekeeping-gene phylogeny**, not a
+core-genome phylogeny.
 
 Nine loci represent only a small fraction of the genome and may not reproduce
 relationships from a recombination-aware core-genome analysis. Individual
@@ -193,16 +191,12 @@ limitations, and repeated or epidemiologically linked isolates constrain
 interpretation. Genomic proximity to a bacteraemia-associated isolate does not
 prove pathogenicity or clinical risk.
 
-## Downstream topology comparison and PCA
-
-`09_compare_completed_trees.R` compares jointly supported bipartitions,
-reproductive-isolate neighbourhoods, and terminal branch lengths across the
-primary 72-genome nine-locus tree, the 71-genome exclusion sensitivity tree,
-and the 72-genome seven-locus sensitivity tree.
+## PCA
 
 `run_9_locus_pca.sh` runs a reproducible PCA of the primary concatenated
 alignment. `10_run_alignment_pca.py` validates identifiers, encodes observed
 alternative alleles occurring in at least two genomes, standardises features,
-and performs SVD. `10_plot_alignment_pca.R` creates labelled PC1-PC2 and
-PC1-PC3 plots. Missing numeric values are assigned the feature mean after
-centring solely for matrix decomposition; no sequence file is changed.
+and performs SVD. `10_plot_alignment_pca.R` creates separate strain-labelled
+and assembly-accession-labelled PC1-PC2 and PC1-PC3 plots. Missing numeric
+values are assigned the feature mean after centring solely for matrix
+decomposition; no sequence file is changed.

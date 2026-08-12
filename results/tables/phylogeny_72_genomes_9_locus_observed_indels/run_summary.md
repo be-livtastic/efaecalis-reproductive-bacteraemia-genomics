@@ -53,5 +53,5 @@ tree with the primary tree after pruning that tip gave Robinson-Foulds distance
 This sensitivity is material and must accompany interpretation, especially
 because the alignment contains many identical concatenated sequences.
 
-This result is a **nine-locus concatenated housekeeping-gene phylogeny**. It is
-not a core-genome phylogeny or a standard seven-locus MLST phylogeny.
+This result is a **nine-locus concatenated housekeeping-gene phylogeny**, not a
+core-genome phylogeny.

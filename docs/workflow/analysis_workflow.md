@@ -13,12 +13,15 @@ The canonical 14- and 58-genome accession lists are consolidated into
 group counts and downloads public assemblies with NCBI Datasets into ignored
 local storage. Existing destinations cause a safe failure.
 
-## 2. Metadata curation — implemented, under review
+## 2. Metadata curation — implemented
 
-Public accession-linked fields are retained in
-`data/metadata/curated_metadata_72_genomes.csv`. Personal paths, workbook row
-numbers and the original Excel workbook are excluded. Field definitions and
-missing-value treatment are documented in the data dictionary.
+`data/metadata/sample_metadata_source_72.tsv` is the canonical public export of
+the two selected workbook sheets. The R script in `scripts/02_metadata_curation/`
+validates the 72 assembly–BioSample–strain mappings against the accession
+manifest and regenerates both `data/metadata/curated_metadata_72_genomes.csv`
+and manuscript Supplementary Table S1. Personal paths and the original Excel
+workbook are excluded. Field definitions and missing-value treatment are
+documented in the data dictionary.
 
 ## 3. Genome selection — implemented
 
@@ -35,9 +38,10 @@ unless the user deliberately opts in.
 
 ## 5. Prokka — implemented annotation run; bulk outputs local
 
-All 72 genomes were annotated with Prokka 1.15.6. Compact per-genome annotation
-statistics and run provenance are retained. Bulk GFF, FASTA, GenBank, SQN and
-log files remain in the ignored local archive and can be regenerated.
+All 72 genomes were annotated with Prokka 1.15.6. The portable runner writes
+bulk annotations to `data/processed/annotations`, which is also the default
+input of the phylogenomics runner. Compact per-genome annotation statistics and
+run provenance are retained; bulk outputs can be regenerated.
 
 ## 6. Panaroo — future
 
@@ -50,10 +54,10 @@ method is approved.
 No recombination-filtering tool has been selected. Whether to apply filtering,
 and with which tool and parameters, remains a scientific-method decision.
 
-## 8. IQ-TREE — preliminary work archived; nine-locus workflow implemented
+## 8. IQ-TREE — nine-locus workflow implemented
 
-Earlier IQ-TREE 2.0.7 results were based on a single `rpoB` gene and are
-archived. A replacement workflow now implements a defined nine-locus concatenated
+Earlier single-gene `rpoB` and failed/interrupted attempts were removed. The
+replacement workflow implements a defined nine-locus concatenated
 housekeeping-gene analysis. Candidate annotations must pass a manual review gate
 before sequence extraction, and IQ-TREE is not run automatically during initial
 inspection.

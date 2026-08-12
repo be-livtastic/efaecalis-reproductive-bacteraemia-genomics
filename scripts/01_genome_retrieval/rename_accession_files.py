@@ -1,8 +1,8 @@
-"""Rename downloaded NCBI files to stable accession-based names safely.
+"""Rename files inside an extracted NCBI dataset to accession-based names.
 
-Run this after retrieval and pass the dataset directory explicitly. The
-default is a dry run; --apply is required to move files. Existing destination
-files are never overwritten.
+Pass ``data/raw/ncbi_genomes`` (or one category below it). The default is a
+dry run; ``--apply`` is required to rename files. Existing files are never
+overwritten.
 """
 
 import argparse
@@ -11,7 +11,7 @@ import shutil
 import sys
 from pathlib import Path
 
-
+# --- Command-line interface ---
 parser = argparse.ArgumentParser()
 parser.add_argument("dataset_dir", type=Path)
 parser.add_argument(
@@ -20,34 +20,31 @@ parser.add_argument(
 args = parser.parse_args()
 dataset_dir = args.dataset_dir.resolve()
 
-folders = {
-    "02_genomes_fna": ".fna",
-    "03_proteins_faa": ".faa",
-    "04_gff": ".gff"
-}
+# --- Discover sequence and annotation files recursively ---
+if not dataset_dir.is_dir():
+    sys.exit(f"Dataset directory does not exist: {dataset_dir}")
+extensions = {".fna", ".faa", ".gff"}
+files = sorted(
+    path for path in dataset_dir.rglob("*")
+    if path.is_file() and path.suffix.lower() in extensions
+)
+if not files:
+    sys.exit(f"No .fna, .faa or .gff files found under: {dataset_dir}")
 
-for folder, new_ext in folders.items():
-    folder_path = dataset_dir / folder
-    if not folder_path.is_dir():
-        sys.exit(f"Required input directory does not exist: {folder_path}")
-    for file in sorted(folder_path.iterdir()):
-        if not file.is_file():
-            continue
-        name = file.name
-
-        match = re.search(r"(GC[AF]_\d+\.\d+)", name)
-        if match:
-            accession = match.group(1)
-            new_name = folder_path / f"{accession}{new_ext}"
-            if file != new_name:
-                if new_name.exists():
-                    sys.exit(
-                        f"Refusing to overwrite existing destination: {new_name}"
-                    )
-                if args.apply:
-                    shutil.move(str(file), str(new_name))
-                    print(f"Renamed {file.name} -> {new_name.name}")
-                else:
-                    print(f"Would rename {file.name} -> {new_name.name}")
-        else:
-            print(f"Could not find accession in: {file.name}")
+# --- Preview or apply collision-safe renames ---
+for file in files:
+    match = re.search(r"(GC[AF]_\d+\.\d+)", str(file))
+    if not match:
+        print(f"Could not find accession in path: {file}")
+        continue
+    accession = match.group(1)
+    destination = file.with_name(f"{accession}{file.suffix.lower()}")
+    if file == destination:
+        continue
+    if destination.exists():
+        sys.exit(f"Refusing to overwrite existing destination: {destination}")
+    if args.apply:
+        shutil.move(str(file), str(destination))
+        print(f"Renamed {file.relative_to(dataset_dir)} -> {destination.name}")
+    else:
+        print(f"Would rename {file.relative_to(dataset_dir)} -> {destination.name}")

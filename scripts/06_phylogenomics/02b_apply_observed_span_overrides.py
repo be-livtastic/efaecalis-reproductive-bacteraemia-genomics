@@ -8,6 +8,7 @@ from pathlib import Path
 from phylogeny_common import fasta_lengths, read_tsv, write_tsv
 
 
+# --- Apply only explicitly reviewed assembly-span exceptions ---
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--coordinates", type=Path, required=True)

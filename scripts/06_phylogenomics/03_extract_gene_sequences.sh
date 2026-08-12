@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 
+# --- Parse and validate command-line inputs ---
 usage() { echo "Usage: $0 --coordinates FILE --output-root DIR [--expected-samples N]"; }
 coordinates=""; output_root=""; expected_samples=72
 while (($#)); do
@@ -21,6 +22,7 @@ by_sample="$output_root/by_sample"
 by_gene="$output_root/by_gene"
 mkdir -p "$by_sample" "$by_gene"
 
+# --- Extract each reviewed interval in strand-aware orientation ---
 tail -n +2 "$coordinates" |
 while IFS=$'\t' read -r sample accession group gene matched_attribute matched_value feature_type contig start end strand phase locus_tag feature_id gene_name product expected rank reason qc gff fna source; do
   [[ "$qc" == "SELECTED" ]] || { echo "Unvalidated coordinate: $sample/$gene" >&2; exit 3; }
@@ -46,6 +48,7 @@ while IFS=$'\t' read -r sample accession group gene matched_attribute matched_va
   fi
 done
 
+# --- Confirm every locus contains the expected sample set ---
 for gene in gdh gyd pstS gki xpt yqiL pyrC groEL recA; do
   destination="$by_gene/${gene}_${expected_samples}_sequences.fasta"
   [[ ! -e "$destination" ]] || { echo "Refusing to overwrite $destination" >&2; exit 4; }

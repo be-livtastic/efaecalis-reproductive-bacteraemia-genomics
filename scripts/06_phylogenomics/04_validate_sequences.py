@@ -15,6 +15,7 @@ from phylogeny_common import read_fasta, read_tsv, write_tsv
 LOCI = ["gdh", "gyd", "pstS", "gki", "xpt", "yqiL", "pyrC", "groEL", "recA"]
 
 
+# --- Apply sequence and assembly-level QC thresholds ---
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--sequence-root", type=Path, required=True)

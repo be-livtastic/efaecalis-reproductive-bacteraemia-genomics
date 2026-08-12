@@ -9,6 +9,7 @@ from pathlib import Path
 from phylogeny_common import parse_attributes, read_tsv, write_tsv
 
 
+# --- Report flanking CDS context around every selected locus ---
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--coordinates", type=Path, required=True)

@@ -10,7 +10,7 @@ import sys
 import pandas as pd
 from pathlib import Path
 
-
+# --- Command-line interface ---
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("input_tsv", type=Path)
@@ -27,6 +27,7 @@ args = parse_args()
 input_file = args.input_tsv.resolve()
 output_file = args.output_csv.resolve()
 
+# --- Input and overwrite safeguards ---
 if not input_file.is_file():
     sys.exit(f"Input TSV does not exist: {input_file}")
 if output_file.exists() and not args.overwrite:
@@ -48,6 +49,7 @@ missing_columns = sorted(required_columns.difference(df.columns))
 if missing_columns:
     sys.exit("Missing required AMRFinderPlus columns: " + ", ".join(missing_columns))
 
+# --- Reusable unique-value formatter ---
 def collapse_unique(series):
     vals = sorted(set(
         str(x) for x in series.dropna()
@@ -57,6 +59,7 @@ def collapse_unique(series):
 
 summary_rows = []
 
+# --- Summarise resistance, virulence and stress hits per genome ---
 for genome, sub in df.groupby(name_col):
     amr_sub = sub[sub[type_col].astype(str).str.upper().str.contains("AMR", na=False)]
     vir_sub = sub[sub[type_col].astype(str).str.upper().str.contains("VIRULENCE", na=False)]
@@ -90,6 +93,7 @@ for genome, sub in df.groupby(name_col):
         "stress_genes": collapse_unique(stress_sub[gene_col])
     })
 
+# --- Write the compact per-genome table ---
 summary = pd.DataFrame(summary_rows)
 summary.to_csv(output_file, index=False)
 

@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
+# --- Parse alignment inputs and resource settings ---
 threads=2; input_root=""; output_root=""; expected_samples=72
 while (($#)); do
   case "$1" in
@@ -13,6 +14,7 @@ done
 [[ -n "$input_root" && -n "$output_root" ]] || { echo "--input-root and --output-root are required" >&2; exit 2; }
 command -v mafft >/dev/null || { echo "mafft is required" >&2; exit 127; }
 mkdir -p "$output_root"
+# --- Align each locus independently and verify taxon counts ---
 for gene in gdh gyd pstS gki xpt yqiL pyrC groEL recA; do
   source_fasta="$input_root/${gene}_${expected_samples}_sequences.fasta"
   destination="$output_root/${gene}.aligned.fasta"

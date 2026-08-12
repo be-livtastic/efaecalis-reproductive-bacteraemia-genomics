@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[2]
 EXPECTED = ["gdh", "gyd", "pstS", "gki", "xpt", "yqiL", "pyrC", "groEL", "recA"]
 
 
+# --- Extract declared locus order from a Python script ---
 def python_loci(path: Path) -> list[str] | None:
     tree = ast.parse(path.read_text(encoding="utf-8"), filename=str(path))
     for node in tree.body:
@@ -19,6 +20,7 @@ def python_loci(path: Path) -> list[str] | None:
     return None
 
 
+# --- Check that configuration, runners and plots use one policy ---
 def main() -> int:
     errors = []
     genes = read_tsv(ROOT / "config/phylogeny_9_loci_genes.tsv")
