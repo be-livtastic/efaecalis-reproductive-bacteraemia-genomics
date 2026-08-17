@@ -1,0 +1,11 @@
+component	version	scope	status
+NCBI Datasets CLI	18.31.0	historical AMR environment	recorded from completed analysis
+Python	3.14.6	historical AMR environment	recorded from completed analysis; not the current environment.yml target
+pandas	3.0.3	historical AMR environment	recorded from completed analysis; not the current environment.yml target
+R	4.5.2	historical Windows AMR session	recorded in amrfinder_r_session_info.txt; not the current environment.yml target
+AMRFinderPlus	4.2.7	completed AMRFinderPlus run	recorded from completed analysis
+AMRFinderPlus database	2026-05-15.1	completed AMRFinderPlus run	recorded from completed analysis
+Prokka	1.15.6	completed annotation run	recorded from completed analysis
+IQ-TREE	2.0.7	archived preliminary rpoB work	historical only; not the current environment.yml target
+Panaroo	not yet run	future core-genome stage	no recorded run version
+Recombination filtering tool	not selected	future optional stage	no recorded run version

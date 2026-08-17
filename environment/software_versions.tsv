@@ -1,11 +1,36 @@
-component	version	status
-NCBI Datasets CLI	18.31.0	available in recorded AMR environment
-Python	3.14.6	available in recorded AMR environment
-pandas	3.0.3	available in recorded AMR environment
-R	4.5.2	recorded from AMR analysis session
-AMRFinderPlus	4.2.7	recorded from completed run
-AMRFinderPlus database	2026-05-15.1	recorded from completed run
-Prokka	1.15.6	recorded from completed annotation run
-Panaroo	not yet run	future core-genome stage
-Recombination filtering tool	not selected	future optional stage
-IQ-TREE	2.0.7	recorded only for archived preliminary rpoB work; final stage not yet run
+component	package	version	status
+Python	python	3.12.13	pinned in environment.yml; installed; Mamba dry-run validated
+pip	pip	26.1.2	pinned in environment.yml; installed; Mamba dry-run validated
+Biopython	biopython	1.87	pinned in environment.yml; installed; Mamba dry-run validated
+NumPy	numpy	2.5.1	pinned in environment.yml; installed; Mamba dry-run validated
+openpyxl	openpyxl	3.1.5	pinned in environment.yml; installed; Mamba dry-run validated
+pandas	pandas	3.0.5	pinned in environment.yml; installed; Mamba dry-run validated
+SciPy	scipy	1.18.0	pinned in environment.yml; installed; Mamba dry-run validated
+NCBI BLAST+	blast	2.17.0	pinned in environment.yml; installed; Mamba dry-run validated
+IQ-TREE	iqtree	3.1.2	pinned in environment.yml; installed; Mamba dry-run validated
+MAFFT	mafft	7.526	pinned in environment.yml; installed; Mamba dry-run validated
+Mamba	mamba	2.8.1	pinned in environment.yml; installed; Mamba dry-run validated
+NCBI Datasets CLI	ncbi-datasets-cli	18.31.0	pinned in environment.yml; installed; Mamba dry-run validated
+AMRFinderPlus	ncbi-amrfinderplus	4.2.7	pinned in environment.yml; installed; Mamba dry-run validated
+Prokka	prokka	1.15.6	pinned in environment.yml; installed; Mamba dry-run validated
+Samtools	samtools	0.1.19	pinned in environment.yml; installed; legacy version required by Prokka 1.15.6 perl-bio-samtools dependency
+SeqKit	seqkit	2.13.0	pinned in environment.yml; installed; Mamba dry-run validated
+R	r-base	4.5.3	pinned in environment.yml; installed; Mamba dry-run validated
+ape	r-ape	5.8_1	pinned in environment.yml; installed; Mamba dry-run validated
+devtools	r-devtools	2.5.2	pinned in environment.yml; installed; Mamba dry-run validated
+dplyr	r-dplyr	1.2.1	pinned in environment.yml; installed; Mamba dry-run validated
+forcats	r-forcats	1.0.1	pinned in environment.yml; installed; Mamba dry-run validated
+fs	r-fs	2.1.0	pinned in environment.yml; installed; Mamba dry-run validated
+ggplot2	r-ggplot2	4.0.3	pinned in environment.yml; installed; Mamba dry-run validated
+janitor	r-janitor	2.2.1	pinned in environment.yml; installed; Mamba dry-run validated
+phangorn	r-phangorn	2.12.1	pinned in environment.yml; installed; Mamba dry-run validated
+purrr	r-purrr	1.2.2	pinned in environment.yml; installed; Mamba dry-run validated
+readr	r-readr	2.2.0	pinned in environment.yml; installed; Mamba dry-run validated
+scales	r-scales	1.4.0	pinned in environment.yml; installed; Mamba dry-run validated
+stringr	r-stringr	1.6.0	pinned in environment.yml; installed; Mamba dry-run validated
+tibble	r-tibble	3.3.1	pinned in environment.yml; installed; Mamba dry-run validated
+tidyr	r-tidyr	1.3.2	pinned in environment.yml; installed; Mamba dry-run validated
+tidyverse	r-tidyverse	2.0.0	pinned in environment.yml; installed; Mamba dry-run validated
+ggtree	bioconductor-ggtree	4.0.4	pinned in environment.yml; installed; Mamba dry-run validated
+treeio	bioconductor-treeio	1.34.0	pinned in environment.yml; installed; Mamba dry-run validated
+gffutils	gffutils	0.14	pinned under pip in environment.yml; installed; Mamba dry-run validated

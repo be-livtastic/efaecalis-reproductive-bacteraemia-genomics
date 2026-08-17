@@ -1,0 +1,9 @@
+Broad_drug_class,genes_detected_in_class,reproductive_genomes_with_any_gene_in_class,bacteraemia_genomes_with_any_gene_in_class,combined_genomes_with_any_gene_in_class,reproductive_percent_with_any_gene_in_class,bacteraemia_percent_with_any_gene_in_class,combined_percent_with_any_gene_in_class
+aminoglycoside,aac(6')-Ie/aph(2'')-Ia; aadD1; ant(6)-Ia; aph(3')-IIIa; spw; str,9,28,37,64.29,48.28,51.39
+tetracycline,rpsJ_RATHK53Q; tet(L); tet(M); tet(S),12,44,56,85.71,75.86,77.78
+macrolide,erm(B),11,35,46,78.57,60.34,63.89
+lincosamide,erm(B); lnu(B); lsa(A); lsa(E),13,58,71,92.86,100,98.61
+streptogramin,erm(B); lsa(A); lsa(E),13,58,71,92.86,100,98.61
+glycopeptide,vanA; vanB; vanH-A; vanH-B; vanR-A; vanR-B; vanS-A; vanS-B; vanW-B; vanX-A; vanX-B; vanY-A; vanY-B; vanZ-A,0,10,10,0,17.24,13.89
+other,catA; dfrF; dfrG; fexA; gyrA_S83I; gyrA_S83R; gyrA_S83Y; optrA; parC_S80I; sat4,8,34,42,57.14,58.62,58.33
+other/unclassified,,0,0,0,0,0,0

@@ -1,0 +1,3 @@
+Analysis,Interpretation,Statistic,Observed_T,Null_mean,Null_SD,Standardized_effect,Empirical_one_sided_p,Assigned_genomes,Assigned_proxy_positive,Permutations,Seed,Extreme_tail
+Formal PubMLST ST concentration,Exploratory population-structure test; not a clinical association test,"sum_s choose(k_s, 2)",93,38.22492,8.501698288126779,6.442839788433479,9.99990000099999e-6,69,28,100000,20260816,T_perm >= T_obs
+Complete seven-locus dataset-profile sensitivity,Exploratory population-structure test; not a clinical association test,"sum_s choose(k_s, 2)",93,37.67097,8.720734474297318,6.344537855506511,9.99990000099999e-6,72,29,100000,20260816,T_perm >= T_obs

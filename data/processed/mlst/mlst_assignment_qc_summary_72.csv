@@ -1,0 +1,11 @@
+Metric,Value
+genomes,72
+reproductive_genomes,14
+bacteraemia_genomes,58
+genome_locus_records,504
+formal_st_assigned,69
+formal_st_unassigned,3
+complete_dataset_profiles,72
+pubmlst_curator_grouping_column,clonal_complex
+locus_status_Exact_known_allele,501
+locus_status_Novel_allele_candidate,3

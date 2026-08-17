@@ -1,0 +1,9 @@
+Resource	File	Endpoint	Records	Retrieved_UTC	SHA256
+gdh	gdh.alleles.fasta	https://rest.pubmlst.org/db/pubmlst_efaecalis_seqdef/loci/gdh/alleles_fasta	146	2026-08-16 17:48:05 UTC	bf085b5ad6808b179afe52adf6826d054a4c865c3f7c9b754391dae8c3cacae3
+gyd	gyd.alleles.fasta	https://rest.pubmlst.org/db/pubmlst_efaecalis_seqdef/loci/gyd/alleles_fasta	61	2026-08-16 17:48:05 UTC	67554865361420d538968168e91913f3ff293eb96817432127a00cf0e0a0f786
+pstS	pstS.alleles.fasta	https://rest.pubmlst.org/db/pubmlst_efaecalis_seqdef/loci/pstS/alleles_fasta	137	2026-08-16 17:48:05 UTC	1ac4ec5142277d6fa9e8fa0c78e56db10a806d11cf9283484998f46c83f340b0
+gki	gki.alleles.fasta	https://rest.pubmlst.org/db/pubmlst_efaecalis_seqdef/loci/gki/alleles_fasta	133	2026-08-16 17:48:05 UTC	4bd9ddb58c3f8b7ece693d7db943240deb0a74dce5a8ffd816ea2def92d5c29b
+aroE	aroE.alleles.fasta	https://rest.pubmlst.org/db/pubmlst_efaecalis_seqdef/loci/aroE/alleles_fasta	144	2026-08-16 17:48:05 UTC	9ffe1916b8dffcf4d5a86e84bb1eab97afddeab9c12fe4b57e017cb5b6a0d09d
+xpt	xpt.alleles.fasta	https://rest.pubmlst.org/db/pubmlst_efaecalis_seqdef/loci/xpt/alleles_fasta	128	2026-08-16 17:48:05 UTC	e7292e0b67580631aa4cc34fa1968f20fb055d7da1ef0a9b2af3b5a3d7bcf0ab
+yqiL	yqiL.alleles.fasta	https://rest.pubmlst.org/db/pubmlst_efaecalis_seqdef/loci/yqiL/alleles_fasta	142	2026-08-16 17:48:05 UTC	ef2b42820e7bbc34bfadadc51d354e0ff4fc071068e1fd4de49489ebb6abd806
+profiles	profiles.tsv	https://rest.pubmlst.org/db/pubmlst_efaecalis_seqdef/schemes/1/profiles_csv	1968	2026-08-16 17:48:05 UTC	d7553fc5d6f3ec9ce4777e699cdd4a66134e02f9924de6a72d8ac964d645c6ab

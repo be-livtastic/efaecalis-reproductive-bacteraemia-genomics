@@ -1,0 +1,5 @@
+Gene_symbol	Decision	Evidence_source	Rationale
+aac(6')-Ie/aph(2'')-Ia	primary_proxy	https://doi.org/10.1128/AAC.47.12.3950-3953.2003	Pre-approved genomic proxy strongly associated with high-level gentamicin resistance; genomic detection is not a phenotype.
+aph(2'')-Ib	review_required	https://pmc.ncbi.nlm.nih.gov/articles/PMC152526/	Published gentamicin-resistance determinant requiring project-specific review before proxy expansion.
+aph(2'')-Ic	review_required	https://pmc.ncbi.nlm.nih.gov/articles/PMC152526/	Published gentamicin-resistance determinant requiring project-specific review before proxy expansion.
+aph(2'')-Id	review_required	https://pmc.ncbi.nlm.nih.gov/articles/PMC105784/	Published high-level gentamicin-resistance determinant requiring project-specific review before proxy expansion.

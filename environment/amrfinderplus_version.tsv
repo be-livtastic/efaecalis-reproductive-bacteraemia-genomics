@@ -1,4 +1,3 @@
 component	version	status
-AMRFinderPlus	4.2.7	recorded from completed run
-AMRFinderPlus database	2026-05-15.1	recorded from completed run
-
+AMRFinderPlus	4.2.7	recorded from completed run; matches current environment.yml package pin
+AMRFinderPlus database	2026-05-15.1	recorded from completed run; database resource version, not a Conda package pin

@@ -1,0 +1,4 @@
+list(scheme = "Enterococcus faecalis seven-locus MLST", locus_order = c("gdh", 
+"gyd", "pstS", "gki", "aroE", "xpt", "yqiL"), profile_columns = c("ST", 
+"gdh", "gyd", "pstS", "gki", "aroE", "xpt", "yqiL", "clonal_complex"
+), curator_grouping_columns = "clonal_complex")

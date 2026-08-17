@@ -2,35 +2,49 @@ name: efaecalis_phylogeny
 channels:
   - conda-forge
   - bioconda
+  - nodefaults
 dependencies:
-  - python=3.12
-  - mamba
-  - samtools
-  - mafft
-  - iqtree
-  - seqkit
-  - biopython
-  - pandas
-  - numpy
-  - scipy
-  - openpyxl
+  # Pin the Python runtime and every directly imported Python package.
+  - python=3.12.13
+  - pip=26.1.2
+  - biopython=1.87
+  - numpy=2.5.1
+  - openpyxl=3.1.5
+  - pandas=3.0.5
+  - scipy=1.18.0
+
+  # Pin command-line bioinformatics tools invoked by the project scripts.
+  - blast=2.17.0
+  - iqtree=3.1.2
+  - mafft=7.526
+  - mamba=2.8.1
   - ncbi-datasets-cli=18.31.0
   - ncbi-amrfinderplus=4.2.7
   - prokka=1.15.6
-  - r-base
-  - r-ape
-  - r-tidyverse
-  - r-ggplot2
-  - r-dplyr
-  - r-readr
-  - r-tidyr
-  - bioconductor-treeio
-  - bioconductor-ggtree
-  - r-phangorn
-  - r-devtools
-  - r-janitor
-  - r-fs
-  - r-scales
-  - pip
+  # Prokka 1.15.6 currently constrains this environment to its legacy perl-bio-samtools dependency.
+  - samtools=0.1.19
+  - seqkit=2.13.0
+
+  # Pin R and every package loaded or namespace-qualified by an R script.
+  - r-base=4.5.3
+  - r-ape=5.8_1
+  - r-devtools=2.5.2
+  - r-dplyr=1.2.1
+  - r-forcats=1.0.1
+  - r-fs=2.1.0
+  - r-ggplot2=4.0.3
+  - r-janitor=2.2.1
+  - r-phangorn=2.12.1
+  - r-purrr=1.2.2
+  - r-readr=2.2.0
+  - r-scales=1.4.0
+  - r-stringr=1.6.0
+  - r-tibble=3.3.1
+  - r-tidyr=1.3.2
+  - r-tidyverse=2.0.0
+  - bioconductor-ggtree=4.0.4
+  - bioconductor-treeio=1.34.0
+
+  # Pin the only pip-installed project dependency.
   - pip:
-      - gffutils
+      - gffutils==0.14

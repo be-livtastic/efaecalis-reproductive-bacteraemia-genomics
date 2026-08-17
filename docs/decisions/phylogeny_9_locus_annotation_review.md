@@ -194,12 +194,3 @@ sensitivity inference excluding `GCA_029011395.1` gave normalized
 Robinson-Foulds distance 0.352941 after matching the 71 shared tips, so topology
 sensitivity is explicitly retained as a limitation.
 
-## Superseded stop condition (historical only)
-
-This paragraph records the earlier gate and is not active. That gate was
-resolved by the explicit observed-disruption policy above: all 72 genomes and
-nine loci were retained, the two exact FNA spans were reviewed, sequence and
-alignment QC passed, and primary plus sensitivity inference completed.
-
-The intended terminology is **nine-locus concatenated housekeeping-gene
-phylogeny**, not core-genome phylogeny or standard MLST phylogeny.

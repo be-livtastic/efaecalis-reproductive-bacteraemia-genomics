@@ -1,0 +1,2 @@
+Analysis,Statistic,Observed_correlation,Null_mean,Null_SD,Empirical_two_sided_p,Permutations,Seed
+Exploratory AMR Jaccard versus unrooted nine-locus patristic distance,Spearman rank correlation implemented as Pearson correlation of ranked distances,0.25772051011039043,-3.6164615041192947e-4,0.04839698314564774,1e-4,9999,20260816

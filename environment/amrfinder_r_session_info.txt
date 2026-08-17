@@ -1,3 +1,5 @@
+# HISTORICAL RUN PROVENANCE: completed Windows AMR analysis session.
+# This is not the current environment.yml specification; see README.md and software_versions.tsv.
 R version 4.5.2 (2025-10-31 ucrt)
 Platform: x86_64-w64-mingw32/x64
 Running under: Windows 11 x64 (build 26200)

@@ -1,0 +1,13 @@
+Metric,Value
+genomes,72
+reproductive_genomes,14
+bacteraemia_genomes,58
+formal_st_assigned,69
+formal_st_unassigned,3
+complete_dataset_profiles,72
+proxy_positive_total,29
+proxy_positive_reproductive,5
+proxy_positive_bacteraemia,24
+tree_tips_matched,72
+amr_genes,38
+raw_amrfinder_rows_reinterpreted,0

@@ -1,0 +1,6 @@
+Method,n_records,min_coverage,max_coverage,min_identity,max_identity,functional_status,notes
+EXACTX,362,100,100,100,100,accepted_when_Type_is_AMR,Complete exact protein match
+BLASTX,121,97.21,100,97.21,100,accepted_when_Type_is_AMR,High-coverage translated sequence match in current data
+POINTX,46,100,100,99.4,100,accepted_when_Type_is_AMR,Reviewed point-mutation detection with complete current-data coverage
+PARTIALX,34,52.61,87.75,98.68,100,excluded_from_functional_presence,Partial hit retained in flagged audit output
+INTERNAL_STOP,4,60.72,100,95.83,99.59,excluded_from_functional_presence,Interrupted coding sequence retained in flagged audit output

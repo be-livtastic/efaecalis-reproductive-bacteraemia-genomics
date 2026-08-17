@@ -1,0 +1,3 @@
+Null_model,Hypothesis,Observed_mean_pairwise_distance,Null_mean,Null_SD,Standardized_effect,Empirical_one_sided_p,Proxy_positive_genomes,Permutations,Seed,Extreme_tail
+Unrestricted,Proxy-positive genomes have smaller mean pairwise patristic distance than random,0.0074435845408867,0.010278594864061113,6.742307150657245e-4,-4.204807434348425,2.999970000299997e-5,29,100000,20260816,D_perm <= D_obs
+Source-stratified (preserves 5/14 and 24/58),Proxy-positive genomes have smaller mean pairwise patristic distance than random,0.0074435845408867,0.01022250950685832,6.587915960366796e-4,-4.218215567244271,3.999960000399996e-5,29,100000,20260816,D_perm <= D_obs

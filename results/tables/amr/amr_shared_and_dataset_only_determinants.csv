@@ -1,0 +1,39 @@
+Gene,Classification,Reproductive_count,Bacteraemia_count,Total_count
+lsa(A),Shared,12,58,70
+tet(M),Shared,11,44,55
+erm(B),Shared,11,35,46
+aac(6')-Ie/aph(2'')-Ia,Shared,5,24,29
+aph(3')-IIIa,Shared,6,17,23
+parC_S80I,Shared,2,21,23
+sat4,Shared,5,17,22
+ant(6)-Ia,Shared,3,15,18
+gyrA_S83I,Shared,1,17,18
+dfrF,detected only in the bacteraemia-associated dataset (n=58),0,15,15
+dfrG,Shared,2,9,11
+vanA,detected only in the bacteraemia-associated dataset (n=58),0,8,8
+vanH-A,detected only in the bacteraemia-associated dataset (n=58),0,8,8
+vanS-A,detected only in the bacteraemia-associated dataset (n=58),0,8,8
+vanX-A,detected only in the bacteraemia-associated dataset (n=58),0,8,8
+vanY-A,detected only in the bacteraemia-associated dataset (n=58),0,8,8
+vanZ-A,detected only in the bacteraemia-associated dataset (n=58),0,8,8
+catA,Shared,3,4,7
+vanR-A,detected only in the bacteraemia-associated dataset (n=58),0,7,7
+aadD1,detected only in the bacteraemia-associated dataset (n=58),0,6,6
+tet(L),Shared,2,4,6
+lnu(B),Shared,1,2,3
+lsa(E),Shared,1,2,3
+spw,Shared,1,2,3
+gyrA_S83Y,Shared,1,1,2
+rpsJ_RATHK53Q,detected only in the bacteraemia-associated dataset (n=58),0,2,2
+str,detected only in the reproductive-associated dataset (n=14),2,0,2
+vanB,detected only in the bacteraemia-associated dataset (n=58),0,2,2
+vanH-B,detected only in the bacteraemia-associated dataset (n=58),0,2,2
+vanR-B,detected only in the bacteraemia-associated dataset (n=58),0,2,2
+vanS-B,detected only in the bacteraemia-associated dataset (n=58),0,2,2
+vanW-B,detected only in the bacteraemia-associated dataset (n=58),0,2,2
+vanX-B,detected only in the bacteraemia-associated dataset (n=58),0,2,2
+vanY-B,detected only in the bacteraemia-associated dataset (n=58),0,2,2
+fexA,detected only in the reproductive-associated dataset (n=14),1,0,1
+gyrA_S83R,detected only in the bacteraemia-associated dataset (n=58),0,1,1
+optrA,detected only in the reproductive-associated dataset (n=14),1,0,1
+tet(S),detected only in the reproductive-associated dataset (n=14),1,0,1

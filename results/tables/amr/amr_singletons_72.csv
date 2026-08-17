@@ -1,0 +1,5 @@
+Gene,Genome,Source,Method,Class,Subclass,Contig_ID,statistical_test_status
+fexA,GCF_906464925.1,Reproductive,BLASTX,PHENICOL,CHLORAMPHENICOL/FLORFENICOL,NZ_OD940435.1,insufficient occurrences for gene-level statistical testing
+gyrA_S83R,GCA_050485635.1,Bacteraemia,POINTX,QUINOLONE,QUINOLONE,CP174856.1,insufficient occurrences for gene-level statistical testing
+optrA,GCF_906464925.1,Reproductive,BLASTX,OXAZOLIDINONE/PHENICOL,FLORFENICOL/OXAZOLIDINONE,NZ_OD940435.1,insufficient occurrences for gene-level statistical testing
+tet(S),GCA_029011535.1,Reproductive,EXACTX,TETRACYCLINE,TETRACYCLINE,CP118072.1,insufficient occurrences for gene-level statistical testing

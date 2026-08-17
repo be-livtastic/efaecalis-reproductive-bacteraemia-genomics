@@ -1,9 +1,5 @@
 # ================================================================
 # AMRFinderPlus analysis for E. faecalis dissertation datasets
-# Datasets:
-#   1) 14 reproductive tract genomes
-#   2) 58 bacteraemia genomes
-#   3) Combined 72-genome dataset
 #
 # Outputs:
 #   - Copies of raw TSV files
@@ -13,12 +9,6 @@
 #   - Low-coverage hit tables (<80% reference coverage)
 #   - Per-genome AMR summaries
 #   - Gene-count, drug-class, dataset-comparison, and selected-category plots
-#
-# PORTABILITY:
-#   Run with Rscript from any directory. The project root is derived from this
-#   script's location, or may be overridden with EFAECALIS_PROJECT_ROOT.
-#   Input directory names are case-sensitive on Linux/WSL.
-#   Set EFAECALIS_ALLOW_OVERWRITE=true only after reviewing existing outputs.
 # ================================================================
 
 # ------------------------------

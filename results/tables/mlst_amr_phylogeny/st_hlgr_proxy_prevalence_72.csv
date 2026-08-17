@@ -1,0 +1,21 @@
+ST,Genomes,Source_composition,Study_composition,Proxy_positive,Proxy_negative,Within_ST_proxy_prevalence_percent,Percent_of_formally_assigned_carriers
+6,13,Bacteraemia=13,PRJNA1185791=13,13,0,100,46.43
+179,12,Bacteraemia=8; Reproductive=4,PRJNA1185791=8; PRJNA1209846=4,5,7,41.67,17.86
+16,7,Bacteraemia=6; Reproductive=1,PRJNA1185791=6; PRJNA1209846=1,3,4,42.86,10.71
+480,3,Bacteraemia=2; Reproductive=1,PRJNA1185791=2; PRJNA1209846=1,2,1,66.67,7.14
+778,2,Bacteraemia=2,PRJNA1185791=2,2,0,100,7.14
+28,1,Bacteraemia=1,PRJNA1185791=1,1,0,100,3.57
+211,1,Reproductive=1,PRJNA1209846=1,1,0,100,3.57
+1112,1,Bacteraemia=1,PRJNA1185791=1,1,0,100,3.57
+40,11,Bacteraemia=10; Reproductive=1,PRJNA1185791=10; PRJNA1209846=1,0,11,0,0
+19,5,Bacteraemia=4; Reproductive=1,PRJNA1185791=4; PRJNA934404=1,0,5,0,0
+21,2,Bacteraemia=2,PRJNA1185791=2,0,2,0,0
+44,2,Reproductive=2,PRJNA934404=2,0,2,0,0
+220,2,Bacteraemia=2,PRJNA1185791=2,0,2,0,0
+30,1,Reproductive=1,PRJNA316969=1,0,1,0,0
+32,1,Bacteraemia=1,PRJNA1185791=1,0,1,0,0
+53,1,Bacteraemia=1,PRJNA1185791=1,0,1,0,0
+165,1,Reproductive=1,PRJNA934404=1,0,1,0,0
+202,1,Bacteraemia=1,PRJNA1185791=1,0,1,0,0
+894,1,Reproductive=1,PRJEB36950=1,0,1,0,0
+1271,1,Bacteraemia=1,PRJNA1185791=1,0,1,0,0
