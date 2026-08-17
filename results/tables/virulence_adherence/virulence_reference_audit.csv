@@ -1,0 +1,13 @@
+Project_target,Mapping_status,Reference_count
+ace,approved_primary,1
+aggregation_substance_context,review_required_context,3
+asa1_or_validated_equivalent,approved_primary,1
+cylA,approved_primary,1
+cytolysin_operon_context,context_only,7
+ebpA,approved_primary,1
+ebpB,approved_primary,1
+ebpC,approved_primary,1
+efaA,approved_primary,1
+esp,approved_primary,1
+gelE,approved_primary,1
+sprE,approved_primary,1

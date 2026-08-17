@@ -42,7 +42,6 @@ in `data/accession_lists/selected_72_accessions.tsv`.
 - `scripts/`: ordered retrieval, analysis and visualisation scripts.
 - `results/`: selected compact tables and figures.
 - `docs/`: workflow, decisions and troubleshooting documentation.
-- `manuscript/supplementary/`: manuscript-ready supplementary tables.
 - `local_archive/`: ignored local-only raw inputs, legacy material and large outputs.
 
 `data/raw/`, `data/interim/`, bulk annotations and current phylogeny work are
@@ -52,11 +51,16 @@ those local inputs are not committed to Git.
 
 ## Analysis workflow
 
-The intended workflow is:
+The implemented workflow is:
 
 NCBI retrieval → metadata curation → genome selection → AMRFinderPlus → Prokka
-→ Multilocus phylogeny → IQ-TREE → statistical and comparative analysis
-→ R visualisation.
+→ nine-locus phylogeny → formal MLST/HLGR-proxy integration → targeted
+virulence/adherence analysis → statistical comparison and R visualisation.
+
+A parallel Panaroo core-genome workflow has completed Panaroo and exact
+72-genome QC. It is currently held at alignment QC because
+`GCA_029011745.1` has 91.90% non-missing sequence, below the prespecified 95%
+minimum; no core-genome IQ-TREE run has been started.
 
 
 ## Software
@@ -66,8 +70,19 @@ The canonical reproducible environment is pinned in
 `environment/software_versions.tsv`. Historical run versions are kept
 separately in `environment/recorded_analysis_versions.tsv` and the recorded
 session files; AMRFinderPlus database provenance is in
-`environment/amrfinderplus_version.tsv`. See `environment/README.md` for the
-distinction between the current environment and immutable run provenance.
+`environment/amrfinderplus_version.tsv`. The isolated Panaroo environment is
+defined in `environment/core_genome.yml`, with its solver decision and exact
+versions recorded in adjacent environment files.
+
+Two independent staged extensions are documented in
+`scripts/07_core_genome/README_core_genome.md` and
+`scripts/07_virulence_adherence/README_virulence_adherence.md`. The core
+pipeline complements rather than replaces the validated nine-locus tree. The
+targeted virulence pipeline reports unresolved and ambiguous calls alongside
+accepted-detection prevalence so they cannot be mistaken for ordinary absence.
+Its approved aggregation-substance decision is recorded in
+`docs/decisions/virulence_aggregation_substance_classification.md`: the broad
+family call is primary and the narrow `asa1_specific` call is secondary.
 
 ## Reproduction
 
@@ -77,13 +92,14 @@ distinction between the current environment and immutable run provenance.
 3. Create local writable directories with `Rscript scripts/00_setup/setup_project.R`.
 4. Retrieve assemblies with
    `bash scripts/01_genome_retrieval/download_ncbi_genomes.sh`
-5. Generate and validate metadata/Supplementary Table S1 with
+5. Generate and validate the canonical metadata table with
    `Rscript scripts/02_metadata_curation/create_supplementary_sample_table.R --overwrite`.
 6. On a fresh workspace, run the comparative AMR analysis with
    `Rscript scripts/03_amr_analysis/amrfinder_comparative_analysis_72_genomes.R`;
    existing outputs require deliberate review before using `--overwrite`.
 7. Annotate genomes with `bash scripts/04_annotation/run_prokka.sh`.
-8. Run the remaining scripts from their documented stage in numerical order.
+8. Run the remaining scripts from their documented stage in numerical order,
+   observing every manual QC checkpoint in `docs/workflow/analysis_workflow.md`.
 9. Review input and output paths in `config/paths.example.yml`.
 
 Scripts refuse to replace existing outputs by default. Personal absolute paths

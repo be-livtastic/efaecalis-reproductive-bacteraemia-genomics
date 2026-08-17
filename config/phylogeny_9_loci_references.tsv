@@ -1,7 +1,0 @@
-canonical_gene	reference_type	forward_sequence	reverse_sequence	source	retrieved	version	checksum_status	notes
-gdh	MLST_primer	GGCGCACTAAAAGATATGGT	CGTTGACACCATGTAAACAA	Ruiz-Garbajosa et al. 2006; PubMLST E. faecalis scheme	2026-07-28	scheme accessed 2026-07-28	source-pinned	Primer evidence ranks a complete CDS but does not define the extracted span.
-gyd	MLST_primer	CAAACTGCTTAGCTCCAATG	CATTTCGTTGTCATACCAAG	Ruiz-Garbajosa et al. 2006; PubMLST E. faecalis scheme	2026-07-28	scheme accessed 2026-07-28	source-pinned	Primer evidence ranks a complete CDS but does not define the extracted span.
-pstS	MLST_primer	CGGAACAGGACTTTCGC	ATTTACATCACGTTCTACTTGC	Ruiz-Garbajosa et al. 2006; PubMLST E. faecalis scheme	2026-07-28	scheme accessed 2026-07-28	source-pinned	Primer evidence ranks a complete CDS but does not define the extracted span.
-gki	MLST_primer	GATTTTGTGGGAATTGGTATGG	ACCATTAAAGCAAAATGATCGC	Ruiz-Garbajosa et al. 2006; PubMLST E. faecalis scheme	2026-07-28	scheme accessed 2026-07-28	source-pinned	Primer evidence ranks a complete CDS but does not define the extracted span.
-xpt	MLST_primer	AAAATGATGGCCGTGTATTAGG	AACGTCACCGTTCCTTCACTTA	Ruiz-Garbajosa et al. 2006; PubMLST E. faecalis scheme	2026-07-28	scheme accessed 2026-07-28	source-pinned	Primer evidence ranks a complete CDS but does not define the extracted span.
-yqiL	MLST_primer	CAGCTTAAGTCAAGTAAGTGCC	GAATATCCCTTCTGCTTGTGCT	Ruiz-Garbajosa et al. 2006; PubMLST E. faecalis scheme	2026-07-28	scheme accessed 2026-07-28	source-pinned	Primer evidence ranks a complete CDS but does not define the extracted span.

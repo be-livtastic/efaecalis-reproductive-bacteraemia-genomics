@@ -1,0 +1,721 @@
+Genome,Source,Target_gene,Detection_status,Status_reason,Database_gene_symbol,Reference_accession,Contig_ID,Start,Stop,Strand,Identity,Coverage,Candidate_locus_count
+GCA_029011255.1,Reproductive,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP118048.1,863332,865074,+,94.04790825386385,100.0,1
+GCA_029011255.1,Reproductive,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP118048.1,1696626,1697552,+,99.569,100.0,1
+GCA_029011255.1,Reproductive,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP118048.1,852136,855600,+,99.076,100.0,1
+GCA_029011255.1,Reproductive,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP118048.1,855604,857034,+,99.02200000000002,100.0,1
+GCA_029011255.1,Reproductive,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP118048.1,857031,858914,+,98.779,100.0,1
+GCA_029011255.1,Reproductive,asa1_or_validated_equivalent,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_029011255.1,Reproductive,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP118048.1,1539882,1541414,-,98.89100000000002,100.0,1
+GCA_029011255.1,Reproductive,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP118048.1,1538979,1539833,-,98.48,100.0,1
+GCA_029011255.1,Reproductive,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_029011255.1,Reproductive,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_029011395.1,Reproductive,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP118057.1,2077341,2079224,-,94.44903830141548,100.0,1
+GCA_029011395.1,Reproductive,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP118057.1,1171206,1172132,-,99.569,100.0,2
+GCA_029011395.1,Reproductive,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP118057.1,2086767,2090231,-,99.423,100.0,1
+GCA_029011395.1,Reproductive,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP118057.1,2085333,2086763,-,99.72,100.0,1
+GCA_029011395.1,Reproductive,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP118057.1,2083453,2085336,-,99.045,100.0,1
+GCA_029011395.1,Reproductive,asa1_or_validated_equivalent,ambiguous_multiple_hit,Multiple distinct accepted loci require review,asa1,WP_010785625,CP118057.1,1327859,1331750,+,96.557,100.0,2
+GCA_029011395.1,Reproductive,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP118057.1,1425222,1426754,+,98.82600000000001,100.0,1
+GCA_029011395.1,Reproductive,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP118057.1,1426803,1427657,+,98.363,100.0,1
+GCA_029011395.1,Reproductive,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_029011395.1,Reproductive,cylA,ambiguous_multiple_hit,Multiple distinct accepted loci require review,cylA,AAM75253,CP118057.1,1386676,1387914,+,99.516,100.0,2
+GCA_029011535.1,Reproductive,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP118072.1,2009292,2011175,-,94.59083093231857,100.0,1
+GCA_029011535.1,Reproductive,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP118072.1,1140007,1140933,-,99.569,100.0,2
+GCA_029011535.1,Reproductive,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP118072.1,2018518,2021982,-,99.913,100.0,1
+GCA_029011535.1,Reproductive,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP118072.1,2017084,2018514,-,99.161,100.0,1
+GCA_029011535.1,Reproductive,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP118072.1,2015204,2017087,-,98.992,100.0,1
+GCA_029011535.1,Reproductive,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP118073.1,9856,13772,+,95.41944170403586,80.13364173734259,2
+GCA_029011535.1,Reproductive,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP118072.1,1296181,1297713,+,98.956,100.0,1
+GCA_029011535.1,Reproductive,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP118072.1,1297762,1298616,+,98.48,100.0,1
+GCA_029011535.1,Reproductive,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_029011535.1,Reproductive,cylA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,cylA,AAM75253,CP118074.1,24159,25397,+,99.435,100.0,1
+GCA_029011745.1,Reproductive,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP118085.1,2023771,2025654,-,94.44903830141548,100.0,1
+GCA_029011745.1,Reproductive,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP118085.1,1052053,1052979,-,99.569,100.0,2
+GCA_029011745.1,Reproductive,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP118085.1,2033194,2036657,-,99.423,100.0,1
+GCA_029011745.1,Reproductive,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP118085.1,2031761,2033190,-,99.65100000000001,100.0,1
+GCA_029011745.1,Reproductive,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP118085.1,2029881,2031764,-,99.045,100.0,1
+GCA_029011745.1,Reproductive,asa1_or_validated_equivalent,ambiguous_multiple_hit,Multiple distinct accepted loci require review,asa1,WP_010785625,CP118085.1,1213182,1217073,+,96.557,100.0,2
+GCA_029011745.1,Reproductive,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP118085.1,1371894,1373426,+,98.82600000000001,100.0,1
+GCA_029011745.1,Reproductive,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP118085.1,1373475,1374329,+,98.246,100.0,1
+GCA_029011745.1,Reproductive,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_029011745.1,Reproductive,cylA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,cylA,AAM75253,CP118085.1,1321805,1323043,+,98.789,100.0,1
+GCA_050469755.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175101.1,52017,54041,+,94.79255579553636,100.0,1
+GCA_050469755.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175101.1,940831,941757,+,99.892,100.0,2
+GCA_050469755.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175101.1,41209,44673,+,99.942,100.0,1
+GCA_050469755.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175101.1,44677,46107,+,100.0,100.0,1
+GCA_050469755.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175101.1,46104,47987,+,99.682,100.0,1
+GCA_050469755.1,Bacteraemia,asa1_or_validated_equivalent,ambiguous_multiple_hit,Multiple distinct accepted loci require review,asa1,WP_010785625,CP175100.1,20404,24321,-,95.41986995515695,80.13364173734259,2
+GCA_050469755.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175101.1,705834,707366,-,100.0,100.0,1
+GCA_050469755.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175101.1,704931,705785,-,100.0,100.0,1
+GCA_050469755.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050469755.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050471105.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175093.1,54002,56026,+,93.2238198697854,100.0,1
+GCA_050471105.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175093.1,861641,862567,+,99.569,100.0,2
+GCA_050471105.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175093.1,40990,44454,+,99.509,100.0,1
+GCA_050471105.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175093.1,44458,45888,+,99.371,100.0,1
+GCA_050471105.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175093.1,45885,47768,+,99.045,100.0,1
+GCA_050471105.1,Bacteraemia,asa1_or_validated_equivalent,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050471105.1,Bacteraemia,gelE,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050471105.1,Bacteraemia,sprE,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050471105.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050471105.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050472745.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175062.1,1354392,1356416,+,94.79255579553636,100.0,1
+GCA_050472745.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175062.1,2294418,2295344,+,99.892,100.0,2
+GCA_050472745.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175062.1,1343584,1347048,+,99.913,100.0,1
+GCA_050472745.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175062.1,1347052,1348482,+,100.0,100.0,1
+GCA_050472745.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175062.1,1348479,1350362,+,99.682,100.0,1
+GCA_050472745.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP175062.1,433241,437133,+,93.37354225352112,80.10794140323824,1
+GCA_050472745.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175062.1,2057359,2058891,-,100.0,100.0,1
+GCA_050472745.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175062.1,2056456,2057310,-,100.0,100.0,1
+GCA_050472745.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050472745.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050472755.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175060.1,880130,882154,+,93.89461032531824,100.0,1
+GCA_050472755.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175060.1,1722909,1723835,+,99.784,100.0,1
+GCA_050472755.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175060.1,866189,869653,+,99.134,100.0,1
+GCA_050472755.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175060.1,869657,871087,+,99.371,100.0,1
+GCA_050472755.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175060.1,871084,872967,+,98.938,100.0,1
+GCA_050472755.1,Bacteraemia,asa1_or_validated_equivalent,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050472755.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175060.1,1555363,1556895,-,98.956,100.0,1
+GCA_050472755.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175060.1,1554460,1555314,-,99.649,100.0,1
+GCA_050472755.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050472755.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050473345.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175058.1,2045566,2047308,-,95.0988907894737,100.0,1
+GCA_050473345.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175058.1,1219082,1220008,-,99.676,100.0,1
+GCA_050473345.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175058.1,2054651,2058115,-,99.942,100.0,1
+GCA_050473345.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175058.1,2053217,2054647,-,99.161,100.0,1
+GCA_050473345.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175058.1,2051337,2053220,-,99.045,100.0,1
+GCA_050473345.1,Bacteraemia,asa1_or_validated_equivalent,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050473345.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175058.1,1380189,1381721,+,98.82600000000001,100.0,1
+GCA_050473345.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175058.1,1381770,1382624,+,98.83,100.0,1
+GCA_050473345.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050473345.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050473355.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175057.1,919619,921502,+,94.59083093231857,100.0,1
+GCA_050473355.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175057.1,1747042,1747968,+,99.676,100.0,2
+GCA_050473355.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175057.1,908812,912276,+,99.913,100.0,1
+GCA_050473355.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175057.1,912280,913710,+,99.02200000000002,100.0,1
+GCA_050473355.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175057.1,913707,915590,+,98.992,100.0,1
+GCA_050473355.1,Bacteraemia,asa1_or_validated_equivalent,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050473355.1,Bacteraemia,gelE,flagged_partial,Identity is >=80% but reference coverage is 50-<80%,gelE,WP_002369251,CP175057.1,1585323,1586293,-,98.867,63.33985649054142,1
+GCA_050473355.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175057.1,1584420,1585274,-,98.713,100.0,1
+GCA_050473355.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050473355.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050473905.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175056.1,1862188,1864212,-,94.69622606191504,100.0,1
+GCA_050473905.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175056.1,933922,934848,-,99.892,100.0,2
+GCA_050473905.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175056.1,1871556,1875020,-,99.942,100.0,1
+GCA_050473905.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175056.1,1870122,1871552,-,100.0,100.0,1
+GCA_050473905.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175056.1,1868242,1870125,-,99.682,100.0,1
+GCA_050473905.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP175056.1,392282,396174,+,93.37354225352112,80.10794140323824,2
+GCA_050473905.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175056.1,1158360,1159892,+,100.0,100.0,1
+GCA_050473905.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175056.1,1159941,1160795,+,100.0,100.0,1
+GCA_050473905.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050473905.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050474485.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175046.1,955267,957432,+,93.48740324594256,100.0,1
+GCA_050474485.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175046.1,1803256,1804182,+,99.569,100.0,1
+GCA_050474485.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175046.1,942255,945719,+,99.365,100.0,1
+GCA_050474485.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175046.1,945723,947153,+,99.301,100.0,1
+GCA_050474485.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175046.1,947150,949033,+,99.045,100.0,1
+GCA_050474485.1,Bacteraemia,asa1_or_validated_equivalent,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050474485.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175046.1,1606538,1608070,-,98.62999999999998,100.0,1
+GCA_050474485.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175046.1,1605635,1606489,-,99.18100000000001,100.0,1
+GCA_050474485.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050474485.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050474495.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175045.1,1601231,1603255,-,94.81632541396688,100.0,1
+GCA_050474495.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175045.1,710891,711817,-,99.892,100.0,3
+GCA_050474495.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175045.1,1610599,1614063,-,99.942,100.0,1
+GCA_050474495.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175045.1,1609165,1610595,-,100.0,100.0,1
+GCA_050474495.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175045.1,1607285,1609168,-,99.682,100.0,1
+GCA_050474495.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP175045.1,2259767,2263659,-,91.9973056978233,80.10794140323824,2
+GCA_050474495.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175045.1,903328,904860,+,100.0,100.0,1
+GCA_050474495.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175045.1,904909,905763,+,100.0,100.0,1
+GCA_050474495.1,Bacteraemia,esp,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,esp,AAD09858,CP175045.1,2815988,2820628,+,87.87061730195097,82.37282106012096,1
+GCA_050474495.1,Bacteraemia,cylA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,cylA,AAM75253,CP175044.1,42822,44060,+,99.839,100.0,1
+GCA_050475565.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175030.1,1977931,1979955,-,93.92847516198704,100.0,1
+GCA_050475565.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175030.1,1157634,1158560,-,99.569,100.0,2
+GCA_050475565.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175030.1,1990492,1993956,-,99.134,100.0,1
+GCA_050475565.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175030.1,1989058,1990488,-,99.092,100.0,1
+GCA_050475565.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175030.1,1987178,1989061,-,98.938,100.0,1
+GCA_050475565.1,Bacteraemia,asa1_or_validated_equivalent,ambiguous_multiple_hit,Multiple distinct accepted loci require review,asa1,WP_010785625,CP175029.1,3912,7802,+,99.126,100.0,3
+GCA_050475565.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175030.1,1327326,1328858,+,98.956,100.0,1
+GCA_050475565.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175030.1,1328907,1329761,+,98.246,100.0,1
+GCA_050475565.1,Bacteraemia,esp,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,esp,AAD09858,CP175030.1,2610075,2615969,-,96.6128376523253,100.0,1
+GCA_050475565.1,Bacteraemia,cylA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,cylA,AAM75253,CP175030.1,2636008,2637246,-,98.87,100.0,2
+GCA_050475575.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175027.1,1072712,1074595,+,93.99111649659864,100.0,1
+GCA_050475575.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175027.1,1951945,1952871,+,99.461,100.0,2
+GCA_050475575.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175027.1,1022265,1025729,+,99.509,100.0,1
+GCA_050475575.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175027.1,1025733,1027163,+,99.441,100.0,1
+GCA_050475575.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175027.1,1027160,1029043,+,99.363,100.0,1
+GCA_050475575.1,Bacteraemia,asa1_or_validated_equivalent,ambiguous_multiple_hit,Multiple distinct accepted loci require review,asa1,WP_010785625,CP175024.1,640,4557,+,94.84304228058937,80.13364173734259,4
+GCA_050475575.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175027.1,1740847,1742379,-,98.89100000000002,100.0,1
+GCA_050475575.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175027.1,1739944,1740798,-,98.48,100.0,1
+GCA_050475575.1,Bacteraemia,esp,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,esp,AAD09858,CP175027.1,448851,454472,+,96.83420225532797,100.0,1
+GCA_050475575.1,Bacteraemia,cylA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,cylA,AAM75253,CP175027.1,441965,443203,+,99.839,100.0,1
+GCA_050476085.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175020.1,1039861,1041603,+,95.0987605263158,100.0,1
+GCA_050476085.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175020.1,1981498,1982424,+,99.676,100.0,1
+GCA_050476085.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175020.1,1029054,1032518,+,99.942,100.0,1
+GCA_050476085.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175020.1,1032522,1033952,+,99.161,100.0,1
+GCA_050476085.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175020.1,1033949,1035832,+,98.992,100.0,1
+GCA_050476085.1,Bacteraemia,asa1_or_validated_equivalent,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050476085.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175020.1,1750137,1751669,-,98.82600000000001,100.0,1
+GCA_050476085.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175020.1,1749234,1750088,-,98.596,100.0,1
+GCA_050476085.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050476085.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050480515.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP174930.1,54002,56026,+,93.2238198697854,100.0,1
+GCA_050480515.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP174930.1,897237,898163,+,99.569,100.0,2
+GCA_050480515.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP174930.1,40990,44454,+,99.509,100.0,1
+GCA_050480515.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP174930.1,44458,45888,+,99.371,100.0,1
+GCA_050480515.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP174930.1,45885,47768,+,99.045,100.0,1
+GCA_050480515.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP174929.1,41089,44979,+,99.1,100.0,1
+GCA_050480515.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP174930.1,718099,719631,-,98.761,100.0,1
+GCA_050480515.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP174930.1,717196,718050,-,98.83,100.0,1
+GCA_050480515.1,Bacteraemia,esp,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,esp,AAD09858,CP174930.1,2435190,2440313,+,96.06919027736355,100.0,1
+GCA_050480515.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050481105.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP174928.1,1892085,1894109,-,93.22381986978539,100.0,1
+GCA_050481105.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP174928.1,1049948,1050874,-,99.569,100.0,2
+GCA_050481105.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP174928.1,1903657,1907121,-,99.509,100.0,1
+GCA_050481105.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP174928.1,1902223,1903653,-,99.371,100.0,1
+GCA_050481105.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP174928.1,1900343,1902226,-,99.045,100.0,1
+GCA_050481105.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP174926.1,41089,44979,+,99.1,100.0,1
+GCA_050481105.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP174928.1,1228480,1230012,+,98.761,100.0,1
+GCA_050481105.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP174928.1,1230061,1230915,+,98.83,100.0,1
+GCA_050481105.1,Bacteraemia,esp,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,esp,AAD09858,CP174928.1,2481924,2487047,-,96.06919027736355,100.0,1
+GCA_050481105.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050481115.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP174925.1,1001033,1003057,+,93.2238198697854,100.0,1
+GCA_050481115.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP174925.1,1844264,1845190,+,99.569,100.0,2
+GCA_050481115.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP174925.1,988021,991485,+,99.509,100.0,1
+GCA_050481115.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP174925.1,991489,992919,+,99.371,100.0,1
+GCA_050481115.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP174925.1,992916,994799,+,99.045,100.0,1
+GCA_050481115.1,Bacteraemia,asa1_or_validated_equivalent,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050481115.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP174925.1,1665130,1666662,-,98.761,100.0,1
+GCA_050481115.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP174925.1,1664227,1665081,-,98.83,100.0,1
+GCA_050481115.1,Bacteraemia,esp,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,esp,AAD09858,CP174925.1,423459,428582,+,96.218061895089,100.0,1
+GCA_050481115.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050481685.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP174922.1,1001033,1003057,+,93.2238198697854,100.0,1
+GCA_050481685.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP174922.1,1844267,1845193,+,99.569,100.0,2
+GCA_050481685.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP174922.1,988021,991485,+,99.509,100.0,1
+GCA_050481685.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP174922.1,991489,992919,+,99.371,100.0,1
+GCA_050481685.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP174922.1,992916,994799,+,99.045,100.0,1
+GCA_050481685.1,Bacteraemia,asa1_or_validated_equivalent,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050481685.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP174922.1,1665133,1666665,-,98.761,100.0,1
+GCA_050481685.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP174922.1,1664230,1665084,-,98.83,100.0,1
+GCA_050481685.1,Bacteraemia,esp,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,esp,AAD09858,CP174922.1,423459,428582,+,96.218061895089,100.0,1
+GCA_050481685.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050481695.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP174921.1,1608040,1610064,-,94.81632541396688,100.0,1
+GCA_050481695.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP174921.1,663277,664203,-,99.892,100.0,2
+GCA_050481695.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP174921.1,1617408,1620872,-,99.913,100.0,1
+GCA_050481695.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP174921.1,1615974,1617404,-,100.0,100.0,1
+GCA_050481695.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP174921.1,1614094,1615977,-,99.682,100.0,1
+GCA_050481695.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP174921.1,2202591,2206483,-,93.37354225352112,80.10794140323824,2
+GCA_050481695.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP174921.1,902806,904338,+,100.0,100.0,1
+GCA_050481695.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP174921.1,904387,905241,+,100.0,100.0,1
+GCA_050481695.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050481695.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050482265.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP174914.1,876518,878542,+,94.81632541396688,100.0,1
+GCA_050482265.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP174914.1,1822384,1823310,+,99.892,100.0,2
+GCA_050482265.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP174914.1,865710,869174,+,99.913,100.0,1
+GCA_050482265.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP174914.1,869178,870608,+,100.0,100.0,1
+GCA_050482265.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP174914.1,870605,872488,+,99.682,100.0,1
+GCA_050482265.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP174914.1,280096,283988,+,93.37354225352112,80.10794140323824,2
+GCA_050482265.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP174914.1,1582246,1583778,-,100.0,100.0,1
+GCA_050482265.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP174914.1,1581343,1582197,-,100.0,100.0,1
+GCA_050482265.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050482265.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050485045.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP174869.1,1649697,1651721,-,94.81632541396688,100.0,1
+GCA_050485045.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP174869.1,746127,747053,-,99.892,100.0,2
+GCA_050485045.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP174869.1,1659065,1662529,-,99.913,100.0,1
+GCA_050485045.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP174869.1,1657631,1659061,-,100.0,100.0,1
+GCA_050485045.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP174869.1,1655751,1657634,-,99.682,100.0,1
+GCA_050485045.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP174869.1,2326500,2330392,-,93.37354225352112,80.10794140323824,3
+GCA_050485045.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP174869.1,944462,945994,+,100.0,100.0,1
+GCA_050485045.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP174869.1,946043,946897,+,100.0,100.0,1
+GCA_050485045.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050485045.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050485055.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP174864.1,1131673,1133697,+,93.59257307415406,100.0,1
+GCA_050485055.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP174864.1,2032520,2033446,+,99.676,100.0,2
+GCA_050485055.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP174864.1,1120864,1124328,+,99.509,100.0,1
+GCA_050485055.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP174864.1,1124332,1125762,+,99.441,100.0,1
+GCA_050485055.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP174864.1,1125759,1127642,+,99.363,100.0,1
+GCA_050485055.1,Bacteraemia,asa1_or_validated_equivalent,flagged_partial,Identity is >=80% but reference coverage is 50-<80%,asa1,WP_010785625,CP174860.1,1,3769,+,95.05231618610748,78.38601901824724,3
+GCA_050485055.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP174864.1,1836178,1837710,-,100.0,100.0,1
+GCA_050485055.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP174864.1,1835275,1836129,-,100.0,100.0,1
+GCA_050485055.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050485055.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050485625.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP174859.1,1633107,1635131,-,94.81632541396688,100.0,1
+GCA_050485625.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP174859.1,689687,690613,-,99.892,100.0,2
+GCA_050485625.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP174859.1,1642475,1645939,-,99.913,100.0,1
+GCA_050485625.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP174859.1,1641041,1642471,-,100.0,100.0,1
+GCA_050485625.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP174859.1,1639161,1641044,-,99.682,100.0,1
+GCA_050485625.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP174859.1,2237238,2241130,-,93.37354225352112,80.10794140323824,1
+GCA_050485625.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP174859.1,927911,929443,+,100.0,100.0,1
+GCA_050485625.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP174859.1,929492,930346,+,100.0,100.0,1
+GCA_050485625.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050485625.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050485635.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP174856.1,1107573,1109597,+,93.49629949604031,100.0,1
+GCA_050485635.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP174856.1,2049566,2050492,+,99.676,100.0,2
+GCA_050485635.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP174856.1,1096765,1100229,+,99.365,100.0,1
+GCA_050485635.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP174856.1,1100233,1101663,+,99.371,100.0,1
+GCA_050485635.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP174856.1,1101660,1103543,+,99.045,100.0,1
+GCA_050485635.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP174856.1,502682,506599,+,94.2665797565663,80.10794140323824,1
+GCA_050485635.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP174856.1,1812081,1813613,-,100.0,100.0,1
+GCA_050485635.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP174856.1,1811178,1812032,-,100.0,100.0,1
+GCA_050485635.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050485635.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050486705.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP174842.1,2888090,2890114,-,93.29633904027007,100.0,1
+GCA_050486705.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP174842.1,2043239,2044165,-,99.569,100.0,2
+GCA_050486705.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP174842.1,2930000,2933464,-,99.481,100.0,1
+GCA_050486705.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP174842.1,2928566,2929996,-,99.371,100.0,1
+GCA_050486705.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP174842.1,2926686,2928569,-,99.045,100.0,1
+GCA_050486705.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP174840.1,123324,127214,+,98.047,100.0,3
+GCA_050486705.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP174842.1,2224459,2225991,+,98.761,100.0,1
+GCA_050486705.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP174842.1,2226040,2226894,+,98.83,100.0,1
+GCA_050486705.1,Bacteraemia,esp,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,esp,AAD09858,CP174842.1,527194,532317,-,96.0511720250522,100.0,1
+GCA_050486705.1,Bacteraemia,cylA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,cylA,AAM75253,CP174840.1,26404,27642,+,99.516,100.0,1
+GCA_050486715.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP174839.1,978780,980663,+,93.99111649659864,100.0,1
+GCA_050486715.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP174839.1,1785613,1786539,+,99.676,100.0,2
+GCA_050486715.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP174839.1,964777,968241,+,99.538,100.0,1
+GCA_050486715.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP174839.1,968245,969675,+,99.441,100.0,1
+GCA_050486715.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP174839.1,969672,971555,+,99.363,100.0,1
+GCA_050486715.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP174839.1,370683,374599,+,94.5526600448574,80.10794140323824,1
+GCA_050486715.1,Bacteraemia,gelE,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050486715.1,Bacteraemia,sprE,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050486715.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050486715.1,Bacteraemia,cylA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,cylA,AAM75253,CP174839.1,410766,412004,+,99.839,100.0,1
+GCA_050491675.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175116.1,937885,939768,+,93.81397947295423,100.0,1
+GCA_050491675.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175116.1,1774138,1775064,+,99.676,100.0,2
+GCA_050491675.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175116.1,926829,930293,+,99.481,100.0,1
+GCA_050491675.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175116.1,930297,931727,+,99.371,100.0,1
+GCA_050491675.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175116.1,931724,933607,+,99.363,100.0,1
+GCA_050491675.1,Bacteraemia,asa1_or_validated_equivalent,ambiguous_multiple_hit,Multiple distinct accepted loci require review,asa1,WP_010785625,CP175117.1,2870,6760,+,97.353,100.0,2
+GCA_050491675.1,Bacteraemia,gelE,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050491675.1,Bacteraemia,sprE,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050491675.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050491675.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050491685.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175113.1,937885,939768,+,93.81397947295423,100.0,1
+GCA_050491685.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175113.1,1774138,1775064,+,99.676,100.0,2
+GCA_050491685.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175113.1,926829,930293,+,99.481,100.0,1
+GCA_050491685.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175113.1,930297,931727,+,99.371,100.0,1
+GCA_050491685.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175113.1,931724,933607,+,99.363,100.0,1
+GCA_050491685.1,Bacteraemia,asa1_or_validated_equivalent,ambiguous_multiple_hit,Multiple distinct accepted loci require review,asa1,WP_010785625,CP175114.1,4136,8026,+,97.353,100.0,2
+GCA_050491685.1,Bacteraemia,gelE,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050491685.1,Bacteraemia,sprE,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050491685.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050491685.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050492125.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175110.1,952720,954744,+,94.79255579553636,100.0,1
+GCA_050492125.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175110.1,1852849,1853775,+,99.892,100.0,1
+GCA_050492125.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175110.1,941912,945376,+,99.942,100.0,1
+GCA_050492125.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175110.1,945380,946810,+,100.0,100.0,1
+GCA_050492125.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175110.1,946807,948690,+,99.682,100.0,1
+GCA_050492125.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP175110.1,451197,455089,+,93.37354225352112,80.10794140323824,3
+GCA_050492125.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175110.1,1656583,1658115,-,100.0,100.0,1
+GCA_050492125.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175110.1,1655680,1656534,-,100.0,100.0,1
+GCA_050492125.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050492125.1,Bacteraemia,cylA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,cylA,AAM75253,CP175112.1,18947,20185,+,99.839,100.0,1
+GCA_050492135.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175106.1,987322,989346,+,94.79255579553636,100.0,1
+GCA_050492135.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175106.1,1887451,1888377,+,99.892,100.0,1
+GCA_050492135.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175106.1,976514,979978,+,99.942,100.0,1
+GCA_050492135.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175106.1,979982,981412,+,100.0,100.0,1
+GCA_050492135.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175106.1,981409,983292,+,99.682,100.0,1
+GCA_050492135.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP175106.1,451197,455089,+,93.37354225352112,80.10794140323824,3
+GCA_050492135.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175106.1,1691185,1692717,-,100.0,100.0,1
+GCA_050492135.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175106.1,1690282,1691136,-,100.0,100.0,1
+GCA_050492135.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050492135.1,Bacteraemia,cylA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,cylA,AAM75253,CP175108.1,12237,13475,+,99.839,100.0,1
+GCA_050505635.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175162.1,1408669,1410552,-,93.99111649659862,100.0,1
+GCA_050505635.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175162.1,575798,576724,-,99.676,100.0,2
+GCA_050505635.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175162.1,1421091,1424555,-,99.538,100.0,1
+GCA_050505635.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175162.1,1419657,1421087,-,99.441,100.0,1
+GCA_050505635.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175162.1,1417777,1419660,-,99.363,100.0,1
+GCA_050505635.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP175162.1,2057430,2061346,-,93.59147644985582,80.10794140323824,1
+GCA_050505635.1,Bacteraemia,gelE,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050505635.1,Bacteraemia,sprE,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050505635.1,Bacteraemia,esp,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,esp,AAD09858,CP175162.1,2008756,2014377,-,96.83420225532795,100.0,1
+GCA_050505635.1,Bacteraemia,cylA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,cylA,AAM75253,CP175162.1,2020025,2021263,-,99.839,100.0,2
+GCA_050505645.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175163.1,53825,55708,+,93.99111649659864,100.0,1
+GCA_050505645.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175163.1,887653,888579,+,99.676,100.0,2
+GCA_050505645.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175163.1,39822,43286,+,99.538,100.0,1
+GCA_050505645.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175163.1,43290,44720,+,99.441,100.0,1
+GCA_050505645.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175163.1,44717,46600,+,99.363,100.0,1
+GCA_050505645.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP175163.1,2276557,2280473,+,93.59147644985582,80.10794140323824,1
+GCA_050505645.1,Bacteraemia,gelE,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050505645.1,Bacteraemia,sprE,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050505645.1,Bacteraemia,esp,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,esp,AAD09858,CP175163.1,2323526,2329147,+,96.83420225532797,100.0,1
+GCA_050505645.1,Bacteraemia,cylA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,cylA,AAM75253,CP175163.1,2316640,2317878,+,99.839,100.0,2
+GCA_050506665.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175301.1,1019485,1021368,+,93.99111649659864,100.0,1
+GCA_050506665.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175301.1,1844660,1845586,+,99.676,100.0,2
+GCA_050506665.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175301.1,1005482,1008946,+,99.538,100.0,1
+GCA_050506665.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175301.1,1008950,1010380,+,99.441,100.0,1
+GCA_050506665.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175301.1,1010377,1012260,+,99.363,100.0,1
+GCA_050506665.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP175301.1,367540,371456,+,93.59147644985582,80.10794140323824,1
+GCA_050506665.1,Bacteraemia,gelE,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050506665.1,Bacteraemia,sprE,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050506665.1,Bacteraemia,esp,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,esp,AAD09858,CP175301.1,414509,420130,+,96.83420225532797,100.0,1
+GCA_050506665.1,Bacteraemia,cylA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,cylA,AAM75253,CP175301.1,407623,408861,+,99.839,100.0,2
+GCA_050506675.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175300.1,1019485,1021368,+,93.99111649659864,100.0,1
+GCA_050506675.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175300.1,1844660,1845586,+,99.676,100.0,2
+GCA_050506675.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175300.1,1005482,1008946,+,99.538,100.0,1
+GCA_050506675.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175300.1,1008950,1010380,+,99.441,100.0,1
+GCA_050506675.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175300.1,1010377,1012260,+,99.363,100.0,1
+GCA_050506675.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP175300.1,367540,371456,+,93.59147644985582,80.10794140323824,1
+GCA_050506675.1,Bacteraemia,gelE,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050506675.1,Bacteraemia,sprE,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050506675.1,Bacteraemia,esp,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,esp,AAD09858,CP175300.1,414509,420130,+,96.83420225532797,100.0,1
+GCA_050506675.1,Bacteraemia,cylA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,cylA,AAM75253,CP175300.1,407623,408861,+,99.839,100.0,2
+GCA_050506685.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175298.1,1051415,1053298,+,93.99111649659864,100.0,1
+GCA_050506685.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175298.1,2034685,2035611,+,99.461,100.0,2
+GCA_050506685.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175298.1,1037412,1040876,+,99.509,100.0,1
+GCA_050506685.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175298.1,1040880,1042310,+,99.441,100.0,1
+GCA_050506685.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175298.1,1042307,1044190,+,99.363,100.0,1
+GCA_050506685.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP175298.1,399995,403911,+,93.59147644985582,80.10794140323824,2
+GCA_050506685.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175298.1,1806878,1808410,-,98.89100000000002,100.0,1
+GCA_050506685.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175298.1,1805975,1806829,-,98.48,100.0,1
+GCA_050506685.1,Bacteraemia,esp,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,esp,AAD09858,CP175298.1,446965,452586,+,96.83420225532797,100.0,1
+GCA_050506685.1,Bacteraemia,cylA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,cylA,AAM75253,CP175298.1,440079,441317,+,99.839,100.0,1
+GCA_050506695.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175296.1,1051415,1053298,+,93.99111649659864,100.0,1
+GCA_050506695.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175296.1,2034683,2035609,+,99.461,100.0,2
+GCA_050506695.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175296.1,1037412,1040876,+,99.509,100.0,1
+GCA_050506695.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175296.1,1040880,1042310,+,99.441,100.0,1
+GCA_050506695.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175296.1,1042307,1044190,+,99.363,100.0,1
+GCA_050506695.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP175296.1,399995,403911,+,93.59147644985582,80.10794140323824,2
+GCA_050506695.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175296.1,1806876,1808408,-,98.89100000000002,100.0,1
+GCA_050506695.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175296.1,1805973,1806827,-,98.48,100.0,1
+GCA_050506695.1,Bacteraemia,esp,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,esp,AAD09858,CP175296.1,446965,452586,+,96.83420225532797,100.0,1
+GCA_050506695.1,Bacteraemia,cylA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,cylA,AAM75253,CP175296.1,440079,441317,+,99.839,100.0,1
+GCA_050506725.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175283.1,885518,887542,+,93.24823510971788,100.0,1
+GCA_050506725.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175283.1,1718882,1719808,+,99.569,100.0,1
+GCA_050506725.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175283.1,872506,875970,+,99.481,100.0,1
+GCA_050506725.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175283.1,875974,877404,+,99.371,100.0,1
+GCA_050506725.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175283.1,877401,879284,+,99.045,100.0,1
+GCA_050506725.1,Bacteraemia,asa1_or_validated_equivalent,ambiguous_multiple_hit,Multiple distinct accepted loci require review,asa1,WP_010785625,CP175285.1,118238,122128,+,97.353,100.0,2
+GCA_050506725.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175283.1,1549825,1551357,-,98.761,100.0,1
+GCA_050506725.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175283.1,1548922,1549776,-,98.83,100.0,1
+GCA_050506725.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050506725.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050506735.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175280.1,885518,887542,+,93.24823510971788,100.0,1
+GCA_050506735.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175280.1,1718882,1719808,+,99.569,100.0,1
+GCA_050506735.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175280.1,872506,875970,+,99.481,100.0,1
+GCA_050506735.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175280.1,875974,877404,+,99.371,100.0,1
+GCA_050506735.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175280.1,877401,879284,+,99.045,100.0,1
+GCA_050506735.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP175282.1,1112,5002,+,97.353,100.0,1
+GCA_050506735.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175280.1,1549825,1551357,-,98.761,100.0,1
+GCA_050506735.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175280.1,1548922,1549776,-,98.83,100.0,1
+GCA_050506735.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050506735.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050506745.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175276.1,1549542,1551566,-,94.79255579553636,100.0,1
+GCA_050506745.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175276.1,649247,650173,-,99.892,100.0,2
+GCA_050506745.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175276.1,1558910,1562374,-,99.942,100.0,1
+GCA_050506745.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175276.1,1557476,1558906,-,100.0,100.0,1
+GCA_050506745.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175276.1,1555596,1557479,-,99.682,100.0,1
+GCA_050506745.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP175276.1,2190259,2194151,-,93.37354225352112,80.10794140323824,2
+GCA_050506745.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175276.1,846239,847771,+,100.0,100.0,1
+GCA_050506745.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175276.1,847820,848674,+,100.0,100.0,1
+GCA_050506745.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050506745.1,Bacteraemia,cylA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,cylA,AAM75253,CP175277.1,18947,20185,+,99.839,100.0,1
+GCA_050506755.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175273.1,807277,809301,+,94.79255579553636,100.0,1
+GCA_050506755.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175273.1,1707336,1708262,+,99.892,100.0,2
+GCA_050506755.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175273.1,796469,799933,+,99.942,100.0,1
+GCA_050506755.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175273.1,799937,801367,+,100.0,100.0,1
+GCA_050506755.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175273.1,801364,803247,+,99.682,100.0,1
+GCA_050506755.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP175273.1,165377,169269,+,93.37354225352112,80.10794140323824,2
+GCA_050506755.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175273.1,1511070,1512602,-,100.0,100.0,1
+GCA_050506755.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175273.1,1510167,1511021,-,100.0,100.0,1
+GCA_050506755.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050506755.1,Bacteraemia,cylA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,cylA,AAM75253,CP175274.1,51331,52569,+,99.839,100.0,1
+GCA_050506765.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175271.1,942930,944954,+,93.24823510971788,100.0,1
+GCA_050506765.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175271.1,1788878,1789804,+,99.569,100.0,2
+GCA_050506765.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175271.1,929918,933382,+,99.481,100.0,1
+GCA_050506765.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175271.1,933386,934816,+,99.301,100.0,1
+GCA_050506765.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175271.1,934813,936696,+,99.045,100.0,1
+GCA_050506765.1,Bacteraemia,asa1_or_validated_equivalent,flagged_partial,Identity is >=80% but reference coverage is 50-<80%,asa1,WP_010785625,CP175269.1,18644,22483,+,94.30553346653346,77.07530197892572,2
+GCA_050506765.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175271.1,1607052,1608584,-,98.761,100.0,1
+GCA_050506765.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175271.1,1606149,1607003,-,98.83,100.0,1
+GCA_050506765.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050506765.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050506775.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175268.1,946659,948542,+,92.98823466214306,100.0,1
+GCA_050506775.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175268.1,1797208,1798134,+,99.784,100.0,1
+GCA_050506775.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175268.1,925998,929462,+,99.192,100.0,1
+GCA_050506775.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175268.1,929466,930896,+,99.441,100.0,1
+GCA_050506775.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175268.1,930893,932776,+,98.514,100.0,1
+GCA_050506775.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP175266.1,72841,76758,+,94.90731550288275,80.13364173734259,1
+GCA_050506775.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175268.1,1596558,1598088,-,98.95500000000001,99.86953685583822,1
+GCA_050506775.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175268.1,1595653,1596507,-,98.596,100.0,1
+GCA_050506775.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050506775.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050506815.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175260.1,1030417,1032300,+,93.99111649659864,100.0,1
+GCA_050506815.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175260.1,1908091,1909017,+,99.461,100.0,2
+GCA_050506815.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175260.1,1016407,1019871,+,99.509,100.0,1
+GCA_050506815.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175260.1,1019875,1021305,+,99.441,100.0,1
+GCA_050506815.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175260.1,1021302,1023185,+,99.363,100.0,1
+GCA_050506815.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP175260.1,400242,404158,+,93.59147644985582,80.10794140323824,3
+GCA_050506815.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175260.1,1698327,1699859,-,98.89100000000002,100.0,1
+GCA_050506815.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175260.1,1697424,1698278,-,98.48,100.0,1
+GCA_050506815.1,Bacteraemia,esp,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,esp,AAD09858,CP175260.1,445594,451215,+,96.82896761845646,100.0,1
+GCA_050506815.1,Bacteraemia,cylA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,cylA,AAM75253,CP175260.1,438708,439946,+,99.839,100.0,1
+GCA_050506825.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175258.1,1052453,1054477,+,93.24823510971788,100.0,1
+GCA_050506825.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175258.1,1898405,1899331,+,99.569,100.0,2
+GCA_050506825.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175258.1,999438,1005307,+,99.5571694163999,100.0,1
+GCA_050506825.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175258.1,1005311,1006741,+,99.371,100.0,1
+GCA_050506825.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175258.1,1006738,1008621,+,99.045,100.0,1
+GCA_050506825.1,Bacteraemia,asa1_or_validated_equivalent,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050506825.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175258.1,1716579,1718111,-,98.761,100.0,1
+GCA_050506825.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175258.1,1715676,1716530,-,98.83,100.0,1
+GCA_050506825.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050506825.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050506865.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175257.1,1013341,1015224,+,93.99111649659864,100.0,1
+GCA_050506865.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175257.1,1848326,1849252,+,99.676,100.0,2
+GCA_050506865.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175257.1,999338,1002802,+,99.538,100.0,1
+GCA_050506865.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175257.1,1002806,1004236,+,99.441,100.0,1
+GCA_050506865.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175257.1,1004233,1006116,+,99.363,100.0,1
+GCA_050506865.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP175257.1,405178,409094,+,93.59147644985582,80.10794140323824,1
+GCA_050506865.1,Bacteraemia,gelE,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050506865.1,Bacteraemia,sprE,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050506865.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050506865.1,Bacteraemia,cylA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,cylA,AAM75253,CP175257.1,445261,446499,+,99.839,100.0,1
+GCA_050506875.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175255.1,1085325,1087208,+,93.72277608695651,100.0,1
+GCA_050506875.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175255.1,1944684,1945610,+,99.461,100.0,2
+GCA_050506875.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175255.1,1074379,1077843,+,99.278,100.0,1
+GCA_050506875.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175255.1,1077847,1079277,+,99.161,100.0,1
+GCA_050506875.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175255.1,1079274,1081157,+,98.885,100.0,1
+GCA_050506875.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP175255.1,478796,482685,+,93.62396988144825,80.10794140323824,1
+GCA_050506875.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175255.1,1759385,1760917,-,99.02199999999999,100.0,1
+GCA_050506875.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175255.1,1758482,1759336,-,98.596,100.0,1
+GCA_050506875.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050506875.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050506885.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175254.1,983410,985293,+,93.7229179347826,100.0,1
+GCA_050506885.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175254.1,1920161,1921087,+,100.0,100.0,2
+GCA_050506885.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175254.1,972464,975928,+,99.192,100.0,1
+GCA_050506885.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175254.1,975932,977362,+,99.161,100.0,1
+GCA_050506885.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175254.1,977359,979242,+,98.885,100.0,1
+GCA_050506885.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP175254.1,364787,368676,+,93.91245530278756,80.10794140323824,2
+GCA_050506885.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175254.1,1691519,1693051,-,100.0,100.0,1
+GCA_050506885.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175254.1,1690616,1691470,-,100.0,100.0,1
+GCA_050506885.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050506885.1,Bacteraemia,cylA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,cylA,AAM75253,CP175252.1,33356,34594,+,99.839,100.0,1
+GCA_050506905.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175239.1,979870,981894,+,94.81632541396688,100.0,1
+GCA_050506905.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175239.1,1874195,1875121,+,99.892,100.0,2
+GCA_050506905.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175239.1,969062,972526,+,99.942,100.0,1
+GCA_050506905.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175239.1,972530,973960,+,100.0,100.0,1
+GCA_050506905.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175239.1,973957,975840,+,99.682,100.0,1
+GCA_050506905.1,Bacteraemia,asa1_or_validated_equivalent,flagged_partial,Identity is >=80% but reference coverage is 50-<80%,asa1,WP_010785625,CP175243.1,11669,15595,+,94.24669812540401,79.23413004369057,3
+GCA_050506905.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175239.1,1681150,1682682,-,100.0,100.0,1
+GCA_050506905.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175239.1,1680247,1681101,-,100.0,100.0,1
+GCA_050506905.1,Bacteraemia,esp,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,esp,AAD09858,CP175239.1,2977416,2982056,-,87.87061730195097,82.37282106012096,1
+GCA_050506905.1,Bacteraemia,cylA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,cylA,AAM75253,CP175242.1,39416,40654,+,99.839,100.0,1
+GCA_050506915.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175237.1,968943,970826,+,94.59083093231857,100.0,1
+GCA_050506915.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175237.1,1769761,1770687,+,99.569,100.0,2
+GCA_050506915.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175237.1,923274,926738,+,99.942,100.0,1
+GCA_050506915.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175237.1,926742,928172,+,99.161,100.0,1
+GCA_050506915.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175237.1,928169,930052,+,99.045,100.0,1
+GCA_050506915.1,Bacteraemia,asa1_or_validated_equivalent,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050506915.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175237.1,1649975,1651507,-,98.956,100.0,1
+GCA_050506915.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175237.1,1649072,1649926,-,98.48,100.0,1
+GCA_050506915.1,Bacteraemia,esp,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,esp,AAD09858,CP175237.1,356266,361389,+,96.30768347472817,100.0,1
+GCA_050506915.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050506925.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175233.1,1904300,1906183,-,94.59083093231857,100.0,1
+GCA_050506925.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175233.1,1104439,1105365,-,99.569,100.0,2
+GCA_050506925.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175233.1,1948603,1952067,-,99.942,100.0,1
+GCA_050506925.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175233.1,1947169,1948599,-,99.161,100.0,1
+GCA_050506925.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175233.1,1945289,1947172,-,99.045,100.0,1
+GCA_050506925.1,Bacteraemia,asa1_or_validated_equivalent,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050506925.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175233.1,1223619,1225151,+,98.956,100.0,1
+GCA_050506925.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175233.1,1225200,1226054,+,98.48,100.0,1
+GCA_050506925.1,Bacteraemia,esp,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,esp,AAD09858,CP175233.1,2513952,2519075,-,96.30768347472818,100.0,1
+GCA_050506925.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050506935.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175230.1,1844200,1846083,-,94.59083093231857,100.0,1
+GCA_050506935.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175230.1,1044337,1045263,-,99.569,100.0,2
+GCA_050506935.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175230.1,1888503,1891967,-,99.942,100.0,1
+GCA_050506935.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175230.1,1887069,1888499,-,99.161,100.0,1
+GCA_050506935.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175230.1,1885189,1887072,-,99.045,100.0,1
+GCA_050506935.1,Bacteraemia,asa1_or_validated_equivalent,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050506935.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175230.1,1163517,1165049,+,98.956,100.0,1
+GCA_050506935.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175230.1,1165098,1165952,+,98.48,100.0,1
+GCA_050506935.1,Bacteraemia,esp,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,esp,AAD09858,CP175230.1,2453852,2458975,-,96.30768347472818,100.0,1
+GCA_050506935.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050506985.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175228.1,1844198,1846081,-,94.59083093231857,100.0,1
+GCA_050506985.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175228.1,1044337,1045263,-,99.569,100.0,2
+GCA_050506985.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175228.1,1888501,1891965,-,99.942,100.0,1
+GCA_050506985.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175228.1,1887067,1888497,-,99.161,100.0,1
+GCA_050506985.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175228.1,1885187,1887070,-,99.045,100.0,1
+GCA_050506985.1,Bacteraemia,asa1_or_validated_equivalent,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050506985.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175228.1,1163517,1165049,+,98.956,100.0,1
+GCA_050506985.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175228.1,1165098,1165952,+,98.48,100.0,1
+GCA_050506985.1,Bacteraemia,esp,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,esp,AAD09858,CP175228.1,2453850,2458973,-,96.30768347472818,100.0,1
+GCA_050506985.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050506995.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175225.1,790919,792802,+,93.99111649659864,100.0,1
+GCA_050506995.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175225.1,1655574,1656500,+,99.461,100.0,2
+GCA_050506995.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175225.1,776916,780380,+,99.509,100.0,1
+GCA_050506995.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175225.1,780384,781814,+,99.441,100.0,1
+GCA_050506995.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175225.1,781811,783694,+,99.363,100.0,1
+GCA_050506995.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP175225.1,155853,159770,+,93.62560794362588,80.10794140323824,2
+GCA_050506995.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175225.1,1445808,1447340,-,98.89100000000002,100.0,1
+GCA_050506995.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175225.1,1444905,1445759,-,98.48,100.0,1
+GCA_050506995.1,Bacteraemia,esp,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,esp,AAD09858,CP175225.1,204511,210132,+,96.83420225532797,100.0,1
+GCA_050506995.1,Bacteraemia,cylA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,cylA,AAM75253,CP175225.1,197625,198863,+,99.839,100.0,1
+GCA_050507065.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175224.1,55511,57394,+,93.99111649659864,100.0,1
+GCA_050507065.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175224.1,920163,921089,+,99.461,100.0,2
+GCA_050507065.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175224.1,41508,44972,+,99.509,100.0,1
+GCA_050507065.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175224.1,44976,46406,+,99.441,100.0,1
+GCA_050507065.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175224.1,46403,48286,+,99.363,100.0,1
+GCA_050507065.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP175224.1,2319131,2323047,+,93.59147644985582,80.10794140323824,3
+GCA_050507065.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175224.1,710397,711929,-,98.89100000000002,100.0,1
+GCA_050507065.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175224.1,709494,710348,-,98.48,100.0,1
+GCA_050507065.1,Bacteraemia,esp,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,esp,AAD09858,CP175224.1,2367788,2373409,+,96.83420225532797,100.0,1
+GCA_050507065.1,Bacteraemia,cylA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,cylA,AAM75253,CP175224.1,2360902,2362140,+,99.839,100.0,1
+GCA_050507075.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175221.1,1037958,1039982,+,94.79255579553636,100.0,1
+GCA_050507075.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175221.1,2019407,2020333,+,99.892,100.0,2
+GCA_050507075.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175221.1,1027150,1030614,+,99.913,100.0,1
+GCA_050507075.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175221.1,1030618,1032048,+,100.0,100.0,1
+GCA_050507075.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175221.1,1032045,1033928,+,99.682,100.0,1
+GCA_050507075.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP175221.1,431906,435798,+,93.37354225352112,80.10794140323824,1
+GCA_050507075.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175221.1,1782351,1783883,-,100.0,100.0,1
+GCA_050507075.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175221.1,1781448,1782302,-,100.0,100.0,1
+GCA_050507075.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050507075.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050507105.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175219.1,1106549,1108573,+,94.79255579553636,100.0,1
+GCA_050507105.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175219.1,2088000,2088926,+,99.892,100.0,2
+GCA_050507105.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175219.1,1095741,1099205,+,99.913,100.0,1
+GCA_050507105.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175219.1,1099209,1100639,+,100.0,100.0,1
+GCA_050507105.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175219.1,1100636,1102519,+,99.682,100.0,1
+GCA_050507105.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP175219.1,500492,504384,+,93.37354225352112,80.10794140323824,1
+GCA_050507105.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175219.1,1850943,1852475,-,100.0,100.0,1
+GCA_050507105.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175219.1,1850040,1850894,-,100.0,100.0,1
+GCA_050507105.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050507105.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050516645.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175406.1,732476,734500,+,93.1623339731286,100.0,1
+GCA_050516645.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175406.1,1588403,1589329,+,99.569,100.0,2
+GCA_050516645.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175406.1,719081,722545,+,99.423,100.0,1
+GCA_050516645.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175406.1,722549,723979,+,99.161,100.0,1
+GCA_050516645.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175406.1,723976,725859,+,99.151,100.0,1
+GCA_050516645.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP175404.1,48457,52374,+,94.33052946828955,80.13364173734259,2
+GCA_050516645.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175406.1,1405062,1406594,-,98.695,100.0,1
+GCA_050516645.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175406.1,1404159,1405013,-,98.83,100.0,1
+GCA_050516645.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050516645.1,Bacteraemia,cylA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,cylA,AAM75253,CP175405.1,60870,62108,+,99.596,100.0,1
+GCA_050516655.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175400.1,787966,789990,-,93.1623339731286,100.0,1
+GCA_050516655.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175400.1,2902216,2903142,-,99.569,100.0,2
+GCA_050516655.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175400.1,799921,803385,-,99.423,100.0,1
+GCA_050516655.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175400.1,798487,799917,-,99.161,100.0,1
+GCA_050516655.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175400.1,796607,798490,-,99.151,100.0,1
+GCA_050516655.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP175401.1,48457,52374,+,94.33052946828955,80.13364173734259,2
+GCA_050516655.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175400.1,115872,117404,+,98.695,100.0,1
+GCA_050516655.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175400.1,117453,118307,+,98.83,100.0,1
+GCA_050516655.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050516655.1,Bacteraemia,cylA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,cylA,AAM75253,CP175398.1,62073,63311,+,99.596,100.0,1
+GCA_050516665.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175397.1,1034423,1036306,+,93.99111649659864,100.0,1
+GCA_050516665.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175397.1,1905903,1906829,+,99.461,100.0,2
+GCA_050516665.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175397.1,1020420,1023884,+,99.481,100.0,1
+GCA_050516665.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175397.1,1023888,1025318,+,99.441,100.0,1
+GCA_050516665.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175397.1,1025315,1027198,+,99.363,100.0,1
+GCA_050516665.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP175397.1,400278,404194,+,93.59147644985582,80.10794140323824,3
+GCA_050516665.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175397.1,1696137,1697669,-,98.89100000000002,100.0,1
+GCA_050516665.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175397.1,1695234,1696088,-,98.48,100.0,1
+GCA_050516665.1,Bacteraemia,esp,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,esp,AAD09858,CP175397.1,447248,452119,+,96.49681521331165,99.85770188545001,1
+GCA_050516665.1,Bacteraemia,cylA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,cylA,AAM75253,CP175397.1,440362,441600,+,99.839,100.0,1
+GCA_050516675.1,Bacteraemia,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175395.1,1031777,1033660,+,93.99111649659864,100.0,1
+GCA_050516675.1,Bacteraemia,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175395.1,1903176,1904102,+,99.461,100.0,2
+GCA_050516675.1,Bacteraemia,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175395.1,1017774,1021238,+,99.509,100.0,1
+GCA_050516675.1,Bacteraemia,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175395.1,1021242,1022672,+,99.441,100.0,1
+GCA_050516675.1,Bacteraemia,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175395.1,1022669,1024552,+,99.363,100.0,1
+GCA_050516675.1,Bacteraemia,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,CP175395.1,400091,404007,+,93.59147644985582,80.10794140323824,3
+GCA_050516675.1,Bacteraemia,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175395.1,1693416,1694948,-,98.89100000000002,100.0,1
+GCA_050516675.1,Bacteraemia,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175395.1,1692513,1693367,-,98.48,100.0,1
+GCA_050516675.1,Bacteraemia,esp,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,esp,AAD09858,CP175395.1,447061,452682,+,96.83420225532797,100.0,1
+GCA_050516675.1,Bacteraemia,cylA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,cylA,AAM75253,CP175395.1,440175,441413,+,99.839,100.0,1
+GCF_049262565.1,Reproductive,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,NZ_CP185997.1,994614,996215,+,95.91594453998279,100.0,1
+GCF_049262565.1,Reproductive,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,NZ_CP185997.1,1868762,1869687,+,99.784,100.0,2
+GCF_049262565.1,Reproductive,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,NZ_CP185997.1,983806,987270,+,99.913,100.0,1
+GCF_049262565.1,Reproductive,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,NZ_CP185997.1,987274,988704,+,99.161,100.0,1
+GCF_049262565.1,Reproductive,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,NZ_CP185997.1,988701,990584,+,99.045,100.0,1
+GCF_049262565.1,Reproductive,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,NZ_CP185998.1,10543,14460,+,94.65090518898141,80.13364173734259,1
+GCF_049262565.1,Reproductive,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,NZ_CP185997.1,1661402,1662934,-,98.956,100.0,1
+GCF_049262565.1,Reproductive,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,NZ_CP185997.1,1660499,1661353,-,98.363,100.0,1
+GCF_049262565.1,Reproductive,esp,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,esp,AAD09858,NZ_CP185997.1,386609,390501,+,95.57363938141582,100.0,1
+GCF_049262565.1,Reproductive,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCF_053117575.1,Reproductive,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,NZ_CP181216.1,1031826,1033709,+,93.99111649659864,100.0,1
+GCF_053117575.1,Reproductive,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,NZ_CP181216.1,1913977,1914903,+,99.461,100.0,2
+GCF_053117575.1,Reproductive,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,NZ_CP181216.1,1017823,1021287,+,99.509,100.0,1
+GCF_053117575.1,Reproductive,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,NZ_CP181216.1,1021291,1022721,+,99.441,100.0,1
+GCF_053117575.1,Reproductive,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,NZ_CP181216.1,1022718,1024601,+,99.363,100.0,1
+GCF_053117575.1,Reproductive,asa1_or_validated_equivalent,ambiguous_multiple_hit,Multiple distinct accepted loci require review,asa1,WP_010785625,NZ_CP181217.1,64231,68148,+,94.52240262652145,80.13364173734259,4
+GCF_053117575.1,Reproductive,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,NZ_CP181216.1,1704210,1705742,-,98.89100000000002,100.0,1
+GCF_053117575.1,Reproductive,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,NZ_CP181216.1,1703307,1704161,-,98.48,100.0,1
+GCF_053117575.1,Reproductive,esp,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,esp,AAD09858,NZ_CP181216.1,447105,452726,+,97.11467852887851,100.0,1
+GCF_053117575.1,Reproductive,cylA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,cylA,AAM75253,NZ_CP181216.1,440219,441457,+,99.839,100.0,1
+GCF_053117585.1,Reproductive,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,NZ_CP181214.1,1057603,1059486,+,93.99111649659864,100.0,1
+GCF_053117585.1,Reproductive,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,NZ_CP181214.1,1888428,1889354,+,99.676,100.0,2
+GCF_053117585.1,Reproductive,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,NZ_CP181214.1,1043600,1047064,+,99.538,100.0,1
+GCF_053117585.1,Reproductive,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,NZ_CP181214.1,1047068,1048498,+,99.441,100.0,1
+GCF_053117585.1,Reproductive,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,NZ_CP181214.1,1048495,1050378,+,99.363,100.0,1
+GCF_053117585.1,Reproductive,asa1_or_validated_equivalent,ambiguous_multiple_hit,Multiple distinct accepted loci require review,asa1,WP_010785625,NZ_CP181215.1,19973,24302,+,91.9231165020337,80.13364173734259,3
+GCF_053117585.1,Reproductive,gelE,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCF_053117585.1,Reproductive,sprE,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCF_053117585.1,Reproductive,esp,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,esp,AAD09858,NZ_CP181214.1,452526,458393,+,96.72186802509317,100.0,1
+GCF_053117585.1,Reproductive,cylA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,cylA,AAM75253,NZ_CP181214.1,445640,446878,+,99.839,100.0,2
+GCF_053117655.1,Reproductive,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,NZ_CP181220.1,968358,970241,+,93.99111649659864,100.0,1
+GCF_053117655.1,Reproductive,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,NZ_CP181220.1,1814892,1815818,+,99.461,100.0,2
+GCF_053117655.1,Reproductive,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,NZ_CP181220.1,954355,957819,+,99.509,100.0,1
+GCF_053117655.1,Reproductive,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,NZ_CP181220.1,957823,959253,+,99.441,100.0,1
+GCF_053117655.1,Reproductive,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,NZ_CP181220.1,959250,961133,+,99.363,100.0,1
+GCF_053117655.1,Reproductive,asa1_or_validated_equivalent,flagged_partial,Identity is >=80% but reference coverage is 50-<80%,asa1,WP_010785625,NZ_CP181220.1,367200,371116,+,93.77434987029831,79.20842970958623,2
+GCF_053117655.1,Reproductive,gelE,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCF_053117655.1,Reproductive,sprE,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCF_053117655.1,Reproductive,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCF_053117655.1,Reproductive,cylA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,cylA,AAM75253,NZ_CP181220.1,407282,408520,+,99.839,100.0,1
+GCF_053117665.1,Reproductive,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,NZ_CP181222.1,2060265,2062289,-,93.24823510971787,100.0,1
+GCF_053117665.1,Reproductive,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,NZ_CP181222.1,1151631,1152557,-,99.569,100.0,2
+GCF_053117665.1,Reproductive,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,NZ_CP181222.1,2071837,2075301,-,99.481,100.0,1
+GCF_053117665.1,Reproductive,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,NZ_CP181222.1,2070403,2071833,-,99.371,100.0,1
+GCF_053117665.1,Reproductive,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,NZ_CP181222.1,2068523,2070406,-,99.045,100.0,1
+GCF_053117665.1,Reproductive,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,NZ_CP181222.1,1309740,1313631,+,96.557,100.0,1
+GCF_053117665.1,Reproductive,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,NZ_CP181222.1,2028601,2030133,-,98.82600000000001,100.0,1
+GCF_053117665.1,Reproductive,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,NZ_CP181222.1,2027698,2028552,-,98.363,100.0,1
+GCF_053117665.1,Reproductive,esp,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,esp,AAD09858,NZ_CP181222.1,424224,429839,+,96.25417110861166,100.0,1
+GCF_053117665.1,Reproductive,cylA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,cylA,AAM75253,NZ_CP181222.1,2057208,2058446,-,98.789,100.0,1
+GCF_053117675.1,Reproductive,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,NZ_CP181226.1,1039797,1041680,+,93.81397947295423,100.0,1
+GCF_053117675.1,Reproductive,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,NZ_CP181226.1,1845288,1846214,+,99.676,100.0,2
+GCF_053117675.1,Reproductive,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,NZ_CP181226.1,991772,995236,+,99.481,100.0,1
+GCF_053117675.1,Reproductive,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,NZ_CP181226.1,995240,996670,+,99.371,100.0,1
+GCF_053117675.1,Reproductive,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,NZ_CP181226.1,996667,998550,+,99.363,100.0,1
+GCF_053117675.1,Reproductive,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,NZ_CP181227.1,23471,27388,+,96.28474567584882,80.13364173734259,3
+GCF_053117675.1,Reproductive,gelE,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCF_053117675.1,Reproductive,sprE,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCF_053117675.1,Reproductive,esp,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,esp,AAD09858,NZ_CP181226.1,417140,422502,+,96.23293653855917,99.85770188545001,1
+GCF_053117675.1,Reproductive,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCF_053117685.1,Reproductive,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,NZ_CP181229.1,2074589,2076471,-,93.96243622448978,100.0,1
+GCF_053117685.1,Reproductive,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,NZ_CP181229.1,1188580,1189506,-,99.461,100.0,2
+GCF_053117685.1,Reproductive,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,NZ_CP181229.1,2087010,2090474,-,99.538,100.0,1
+GCF_053117685.1,Reproductive,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,NZ_CP181229.1,2085576,2087006,-,99.441,100.0,1
+GCF_053117685.1,Reproductive,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,NZ_CP181229.1,2083696,2085579,-,99.363,100.0,1
+GCF_053117685.1,Reproductive,asa1_or_validated_equivalent,ambiguous_multiple_hit,Multiple distinct accepted loci require review,asa1,WP_010785625,NZ_CP181231.1,10593,14483,+,96.942,100.0,4
+GCF_053117685.1,Reproductive,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,NZ_CP181229.1,1397739,1399271,+,98.89100000000002,100.0,1
+GCF_053117685.1,Reproductive,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,NZ_CP181229.1,1399320,1400174,+,98.48,100.0,1
+GCF_053117685.1,Reproductive,esp,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,esp,AAD09858,NZ_CP181229.1,2653880,2659261,-,96.78051731707316,100.0,1
+GCF_053117685.1,Reproductive,cylA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,cylA,AAM75253,NZ_CP181229.1,2664909,2666147,-,99.839,100.0,1
+GCF_053117695.1,Reproductive,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,NZ_CP181234.1,2074354,2076378,-,94.69581400282887,100.0,1
+GCF_053117695.1,Reproductive,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,NZ_CP181234.1,1268423,1269349,-,99.892,100.0,2
+GCF_053117695.1,Reproductive,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,NZ_CP181234.1,2086309,2089773,-,99.307,100.0,1
+GCF_053117695.1,Reproductive,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,NZ_CP181234.1,2084875,2086305,-,99.092,100.0,1
+GCF_053117695.1,Reproductive,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,NZ_CP181234.1,2082995,2084878,-,98.992,100.0,1
+GCF_053117695.1,Reproductive,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,NZ_CP181235.1,24696,28586,-,96.967,100.0,1
+GCF_053117695.1,Reproductive,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,NZ_CP181234.1,1426455,1427986,+,98.89100000000002,100.0,1
+GCF_053117695.1,Reproductive,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,NZ_CP181234.1,1428035,1428889,+,98.48,100.0,1
+GCF_053117695.1,Reproductive,esp,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,esp,AAD09858,NZ_CP181234.1,2677316,2682439,-,96.21815790417016,100.0,1
+GCF_053117695.1,Reproductive,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCF_053117705.1,Reproductive,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,NZ_CP181238.1,1029756,1031639,+,93.99111649659864,100.0,1
+GCF_053117705.1,Reproductive,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,NZ_CP181238.1,1927366,1928292,+,99.461,100.0,2
+GCF_053117705.1,Reproductive,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,NZ_CP181238.1,1015753,1019217,+,99.538,100.0,1
+GCF_053117705.1,Reproductive,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,NZ_CP181238.1,1019221,1020651,+,99.441,100.0,1
+GCF_053117705.1,Reproductive,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,NZ_CP181238.1,1020648,1022531,+,99.363,100.0,1
+GCF_053117705.1,Reproductive,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,NZ_CP181238.1,400259,404175,+,93.59147644985582,80.10794140323824,4
+GCF_053117705.1,Reproductive,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,NZ_CP181238.1,1717602,1719134,-,98.89100000000002,100.0,1
+GCF_053117705.1,Reproductive,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,NZ_CP181238.1,1716699,1717553,-,98.48,100.0,1
+GCF_053117705.1,Reproductive,esp,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,esp,AAD09858,NZ_CP181238.1,447229,452346,+,96.92135571035334,99.85770188545001,1
+GCF_053117705.1,Reproductive,cylA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,cylA,AAM75253,NZ_CP181238.1,440343,441581,+,99.839,100.0,1
+GCF_906464925.1,Reproductive,ace,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ace,WP_010714416,NZ_OD940434.1,968925,970808,+,93.81397947295423,100.0,1
+GCF_906464925.1,Reproductive,efaA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,NZ_OD940434.1,1806480,1807406,+,99.676,100.0,2
+GCF_906464925.1,Reproductive,ebpA,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,NZ_OD940434.1,957869,961333,+,99.481,100.0,1
+GCF_906464925.1,Reproductive,ebpB,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,NZ_OD940434.1,961337,962767,+,99.371,100.0,1
+GCF_906464925.1,Reproductive,ebpC,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,NZ_OD940434.1,962764,964647,+,99.363,100.0,1
+GCF_906464925.1,Reproductive,asa1_or_validated_equivalent,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,asa1,WP_010785625,NZ_OD940435.1,11806,15723,+,95.63828640153943,80.13364173734259,2
+GCF_906464925.1,Reproductive,gelE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,NZ_OD940434.1,1634297,1635829,-,99.739,100.0,1
+GCF_906464925.1,Reproductive,sprE,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,NZ_OD940434.1,1633394,1634248,-,99.766,100.0,1
+GCF_906464925.1,Reproductive,esp,accepted_present,One distinct genomic locus meets >=80% identity and >=80% reference coverage,esp,AAD09858,NZ_OD940434.1,436612,441729,+,96.60684439076456,99.85770188545001,1
+GCF_906464925.1,Reproductive,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0

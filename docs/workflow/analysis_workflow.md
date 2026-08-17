@@ -1,97 +1,149 @@
 # Analysis workflow
 
-## Status key
+## Current dataset and provenance
 
-- **Implemented:** represented by retained scripts and compact outputs.
-- **Preliminary/archived:** previously explored but excluded pending revision.
-- **Future:** planned and not yet implemented.
+The canonical comparison contains 72 complete human *Enterococcus faecalis*
+genomes: 14 reproductive-associated and 58 bacteraemia-associated. Assembly
+accessions, including version suffixes such as `.1`, and source assignments are
+defined in `data/accession_lists/selected_72_accessions.tsv`. Curated public
+metadata and strain names are in
+`data/metadata/curated_metadata_72_genomes.csv`. Every analytical join must
+match all 72 accessions exactly; genomes are never dropped silently.
 
-## 1. NCBI retrieval — implemented
+Large assemblies, annotations and raw tool outputs are local/regenerable.
+Compact audit records, scripts, decisions, tables and selected figures are
+retained in the repository.
 
-The canonical 14- and 58-genome accession lists are consolidated into
-`data/accession_lists/selected_72_accessions.tsv`. The retrieval script validates
-group counts and downloads public assemblies with NCBI Datasets into ignored
-local storage. Existing destinations cause a safe failure.
+## 1. Retrieval, metadata and annotation — completed
 
-## 2. Metadata curation — implemented
+The NCBI retrieval stage validates the 14/58 accession manifest before writing
+assemblies to local storage. Metadata curation checks one-to-one
+assembly–BioSample–strain mappings and writes the canonical 72-row metadata
+table. Prokka 1.15.6 annotations exist for all 72 genomes and are the frozen
+annotation input for the multilocus and Panaroo workflows.
 
-`data/metadata/sample_metadata_source_72.tsv` is the canonical public export of
-the two selected workbook sheets. The R script in `scripts/02_metadata_curation/`
-validates the 72 assembly–BioSample–strain mappings against the accession
-manifest and regenerates both `data/metadata/curated_metadata_72_genomes.csv`
-and manuscript Supplementary Table S1. Personal paths and the original Excel
-workbook are excluded. Field definitions and missing-value treatment are
-documented in the data dictionary.
+## 2. Comparative AMRFinderPlus analysis — completed
 
-## 3. Genome selection — implemented
+The authoritative pipeline is
+`scripts/03_amr_analysis/amrfinder_comparative_analysis_72_genomes.R`. It reads
+72 per-genome AMRFinderPlus TSVs, requires the validated 23-column schema, and
+preserves all 567 raw records (523 AMR and 44 STRESS) in an audit table.
 
-The current comparison contains 14 reproductive-associated and 58
-bacteraemia-associated genomes. Accession/category assignments are the canonical
-selection interface. Selection should be revalidated before each full rerun.
+Functional AMR presence is defined exactly as:
 
-## 4. AMRFinderPlus — implemented
+```text
+Type == "AMR" and Method in {EXACTX, BLASTX, POINTX}
+```
 
-AMRFinderPlus was run using version 4.2.7 and database 2026-05-15.1. Retained
-scripts preserve the existing scientific classification logic. They now use
-portable paths, check required inputs and refuse to overwrite previous results
-unless the user deliberately opts in.
+`PARTIALX`, `INTERNAL_STOP`, STRESS and other excluded records remain visible
+with exclusion reasons but never create a functional 1. Coverage below 80% is
+an audit flag, not an additional exclusion rule. The 72-row binary matrix is
+the basis of prevalence, cautious shared/dataset-only descriptions, drug-class
+summaries, Fisher tests and BH correction. Genomic detection is not phenotypic
+resistance.
 
-## 5. Prokka — implemented annotation run; bulk outputs local
+The unclustered and clustered AMR presence/absence heatmaps both use strain
+names from the curated metadata and an explicit blue/red binary palette. The
+clustered variant applies binary Jaccard distance to unscaled 0/1 calls and
+average-linkage clustering to both strains and genes. Its full row/column
+distance audit and clustering policy are written beside the heatmaps. A
+`--heatmaps-only` mode regenerates only these heatmap artifacts from the frozen
+validated AMR tables.
 
-All 72 genomes were annotated with Prokka 1.15.6. The portable runner writes
-bulk annotations to `data/processed/annotations`, which is also the default
-input of the phylogenomics runner. Compact per-genome annotation statistics and
-run provenance are retained; bulk outputs can be regenerated.
+The older `amrfinder_analysis_72_genomes.R` is retained for legacy tabular
+outputs and selected descriptive plots. Obsolete per-genome AMR-gene-count,
+confidence-group and reference-coverage figures are not part of the current
+figure set.
 
-## 6. Panaroo — future
+## 3. Nine-locus phylogeny — completed and frozen
 
-A Panaroo pangenome/core-genome workflow has not yet been added. Its parameters,
-quality thresholds and outputs must be documented when the revised phylogeny
-method is approved.
+The validated unrooted phylogeny uses the fixed order `gdh`, `gyd`, `pstS`,
+`gki`, `xpt`, `yqiL`, `pyrC`, `groEL`, and `recA`. `aroE` is excluded from this
+whole-span analysis under the documented observed-sequence policy; this does
+not affect its use in formal seven-locus MLST. The 11,341-nt alignment contains
+all 72 genomes, and IQ-TREE selected `TN+F+I+G4` with 1,000 ultrafast bootstrap
+and 1,000 SH-aLRT replicates. The original analytical tree is unrooted;
+midpoint rooting is display-only.
 
-## 7. Optional recombination filtering — future
+The matched 71-genome sensitivity analysis excluding `GCA_029011395.1` differs
+materially after pruning to common tips, so it accompanies interpretation.
+Detailed methods and limitations are in `docs/workflow/phylogeny_9_locus.md`.
 
-No recombination-filtering tool has been selected. Whether to apply filtering,
-and with which tool and parameters, remains a scientific-method decision.
+## 4. Formal MLST and HLGR-associated genotype proxy — completed
 
-## 8. IQ-TREE — nine-locus workflow implemented
+The R workflow under `scripts/05_mlst/` assigns the official seven-locus order
+`gdh-gyd-pstS-gki-aroE-xpt-yqiL` from pinned PubMLST resources. Known alleles
+require 100% identity and 100% allele-length coverage; an ST requires an exact
+seven-allele profile match. Sixty-nine genomes have formal ST assignments and
+three remain explicitly unassigned. No nearest allele, ST or clonal complex is
+invented.
 
-Earlier single-gene `rpoB` and failed/interrupted attempts were removed. The
-replacement workflow implements a defined nine-locus concatenated
-housekeeping-gene analysis. Candidate annotations must pass a manual review gate
-before sequence extraction, and IQ-TREE is not run automatically during initial
-inspection.
+The frozen AMR matrix supplies the primary
+`aac(6')-Ie/aph(2'')-Ia` HLGR-associated genotype proxy. The validated state is
+29 detected carriers (5/14 reproductive and 24/58 bacteraemia). This is a
+genomic proxy, not a confirmed HLGR phenotype. ST prevalence is descriptive;
+the ST-concentration, patristic-distance and AMR/tree concordance tests are
+labelled exploratory. All analytical distance calculations use the frozen
+unrooted nine-locus tree.
 
-### Ten-locus concatenated housekeeping-gene phylogeny
+## 5. Targeted virulence/adherence analysis — completed through B4
 
-The analysis uses six established *E. faecalis* MLST loci (`gdh`, `gyd`,
-`pstS`, `gki`, `xpt`, and `yqiL`) plus three conserved markers (`pyrC`, `groEL`,
-and `recA`). `aroE` is excluded consistently because reference-guided review
-found a one-base deletion in one underlying assembly and no defensible intact
-whole CDS. Complete annotated CDSs are aligned independently and
-concatenated in that fixed order. MLST primer and reference evidence supports
-annotation disambiguation but does not define the extracted sequence span.
+The independent workflow under `scripts/07_virulence_adherence/` uses a pinned
+official VFDB core Set A snapshot and BLASTN against the canonical assemblies.
+Every candidate HSP and consolidated locus remains auditable. Accepted,
+partial, review-required, ambiguous-multiple-hit and not-detected statuses are
+mutually exclusive and reconcile to 14/58 for every target.
 
-The revised nine-locus dataset has passed the mechanical 648-record coordinate
-gate, but it has not passed the biological sequence-QC gate. The remaining two
-length failures and one additional short-CDS caveat are detailed in
-`docs/decisions/phylogeny_9_locus_annotation_review.md`. Alignment and tree
-inference must not proceed until the truncated records are resolved or a
-revised analysis policy is explicitly approved and documented.
+The approved resolved analysis applies competitive best-reference assignment.
+It reports `aggregation_substance_family_detected` as the primary broad binary
+feature and `asa1_specific` as a secondary lower-confidence breakdown. The
+`GCA_029011395.1` `cylA` call is retained as accepted with copy number two.
+Unresolved counts and maximum-possible uncertainty bounds are shown before
+Fisher results. Optional integration with a core-genome tree remains pending
+because no accepted core tree exists yet.
 
-This multilocus analysis is more informative than the archived single-gene
-`rpoB` exploration, but it is not equivalent to a pangenome-derived core-genome
-phylogeny. It provides a defined, reproducible view that should be interpreted
-alongside curated metadata and AMR findings. Phylogenetic proximity does not
-demonstrate pathogenicity, transmission, or epidemiological linkage.
+## 6. Panaroo core-genome analysis — A0/A1 complete; A2 review hold
 
-## 9. Statistical analysis — partial/future
+The staged pipeline under `scripts/07_core_genome/` complements rather than
+replaces the nine-locus tree. Panaroo 1.8.0 ran with strict cleaning, MAFFT and
+a 0.95 core threshold on all 72 accession-labelled Prokka GFFs. A1 completed
+successfully on 2026-08-17:
 
-Current AMR summaries are descriptive. Confirmatory comparative tests, covariate
-handling and multiple-testing policy require explicit scientific approval.
+- 7,290 total pangenome families;
+- 2,192 families present in at least 69/72 genomes;
+- 5,098 accessory families below that threshold;
+- 72 taxa in `core_gene_alignment.aln`;
+- concatenated alignment length 2,118,553 nt.
 
-## 10. R visualisation — implemented for AMR; exploratory overview retained
+Panaroo QC passed exact accession and 14/58 reconciliation. Alignment QC found
+81,093 variable and 59,907 parsimony-informative sites, no ambiguous bases, and
+one prespecified gate failure: `GCA_029011745.1` has 91.9047% non-missing
+sequence (171,503 gaps), below the 95% minimum. The genome remains in the
+alignment; it has not been silently excluded. IQ-TREE, SNP distances and
+core/nine-locus tree comparison have not been run pending an explicit review
+decision.
 
-Selected AMR figures and an exploratory dataset-overview script are retained.
-Figures should be regenerated from canonical tables and labelled according to
-the completion status of their underlying analysis.
+When that gate is resolved, the intended computationally bounded tree setting
+is a fixed `GTR+G4` model with 1,000 ultrafast bootstrap replicates and four
+threads, without ModelFinder or SH-aLRT. This setting must be confirmed before
+execution; a fast fixed-model tree without bootstrap is the documented
+time-constrained fallback.
+
+## 7. Environments and reproducibility
+
+The main environment is pinned in `environment/environment.yml`, with direct
+package versions in `environment/software_versions.tsv` and historical run
+versions in the recorded provenance files. The isolated Panaroo environment is
+defined by `environment/core_genome.yml`; its solver decision and installed
+versions are recorded separately. Scripts use project-relative paths, preserve
+accession version suffixes and refuse to overwrite outputs unless an explicit
+overwrite option is supplied.
+
+## 8. Interpretation boundaries
+
+The source groups are small and unbalanced, so prevalence and effect sizes are
+reported alongside adjusted p-values. “Detected only in one dataset” is not a
+specificity claim. Public-study structure, geography, incomplete metadata and
+related isolates can confound source comparisons. Genomic AMR or virulence
+detection does not establish expression, phenotype, pathogenicity,
+transmission or clinical risk.

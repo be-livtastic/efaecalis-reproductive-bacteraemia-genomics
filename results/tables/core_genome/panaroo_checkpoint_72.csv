@@ -1,0 +1,9 @@
+Metric,Value
+status,pass
+genomes_in_gene_table,72
+alignment_taxa,72
+alignment_length,2118553
+total_gene_families,7290
+core_gene_families_at_least_69_of_72,2192
+accessory_gene_families_below_69_of_72,5098
+panaroo_supplied_summary_files,summary_statistics.txt

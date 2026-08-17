@@ -1,0 +1,41 @@
+Genome,Source,Target_gene,Detection_status,Status_reason,Database_gene_symbol,Reference_accession,Contig_ID,Start,Stop,Strand,Identity,Coverage,Candidate_locus_count
+GCA_029011255.1,Reproductive,ace,accepted_present,Meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP118048.1,863332,865074,+,94.04790825386385,100.0,1
+GCA_029011255.1,Reproductive,efaA,accepted_present,Meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP118048.1,1696626,1697552,+,99.569,100.0,1
+GCA_029011255.1,Reproductive,ebpA,accepted_present,Meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP118048.1,852136,855600,+,99.076,100.0,1
+GCA_029011255.1,Reproductive,ebpB,accepted_present,Meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP118048.1,855604,857034,+,99.02200000000002,100.0,1
+GCA_029011255.1,Reproductive,ebpC,accepted_present,Meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP118048.1,857031,858914,+,98.779,100.0,1
+GCA_029011255.1,Reproductive,asa1_or_validated_equivalent,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_029011255.1,Reproductive,gelE,accepted_present,Meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP118048.1,1539882,1541414,-,98.89100000000002,100.0,1
+GCA_029011255.1,Reproductive,sprE,accepted_present,Meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP118048.1,1538979,1539833,-,98.48,100.0,1
+GCA_029011255.1,Reproductive,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_029011255.1,Reproductive,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050469755.1,Bacteraemia,ace,accepted_present,Meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175101.1,52017,54041,+,94.79255579553636,100.0,1
+GCA_050469755.1,Bacteraemia,efaA,accepted_present,Meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175101.1,940831,941757,+,99.892,100.0,2
+GCA_050469755.1,Bacteraemia,ebpA,accepted_present,Meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175101.1,41209,44673,+,99.942,100.0,1
+GCA_050469755.1,Bacteraemia,ebpB,accepted_present,Meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175101.1,44677,46107,+,100.0,100.0,1
+GCA_050469755.1,Bacteraemia,ebpC,accepted_present,Meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175101.1,46104,47987,+,99.682,100.0,1
+GCA_050469755.1,Bacteraemia,asa1_or_validated_equivalent,ambiguous_multiple_hit,Multiple distinct accepted loci require review,asa1,WP_010785625,CP175100.1,20404,24321,-,95.41986995515695,80.13364173734259,2
+GCA_050469755.1,Bacteraemia,gelE,accepted_present,Meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,CP175101.1,705834,707366,-,100.0,100.0,1
+GCA_050469755.1,Bacteraemia,sprE,accepted_present,Meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,CP175101.1,704931,705785,-,100.0,100.0,1
+GCA_050469755.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050469755.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050471105.1,Bacteraemia,ace,accepted_present,Meets >=80% identity and >=80% reference coverage,ace,WP_010714416,CP175093.1,54002,56026,+,93.2238198697854,100.0,1
+GCA_050471105.1,Bacteraemia,efaA,accepted_present,Meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,CP175093.1,861641,862567,+,99.569,100.0,2
+GCA_050471105.1,Bacteraemia,ebpA,accepted_present,Meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,CP175093.1,40990,44454,+,99.509,100.0,1
+GCA_050471105.1,Bacteraemia,ebpB,accepted_present,Meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,CP175093.1,44458,45888,+,99.371,100.0,1
+GCA_050471105.1,Bacteraemia,ebpC,accepted_present,Meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,CP175093.1,45885,47768,+,99.045,100.0,1
+GCA_050471105.1,Bacteraemia,asa1_or_validated_equivalent,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050471105.1,Bacteraemia,gelE,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050471105.1,Bacteraemia,sprE,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050471105.1,Bacteraemia,esp,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCA_050471105.1,Bacteraemia,cylA,not_detected,No candidate met a retained detection-status threshold,,,,,,,,,0
+GCF_053117575.1,Reproductive,ace,accepted_present,Meets >=80% identity and >=80% reference coverage,ace,WP_010714416,NZ_CP181216.1,1031826,1033709,+,93.99111649659864,100.0,1
+GCF_053117575.1,Reproductive,efaA,accepted_present,Meets >=80% identity and >=80% reference coverage,efaA,WP_002356954,NZ_CP181216.1,1913977,1914903,+,99.461,100.0,2
+GCF_053117575.1,Reproductive,ebpA,accepted_present,Meets >=80% identity and >=80% reference coverage,ebpA,WP_154081516,NZ_CP181216.1,1017823,1021287,+,99.509,100.0,1
+GCF_053117575.1,Reproductive,ebpB,accepted_present,Meets >=80% identity and >=80% reference coverage,ebpB,WP_002379309,NZ_CP181216.1,1021291,1022721,+,99.441,100.0,1
+GCF_053117575.1,Reproductive,ebpC,accepted_present,Meets >=80% identity and >=80% reference coverage,ebpC,WP_011109477,NZ_CP181216.1,1022718,1024601,+,99.363,100.0,1
+GCF_053117575.1,Reproductive,asa1_or_validated_equivalent,ambiguous_multiple_hit,Multiple distinct accepted loci require review,asa1,WP_010785625,NZ_CP181217.1,64231,68148,+,94.52240262652145,80.13364173734259,4
+GCF_053117575.1,Reproductive,gelE,accepted_present,Meets >=80% identity and >=80% reference coverage,gelE,WP_002369251,NZ_CP181216.1,1704210,1705742,-,98.89100000000002,100.0,1
+GCF_053117575.1,Reproductive,sprE,accepted_present,Meets >=80% identity and >=80% reference coverage,sprE,WP_002369252,NZ_CP181216.1,1703307,1704161,-,98.48,100.0,1
+GCF_053117575.1,Reproductive,esp,accepted_present,Meets >=80% identity and >=80% reference coverage,esp,AAD09858,NZ_CP181216.1,447105,452726,+,97.11467852887851,100.0,1
+GCF_053117575.1,Reproductive,cylA,accepted_present,Meets >=80% identity and >=80% reference coverage,cylA,AAM75253,NZ_CP181216.1,440219,441457,+,99.839,100.0,1

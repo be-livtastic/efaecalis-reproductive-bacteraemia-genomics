@@ -1,0 +1,16 @@
+Target_gene,Detection_status,Genome_count
+ace,accepted_present,4
+asa1_or_validated_equivalent,ambiguous_multiple_hit,2
+asa1_or_validated_equivalent,not_detected,2
+cylA,accepted_present,1
+cylA,not_detected,3
+ebpA,accepted_present,4
+ebpB,accepted_present,4
+ebpC,accepted_present,4
+efaA,accepted_present,4
+esp,accepted_present,1
+esp,not_detected,3
+gelE,accepted_present,3
+gelE,not_detected,1
+sprE,accepted_present,3
+sprE,not_detected,1

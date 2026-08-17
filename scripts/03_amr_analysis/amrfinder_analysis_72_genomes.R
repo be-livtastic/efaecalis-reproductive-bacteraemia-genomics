@@ -8,7 +8,7 @@
 #   - Confidence-separated hit tables
 #   - Low-coverage hit tables (<80% reference coverage)
 #   - Per-genome AMR summaries
-#   - Gene-count, drug-class, dataset-comparison, and selected-category plots
+#   - Drug-class, dataset-comparison, and selected-category plots
 # ================================================================
 
 # ------------------------------
@@ -675,29 +675,6 @@ save_plot <- function(plot_object, filename, width = 11, height = 7) {
   )
 }
 
-plot_gene_count_per_genome <- function(summary_data, dataset_label, filename) {
-  p <- summary_data |>
-    mutate(genome_id = forcats::fct_reorder(genome_id, unique_amr_gene_count)) |>
-    ggplot(aes(x = genome_id, y = unique_amr_gene_count)) +
-    geom_col() +
-    coord_flip() +
-    labs(
-      title = paste0("Functional AMR gene count per genome: ", dataset_label),
-      subtitle = "INTERNAL_STOP hits are excluded; genes are counted once per genome",
-      x = "Genome / isolate",
-      y = "Number of unique functional AMR genes"
-    ) +
-    theme_minimal(base_size = 11) +
-    theme(panel.grid.major.y = element_blank())
-  
-  save_plot(
-    p,
-    filename,
-    width = 11,
-    height = ifelse(nrow(summary_data) > 30, 14, 8)
-  )
-}
-
 plot_drug_classes <- function(data, dataset_label, filename) {
   plot_data <- data |>
     filter(
@@ -727,24 +704,6 @@ plot_drug_classes <- function(data, dataset_label, filename) {
 # ------------------------------
 # 9. Create retained graphs
 # ------------------------------
-plot_gene_count_per_genome(
-  reproductive_summary,
-  "14 reproductive genomes",
-  "reproductive_14_amr_gene_count_per_genome.png"
-)
-
-plot_gene_count_per_genome(
-  bacteraemia_summary,
-  "58 bacteraemia genomes",
-  "bacteraemia_58_amr_gene_count_per_genome.png"
-)
-
-plot_gene_count_per_genome(
-  combined_summary,
-  "combined 72 genomes",
-  "combined_72_amr_gene_count_per_genome.png"
-)
-
 plot_drug_classes(
   reproductive_clean,
   "14 reproductive genomes",

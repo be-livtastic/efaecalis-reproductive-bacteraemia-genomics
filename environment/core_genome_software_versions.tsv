@@ -1,0 +1,9 @@
+component	package	version	status
+Python	python	3.11.15	separate core environment required by Panaroo dependency resolution
+Panaroo	panaroo	1.8.0	pinned for core-gene clustering and alignment
+snp-dists	snp-dists	1.2.0	pinned for concatenated core-alignment SNP distances
+MAFFT	mafft	7.526	pinned for Panaroo core alignment
+IQ-TREE	iqtree	3.1.2	pinned for core-genome phylogenetic inference
+Biopython	biopython	1.87	pinned for alignment and tree input validation
+pandas	pandas	3.0.5	pinned for QC and tabular processing
+NumPy	numpy	2.3.5	pinned for alignment QC

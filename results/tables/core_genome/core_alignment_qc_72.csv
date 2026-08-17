@@ -1,0 +1,11 @@
+Metric,Value
+taxa,72.0
+alignment_length,2118553.0
+variable_sites,81093.0
+parsimony_informative_sites,59907.0
+invariant_sites_among_observed_bases,2037400.0
+all_missing_sites,60.0
+total_gap_characters,1829275.0
+total_ambiguous_characters,0.0
+minimum_genome_non_missing_proportion,0.9190471043207321
+genomes_below_95_percent_non_missing,1.0

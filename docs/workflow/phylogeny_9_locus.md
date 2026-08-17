@@ -6,6 +6,11 @@ This completed pipeline implements an extended MLST-style, whole-locus
 analysis of 14 reproductive-associated and 58 bacteraemia-associated
 *Enterococcus faecalis* assemblies. It is not a core-genome phylogeny.
 
+The validated 72-tip tree, its 11,341-nt concatenated alignment and matched
+71-genome sensitivity analysis are frozen upstream inputs for the completed
+MLST/AMR/HLGR integration. The separate Panaroo workflow remains at an
+alignment-QC review hold and has not replaced or regenerated this tree.
+
 The fixed locus order is `gdh`, `gyd`, `pstS`, `gki`, `xpt`, `yqiL`, `pyrC`,
 `groEL`, and `recA`. `aroE` is excluded consistently from all genomes
 because one assembly contains a confirmed one-base deletion and no defensible
@@ -117,8 +122,8 @@ are genuine observed characters, and no nucleotide is imputed. The shorter
 1488-nt `GCA_029011535.1 gdh` allele is retained as an approved terminal
 variant. Regenerated sequence QC reports 648 PASS, 0 REVIEW, and 0 FAIL.
 
-Reference-guided follow-up confirms that the remaining failures are not simple
-Prokka boundary errors. `GCA_029011395.1` has a one-base insertion that splits
+Reference-guided follow-up confirms that the reviewed sequence disruptions are
+not simple Prokka boundary errors. `GCA_029011395.1` has a one-base insertion that splits
 the normal 2412 nt acetyl-CoA acetyltransferase/HMG-CoA reductase fusion into
 separate `thlA` and `mvaA` ORFs, plus a different one-base deletion that splits
 the terminal portion of `recA`. The short `GCA_029011535.1 gdh` also has a

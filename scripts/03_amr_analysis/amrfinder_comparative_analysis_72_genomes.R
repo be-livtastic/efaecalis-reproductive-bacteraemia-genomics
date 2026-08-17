@@ -75,6 +75,9 @@ get_config <- function() {
     metadata_path = file.path(
       project_root, "data", "accession_lists", "selected_72_accessions.tsv"
     ),
+    strain_metadata_path = file.path(
+      project_root, "data", "metadata", "curated_metadata_72_genomes.csv"
+    ),
     processed_output_dir = file.path(project_root, "data", "processed", "amr"),
     table_output_dir = file.path(project_root, "results", "tables", "amr"),
     figure_output_dir = file.path(project_root, "results", "figures", "amr"),
@@ -84,7 +87,7 @@ get_config <- function() {
 
 parse_args <- function() {
   args <- commandArgs(trailingOnly = TRUE)
-  allowed <- c("--overwrite", "--help")
+  allowed <- c("--overwrite", "--heatmaps-only", "--help")
   unknown <- setdiff(args, allowed)
   if (length(unknown) > 0L) {
     stop("Unknown argument(s): ", paste(unknown, collapse = ", "), call. = FALSE)
@@ -92,12 +95,16 @@ parse_args <- function() {
   if ("--help" %in% args) {
     cat(
       "Usage: Rscript scripts/03_amr_analysis/",
-      "amrfinder_comparative_analysis_72_genomes.R [--overwrite]\n",
+      "amrfinder_comparative_analysis_72_genomes.R ",
+      "[--overwrite] [--heatmaps-only]\n",
       sep = ""
     )
     quit(save = "no", status = 0L)
   }
-  list(overwrite = "--overwrite" %in% args)
+  list(
+    overwrite = "--overwrite" %in% args,
+    heatmaps_only = "--heatmaps-only" %in% args
+  )
 }
 
 check_packages <- function(packages) {
@@ -163,6 +170,13 @@ output_registry <- function(config) {
     ),
     amr_presence_absence_heatmap_selected_72 = file.path(
       config$figure_output_dir, "amr_presence_absence_heatmap_selected_72.png"
+    ),
+    amr_presence_absence_heatmap_clustered_72 = file.path(
+      config$figure_output_dir, "amr_presence_absence_heatmap_clustered_72.png"
+    ),
+    amr_presence_absence_heatmap_clustering_audit_72 = file.path(
+      config$figure_output_dir,
+      "amr_presence_absence_heatmap_clustering_audit_72.tsv"
     ),
     amr_drug_class_prevalence_comparison_72 = file.path(
       config$figure_output_dir, "amr_drug_class_prevalence_comparison_72.png"
@@ -343,6 +357,74 @@ load_metadata <- function(path) {
     }
   }
   metadata
+}
+
+load_strain_metadata <- function(path, canonical_metadata) {
+  # Read strain labels from the curated metadata and require an exact 72-genome join.
+  if (!file.exists(path)) {
+    stop("Curated strain metadata file does not exist: ", path, call. = FALSE)
+  }
+  strain_metadata <- readr::read_csv(
+    path, show_col_types = FALSE, progress = FALSE,
+    col_types = readr::cols(.default = readr::col_character())
+  )
+  required <- c(
+    "assembly_accession", "strain", "reproductive_bacteraemia_category"
+  )
+  missing <- setdiff(required, names(strain_metadata))
+  if (length(missing) > 0L) {
+    stop(
+      "Curated strain metadata is missing required column(s): ",
+      paste(missing, collapse = ", "), call. = FALSE
+    )
+  }
+  strain_metadata <- strain_metadata |>
+    dplyr::transmute(
+      Genome = stringr::str_trim(.data$assembly_accession),
+      Strain = stringr::str_trim(.data$strain),
+      Source = stringr::str_trim(.data$reproductive_bacteraemia_category)
+    )
+  if (nrow(strain_metadata) != 72L || anyDuplicated(strain_metadata$Genome)) {
+    stop(
+      "Curated strain metadata must contain exactly 72 unique accessions.",
+      call. = FALSE
+    )
+  }
+  if (any(is.na(strain_metadata$Strain) | strain_metadata$Strain == "")) {
+    stop("Every canonical genome must have a non-empty strain name.", call. = FALSE)
+  }
+  if (anyDuplicated(strain_metadata$Strain)) {
+    duplicates <- unique(strain_metadata$Strain[duplicated(strain_metadata$Strain)])
+    stop(
+      "Strain names must be unique for heatmap axes; duplicated value(s): ",
+      paste(duplicates, collapse = ", "), call. = FALSE
+    )
+  }
+  joined <- dplyr::full_join(
+    canonical_metadata, strain_metadata,
+    by = "Genome", suffix = c("_canonical", "_curated")
+  )
+  if (nrow(joined) != 72L || any(is.na(joined$Source_canonical)) ||
+      any(is.na(joined$Source_curated))) {
+    stop(
+      "Curated strain metadata does not match the exact canonical accession set.",
+      call. = FALSE
+    )
+  }
+  mismatched <- joined$Source_canonical != joined$Source_curated
+  if (any(mismatched)) {
+    stop(
+      "Curated strain metadata source disagrees with the canonical manifest for: ",
+      paste(joined$Genome[mismatched], collapse = ", "), call. = FALSE
+    )
+  }
+  joined |>
+    dplyr::transmute(
+      Genome = .data$Genome,
+      Source = .data$Source_canonical,
+      Strain = .data$Strain
+    ) |>
+    dplyr::arrange(.data$Genome)
 }
 
 validate_genome_membership <- function(manifest, metadata) {
@@ -675,7 +757,7 @@ build_presence_absence <- function(functional_hits, metadata) {
 presence_matrix_long <- function(matrix) {
   matrix |>
     tidyr::pivot_longer(
-      cols = -c(.data$Genome, .data$Source),
+      cols = -c("Genome", "Source"),
       names_to = "Gene", values_to = "Present"
     )
 }
@@ -783,7 +865,7 @@ add_broad_drug_classes <- function(data) {
       .data$Class_for_analysis, .data$Subclass_for_analysis,
       classify_broad_classes_one
     )) |>
-    tidyr::unnest_longer(.data$Broad_drug_class)
+    tidyr::unnest_longer("Broad_drug_class")
 }
 
 collapse_values <- function(values) {
@@ -1069,16 +1151,113 @@ plot_gene_prevalence <- function(prevalence) {
     ggplot2::theme_minimal(base_size = 11)
 }
 
-plot_presence_absence_heatmap <- function(matrix, prevalence, functional_hits) {
+selected_heatmap_genes <- function(prevalence, functional_hits) {
+  # Select the documented top-prevalence genes plus every aminoglycoside gene.
   top_genes <- prevalence |>
     dplyr::slice_max(.data$Combined_percent, n = HEATMAP_TOP_N_GENES, with_ties = FALSE) |>
     dplyr::pull(.data$Gene)
-  aminoglycoside_genes <- functional_hits |>
+  functional_for_classes <- functional_hits
+  if (!"Class_for_analysis" %in% names(functional_for_classes) &&
+      "Class" %in% names(functional_for_classes)) {
+    functional_for_classes$Class_for_analysis <- functional_for_classes$Class
+  }
+  if (!"Subclass_for_analysis" %in% names(functional_for_classes) &&
+      "Subclass" %in% names(functional_for_classes)) {
+    functional_for_classes$Subclass_for_analysis <- functional_for_classes$Subclass
+  }
+  required <- c("Class_for_analysis", "Subclass_for_analysis")
+  missing <- setdiff(required, names(functional_for_classes))
+  if (length(missing) > 0L) {
+    stop(
+      "Functional-hit table is missing heatmap class column(s): ",
+      paste(missing, collapse = ", "), call. = FALSE
+    )
+  }
+  aminoglycoside_genes <- functional_for_classes |>
     add_broad_drug_classes() |>
     dplyr::filter(.data$Broad_drug_class == "aminoglycoside") |>
     dplyr::pull(.data$Gene) |>
     unique()
-  selected_genes <- unique(c(top_genes, sort(aminoglycoside_genes)))
+  unique(c(top_genes, sort(aminoglycoside_genes)))
+}
+
+heatmap_detection_scale <- function() {
+  # Use one explicit blue/red binary palette for every AMR heatmap variant.
+  ggplot2::scale_fill_manual(
+    values = c(Absent = "#2166AC", Present = "#B2182B"),
+    drop = FALSE
+  )
+}
+
+binary_jaccard_matrix <- function(data_matrix) {
+  # Calculate Jaccard distances on raw binary calls, including a defined zero-union case.
+  binary <- data_matrix != 0
+  n_items <- nrow(binary)
+  result <- matrix(
+    0, nrow = n_items, ncol = n_items,
+    dimnames = list(rownames(binary), rownames(binary))
+  )
+  if (n_items < 2L) return(result)
+  for (i in seq_len(n_items - 1L)) {
+    for (j in seq.int(i + 1L, n_items)) {
+      union_count <- sum(binary[i, ] | binary[j, ])
+      distance <- if (union_count == 0L) {
+        0
+      } else {
+        sum(xor(binary[i, ], binary[j, ])) / union_count
+      }
+      result[i, j] <- distance
+      result[j, i] <- distance
+    }
+  }
+  result
+}
+
+distance_matrix_audit <- function(
+    distance_matrix, dimension, accession_lookup = NULL, cluster_order) {
+  # Store the complete symmetric matrix in long form with reproducible clustering metadata.
+  audit <- as.data.frame(as.table(distance_matrix), stringsAsFactors = FALSE) |>
+    tibble::as_tibble() |>
+    dplyr::rename(
+      Item_1_key = Var1,
+      Item_2_key = Var2,
+      Distance = Freq
+    ) |>
+    dplyr::mutate(
+      Heatmap_variant = "clustered",
+      Dimension = dimension,
+      Item_1 = .data$Item_1_key,
+      Item_2 = .data$Item_2_key,
+      Item_1_accession = NA_character_,
+      Item_2_accession = NA_character_,
+      Item_1_cluster_order = match(.data$Item_1_key, cluster_order),
+      Item_2_cluster_order = match(.data$Item_2_key, cluster_order),
+      Distance_method = "binary Jaccard; joint absences ignored; zero union defined as distance 0",
+      Scaling_normalisation = "none; raw accepted-detection presence/absence values (0/1)",
+      Linkage_method = "average (UPGMA)"
+    )
+  if (!is.null(accession_lookup)) {
+    audit <- audit |>
+      dplyr::mutate(
+        Item_1 = unname(accession_lookup[.data$Item_1_key]),
+        Item_2 = unname(accession_lookup[.data$Item_2_key]),
+        Item_1_accession = .data$Item_1_key,
+        Item_2_accession = .data$Item_2_key
+      )
+  }
+  audit |>
+    dplyr::select(dplyr::all_of(c(
+      "Heatmap_variant", "Dimension", "Item_1", "Item_2",
+      "Item_1_accession", "Item_2_accession", "Distance",
+      "Item_1_cluster_order", "Item_2_cluster_order", "Distance_method",
+      "Scaling_normalisation", "Linkage_method"
+    )))
+}
+
+plot_presence_absence_heatmap <- function(
+    matrix, prevalence, functional_hits, strain_metadata) {
+  # Keep the original deterministic ordering while replacing accessions with strain labels.
+  selected_genes <- selected_heatmap_genes(prevalence, functional_hits)
   gene_order <- prevalence |>
     dplyr::filter(.data$Gene %in% selected_genes) |>
     dplyr::arrange(.data$Combined_count, .data$Gene) |>
@@ -1089,31 +1268,111 @@ plot_presence_absence_heatmap <- function(matrix, prevalence, functional_hits) {
       .data$Genome
     ) |>
     dplyr::pull(.data$Genome)
+  strain_order <- strain_metadata$Strain[match(genome_order, strain_metadata$Genome)]
   plot_data <- presence_matrix_long(matrix) |>
     dplyr::filter(.data$Gene %in% selected_genes) |>
+    dplyr::left_join(strain_metadata, by = c("Genome", "Source")) |>
     dplyr::mutate(
       Gene = factor(.data$Gene, levels = gene_order),
-      Genome = factor(.data$Genome, levels = genome_order),
+      Strain = factor(.data$Strain, levels = strain_order),
       Present = factor(.data$Present, levels = c(0, 1), labels = c("Absent", "Present"))
     )
   ggplot2::ggplot(
     plot_data,
-    ggplot2::aes(x = .data$Gene, y = .data$Genome, fill = .data$Present)
+    ggplot2::aes(x = .data$Gene, y = .data$Strain, fill = .data$Present)
   ) +
     ggplot2::geom_tile() +
+    heatmap_detection_scale() +
     ggplot2::facet_grid(
       rows = ggplot2::vars(Source), scales = "free_y", space = "free_y"
     ) +
     ggplot2::labs(
       title = "Accepted functional AMR determinant presence/absence",
       subtitle = "Top 30 genes by prevalence plus all accepted aminoglycoside genes",
-      x = "AMR determinant", y = "Genome", fill = "Detection"
+      x = "AMR determinant", y = "Strain", fill = "Detection"
     ) +
     ggplot2::theme_minimal(base_size = 9) +
     ggplot2::theme(
       axis.text.x = ggplot2::element_text(angle = 60, hjust = 1),
       panel.grid = ggplot2::element_blank()
     )
+}
+
+build_clustered_presence_absence_heatmap <- function(
+    matrix, prevalence, functional_hits, strain_metadata) {
+  # Cluster both genomes and genes using average-linkage Jaccard distances.
+  selected_genes <- selected_heatmap_genes(prevalence, functional_hits)
+  binary <- matrix |>
+    dplyr::arrange(.data$Genome) |>
+    dplyr::select("Genome", dplyr::all_of(selected_genes))
+  numeric_matrix <- as.matrix(binary[, selected_genes, drop = FALSE])
+  storage.mode(numeric_matrix) <- "numeric"
+  rownames(numeric_matrix) <- binary$Genome
+
+  row_distance <- binary_jaccard_matrix(numeric_matrix)
+  column_distance <- binary_jaccard_matrix(t(numeric_matrix))
+  row_cluster <- stats::hclust(stats::as.dist(row_distance), method = "average")
+  column_cluster <- stats::hclust(
+    stats::as.dist(column_distance), method = "average"
+  )
+  genome_order <- rownames(numeric_matrix)[row_cluster$order]
+  gene_order <- colnames(numeric_matrix)[column_cluster$order]
+  strain_lookup <- stats::setNames(
+    strain_metadata$Strain, strain_metadata$Genome
+  )
+  strain_order <- unname(strain_lookup[genome_order])
+
+  plot_data <- presence_matrix_long(matrix) |>
+    dplyr::filter(.data$Gene %in% selected_genes) |>
+    dplyr::left_join(strain_metadata, by = c("Genome", "Source")) |>
+    dplyr::mutate(
+      Gene = factor(.data$Gene, levels = gene_order),
+      Strain = factor(.data$Strain, levels = rev(strain_order)),
+      Present = factor(
+        .data$Present, levels = c(0, 1), labels = c("Absent", "Present")
+      )
+    )
+  plot <- ggplot2::ggplot(
+    plot_data,
+    ggplot2::aes(x = .data$Gene, y = .data$Strain, fill = .data$Present)
+  ) +
+    ggplot2::geom_tile() +
+    heatmap_detection_scale() +
+    ggplot2::labs(
+      title = "Clustered accepted functional AMR determinant presence/absence",
+      subtitle = paste(
+        "Rows and columns: binary Jaccard distance, average linkage;",
+        "raw 0/1 calls without scaling"
+      ),
+      x = "AMR determinant", y = "Strain", fill = "Detection"
+    ) +
+    ggplot2::theme_minimal(base_size = 9) +
+    ggplot2::theme(
+      axis.text.x = ggplot2::element_text(angle = 60, hjust = 1),
+      panel.grid = ggplot2::element_blank()
+    )
+
+  unclustered_policy <- tibble::tibble(
+    Heatmap_variant = "unclustered",
+    Dimension = "rows_and_columns",
+    Item_1 = NA_character_, Item_2 = NA_character_,
+    Item_1_accession = NA_character_, Item_2_accession = NA_character_,
+    Distance = NA_real_,
+    Item_1_cluster_order = NA_integer_, Item_2_cluster_order = NA_integer_,
+    Distance_method = "not applied; rows ordered by source/accession and columns by prevalence/gene",
+    Scaling_normalisation = "none; raw accepted-detection presence/absence values (0/1)",
+    Linkage_method = "not applied"
+  )
+  row_audit <- distance_matrix_audit(
+    row_distance, "rows (strains)", strain_lookup, genome_order
+  )
+  column_audit <- distance_matrix_audit(
+    column_distance, "columns (AMR determinants)", NULL, gene_order
+  )
+  list(
+    plot = plot,
+    audit = dplyr::bind_rows(unclustered_policy, row_audit, column_audit)
+  )
 }
 
 plot_drug_class_prevalence <- function(drug_class_summary) {
@@ -1150,6 +1409,14 @@ safe_write_csv <- function(data, path, overwrite) {
   readr::write_csv(data, path, na = "")
 }
 
+safe_write_tsv <- function(data, path, overwrite) {
+  # Apply the same overwrite guard to the clustering-distance audit TSV.
+  if (file.exists(path) && !overwrite) {
+    stop("Refusing to overwrite existing output: ", path, call. = FALSE)
+  }
+  readr::write_tsv(data, path, na = "")
+}
+
 safe_save_plot <- function(plot, path, overwrite, width, height) {
   if (file.exists(path) && !overwrite) {
     stop("Refusing to overwrite existing figure: ", path, call. = FALSE)
@@ -1164,6 +1431,8 @@ write_outputs <- function(objects, plots, paths, overwrite) {
   csv_names <- setdiff(names(paths), c(
     "amr_gene_prevalence_comparison_72",
     "amr_presence_absence_heatmap_selected_72",
+    "amr_presence_absence_heatmap_clustered_72",
+    "amr_presence_absence_heatmap_clustering_audit_72",
     "amr_drug_class_prevalence_comparison_72",
     "amrfinder_comparative_analysis_72_log"
   ))
@@ -1177,6 +1446,10 @@ write_outputs <- function(objects, plots, paths, overwrite) {
   for (name in csv_names) {
     safe_write_csv(objects[[name]], paths[[name]], overwrite)
   }
+  safe_write_tsv(
+    objects$amr_presence_absence_heatmap_clustering_audit_72,
+    paths[["amr_presence_absence_heatmap_clustering_audit_72"]], overwrite
+  )
   safe_save_plot(
     plots$gene_prevalence, paths[["amr_gene_prevalence_comparison_72"]],
     overwrite, width = 10, height = 9
@@ -1187,9 +1460,78 @@ write_outputs <- function(objects, plots, paths, overwrite) {
     overwrite, width = 14, height = 16
   )
   safe_save_plot(
+    plots$presence_absence_clustered,
+    paths[["amr_presence_absence_heatmap_clustered_72"]],
+    overwrite, width = 14, height = 16
+  )
+  safe_save_plot(
     plots$drug_class, paths[["amr_drug_class_prevalence_comparison_72"]],
     overwrite, width = 10, height = 7
   )
+}
+
+run_heatmaps_only <- function(args, config, paths) {
+  # Regenerate only heatmap artifacts from frozen validated AMR tables.
+  heatmap_paths <- paths[c(
+    "amr_presence_absence_heatmap_selected_72",
+    "amr_presence_absence_heatmap_clustered_72",
+    "amr_presence_absence_heatmap_clustering_audit_72"
+  )]
+  preflight_outputs(heatmap_paths, args$overwrite)
+  dir.create(config$figure_output_dir, recursive = TRUE, showWarnings = FALSE)
+  required_inputs <- c(
+    matrix = paths[["amr_gene_presence_absence"]],
+    prevalence = paths[["amr_gene_prevalence_72"]],
+    functional_hits = file.path(
+      config$processed_output_dir, "amr_functional_hits_with_contigs_72.csv"
+    )
+  )
+  missing_inputs <- required_inputs[!file.exists(required_inputs)]
+  if (length(missing_inputs) > 0L) {
+    stop(
+      "Heatmaps-only mode is missing validated upstream input(s): ",
+      paste(missing_inputs, collapse = ", "), call. = FALSE
+    )
+  }
+  matrix <- readr::read_csv(
+    required_inputs[["matrix"]], show_col_types = FALSE, progress = FALSE
+  )
+  prevalence <- readr::read_csv(
+    required_inputs[["prevalence"]], show_col_types = FALSE, progress = FALSE
+  )
+  functional <- readr::read_csv(
+    required_inputs[["functional_hits"]], show_col_types = FALSE, progress = FALSE
+  )
+  metadata <- load_metadata(config$metadata_path)
+  strain_metadata <- load_strain_metadata(config$strain_metadata_path, metadata)
+  if (nrow(matrix) != 72L || anyDuplicated(matrix$Genome) ||
+      !setequal(matrix$Genome, metadata$Genome)) {
+    stop(
+      "Frozen AMR matrix must contain exactly the 72 canonical genomes.",
+      call. = FALSE
+    )
+  }
+  clustered <- build_clustered_presence_absence_heatmap(
+    matrix, prevalence, functional, strain_metadata
+  )
+  unclustered <- plot_presence_absence_heatmap(
+    matrix, prevalence, functional, strain_metadata
+  )
+  safe_save_plot(
+    unclustered, heatmap_paths[["amr_presence_absence_heatmap_selected_72"]],
+    args$overwrite, width = 14, height = 16
+  )
+  safe_save_plot(
+    clustered$plot,
+    heatmap_paths[["amr_presence_absence_heatmap_clustered_72"]],
+    args$overwrite, width = 14, height = 16
+  )
+  safe_write_tsv(
+    clustered$audit,
+    heatmap_paths[["amr_presence_absence_heatmap_clustering_audit_72"]],
+    args$overwrite
+  )
+  message("Heatmap-only regeneration completed successfully.")
 }
 
 main <- function() {
@@ -1198,6 +1540,10 @@ main <- function() {
   check_packages(required_packages)
   config <- get_config()
   paths <- output_registry(config)
+  if (args$heatmaps_only) {
+    run_heatmaps_only(args, config, paths)
+    return(invisible(NULL))
+  }
   preflight_outputs(paths, args$overwrite)
   create_output_directories(config)
   log_path <- paths[["amrfinder_comparative_analysis_72_log"]]
@@ -1207,6 +1553,9 @@ main <- function() {
   manifest <- discover_amrfinder_files(config)
   log_message(log_path, "Per-genome files discovered: ", nrow(manifest))
   metadata <- load_metadata(config$metadata_path)
+  strain_metadata <- load_strain_metadata(
+    config$strain_metadata_path, metadata
+  )
   manifest <- validate_genome_membership(manifest, metadata)
   log_message(log_path, "Metadata and file membership validation passed")
 
@@ -1239,6 +1588,11 @@ main <- function() {
   contig_hits <- build_functional_hits_with_contigs(functional)
   qc <- build_qc_summary(data, matrix, prevalence, fisher, classifications)
 
+  # Derive clustered orders and the complete distance audit before registration.
+  clustered_heatmap <- build_clustered_presence_absence_heatmap(
+    matrix, prevalence, functional, strain_metadata
+  )
+
   # Register every table explicitly so missing or duplicated destinations fail safely.
   objects <- list(
     amr_standardised_long_72 = data,
@@ -1255,13 +1609,17 @@ main <- function() {
     amr_gene_fisher_tests_72 = fisher,
     amr_singletons_72 = singletons,
     amr_notable_prevalence_differences_72 = notable,
-    amr_pipeline_qc_summary_72 = qc
+    amr_pipeline_qc_summary_72 = qc,
+    amr_presence_absence_heatmap_clustering_audit_72 = clustered_heatmap$audit
   )
 
-  # Build the three documented plots from validated in-memory analysis objects.
+  # Build the documented plots from validated in-memory analysis objects.
   plots <- list(
     gene_prevalence = plot_gene_prevalence(prevalence),
-    presence_absence = plot_presence_absence_heatmap(matrix, prevalence, functional),
+    presence_absence = plot_presence_absence_heatmap(
+      matrix, prevalence, functional, strain_metadata
+    ),
+    presence_absence_clustered = clustered_heatmap$plot,
     drug_class = plot_drug_class_prevalence(drug_classes)
   )
 
