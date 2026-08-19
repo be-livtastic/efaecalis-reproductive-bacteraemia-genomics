@@ -1,0 +1,10 @@
+{
+  "name": "E. faecalis core-genome environment",
+  "image": "mambaorg/micromamba:2.3.2",
+  "remoteUser": "mambauser",
+  "containerEnv": {
+    "MAMBA_ROOT_PREFIX": "/opt/conda"
+  },
+  "postCreateCommand": "bash .devcontainer/setup-core-environment.sh",
+  "shutdownAction": "stopContainer"
+}
