@@ -39,6 +39,23 @@ Core families are present in at least 69 of 72 genomes; families present in fewe
 
 All analytical trees remain unrooted. Midpoint rooting is display-only. No project-defined clades are assigned, no transmission is inferred, and Gubbins is not run automatically.
 
+## Rebuilt-Codespace pre-transfer gate
+
+After pushing commit `ffa0b93` (or its full SHA) to `main` and rebuilding Codespace `expert-guide-5gx777p954pq37p6v`, run:
+
+```bash
+bash scripts/07_core_genome/validate_pretransfer_environment.sh
+```
+
+This validates the exact pre-transfer constraints in one pass: `main` branch state, `HEAD`/`origin/main` agreement, expected core tool versions, expected package versions, and that `analysis/core_genome/panaroo_strict_core95/core_gene_alignment.aln` is absent before transfer.
+
+Required terminal token:
+
+- `READY_FOR_ALIGNMENT_TRANSFER` when every gate passes.
+- `STOPPED_PRETRANSFER` plus the first blocker when any gate fails.
+
+Do not transfer the alignment, run Panaroo, or start IQ-TREE until this gate returns `READY_FOR_ALIGNMENT_TRANSFER`.
+
 Helper tests cover versioned accession parsing, missing-genome rejection, 1.5-IQR flag retention, tied nearest neighbours and SNP-matrix symmetry:
 
 ```bash
