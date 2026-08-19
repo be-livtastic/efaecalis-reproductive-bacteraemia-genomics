@@ -1,0 +1,104 @@
+{
+  "timestamp_utc": "20260819T042124Z",
+  "alignment_path": "/workspaces/efaecalis-reproductive-bacteraemia-genomics/analysis/core_genome/panaroo_strict_core95/core_gene_alignment.aln",
+  "size_bytes": 155079360,
+  "sha256": "904bd6aec7ef086419abcc86b1aeee0ee400727d529e6a33c123040606b31079",
+  "record_count": 72,
+  "unique_taxa_count": 72,
+  "duplicate_ids": [],
+  "min_aligned_sequence_length": 2118553,
+  "max_aligned_sequence_length": 2118553,
+  "total_alignment_length": 2118553,
+  "all_aligned_lengths_identical": true,
+  "empty_sequences": [],
+  "missing_characters_treated_as_missing": [
+    "-",
+    "?",
+    "N",
+    "n"
+  ],
+  "minimum_non_missing_percent": 91.90471043207322,
+  "minimum_non_missing_accession": "GCA_029011745.1",
+  "missingness_tsv": "/workspaces/efaecalis-reproductive-bacteraemia-genomics/analysis/core_genome/qc/output/core_alignment_missingness_per_genome_20260819T042124Z.tsv",
+  "site_statistics_tsv": "/workspaces/efaecalis-reproductive-bacteraemia-genomics/analysis/core_genome/qc/output/core_alignment_site_statistics_20260819T042124Z.tsv",
+  "site_statistics": {
+    "total_aligned_sites": 2118553,
+    "invariant_sites": 2037400,
+    "variable_sites": 81093,
+    "parsimony_informative_sites": 59907,
+    "singleton_variable_sites": 21186,
+    "overall_missing_gap_proportion": 0.011992429371472992
+  },
+  "lowest_10_non_missing": [
+    {
+      "accession": "GCA_029011745.1",
+      "source_group": "",
+      "non_missing_sites": 1947050,
+      "missing_sites": 171503,
+      "non_missing_percent": 91.90471043207322
+    },
+    {
+      "accession": "GCA_029011535.1",
+      "source_group": "",
+      "non_missing_sites": 2024340,
+      "missing_sites": 94213,
+      "non_missing_percent": 95.55295524822839
+    },
+    {
+      "accession": "GCA_029011395.1",
+      "source_group": "",
+      "non_missing_sites": 2035661,
+      "missing_sites": 82892,
+      "non_missing_percent": 96.08732941776769
+    },
+    {
+      "accession": "GCA_050492125.1",
+      "source_group": "",
+      "non_missing_sites": 2076038,
+      "missing_sites": 42515,
+      "non_missing_percent": 97.99320573995553
+    },
+    {
+      "accession": "GCA_050492135.1",
+      "source_group": "",
+      "non_missing_sites": 2076038,
+      "missing_sites": 42515,
+      "non_missing_percent": 97.99320573995553
+    },
+    {
+      "accession": "GCA_050506875.1",
+      "source_group": "",
+      "non_missing_sites": 2078721,
+      "missing_sites": 39832,
+      "non_missing_percent": 98.11984878358011
+    },
+    {
+      "accession": "GCA_050506885.1",
+      "source_group": "",
+      "non_missing_sites": 2085777,
+      "missing_sites": 32776,
+      "non_missing_percent": 98.45290629972439
+    },
+    {
+      "accession": "GCA_050486715.1",
+      "source_group": "",
+      "non_missing_sites": 2088375,
+      "missing_sites": 30178,
+      "non_missing_percent": 98.57553717088975
+    },
+    {
+      "accession": "GCA_050471105.1",
+      "source_group": "",
+      "non_missing_sites": 2089122,
+      "missing_sites": 29431,
+      "non_missing_percent": 98.61079708650196
+    },
+    {
+      "accession": "GCF_053117675.1",
+      "source_group": "",
+      "non_missing_sites": 2090689,
+      "missing_sites": 27864,
+      "non_missing_percent": 98.68476266583843
+    }
+  ]
+}

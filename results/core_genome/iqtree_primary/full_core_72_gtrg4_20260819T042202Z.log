@@ -1,0 +1,231 @@
+IQ-TREE version 3.1.2 for Linux x86 64-bit built May 17 2026
+Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
+Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
+Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
+
+Host:    codespaces-1529c9 (AVX2, FMA3, 15 GB RAM)
+Command: iqtree -s analysis/core_genome/panaroo_strict_core95/core_gene_alignment.aln -st DNA -m GTR+G4 -B 1000 -T 4 --prefix analysis/core_genome/iqtree_primary_runs/full_core_72_gtrg4_20260819T042202Z
+Seed:    20337 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Wed Aug 19 04:26:42 2026
+Kernel:  AVX+FMA - 4 threads (4 CPU cores detected)
+
+Reading alignment file analysis/core_genome/panaroo_strict_core95/core_gene_alignment.aln ... Fasta format detected
+Reading fasta file: done in 2.57887 secs using 90.24% CPU
+Alignment most likely contains DNA/RNA sequences
+Constructing alignment: done in 3.55493 secs using 59.81% CPU
+WARNING: 60 sites contain only gaps or ambiguous characters.
+Alignment has 72 sequences with 2118553 columns, 39253 distinct patterns
+59907 parsimony-informative, 21186 singleton sites, 2037460 constant sites
+                 Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 0.00902987 secs using 268.7% CPU
+   1  GCF_053117695.1    1.26%    passed     99.05%
+   2  GCA_050506885.1    1.55%    passed     78.78%
+   3  GCA_050480515.1    0.81%    passed     99.02%
+   4  GCA_050485055.1    0.89%    passed     99.86%
+   5  GCA_050473345.1    0.84%    passed     99.30%
+   6  GCA_050485625.1    0.94%    passed     99.66%
+   7  GCA_050506925.1    0.99%    passed     99.47%
+   8  GCA_050506995.1    0.83%    passed     99.66%
+   9  GCA_050485635.1    0.86%    passed     99.16%
+  10  GCA_050506825.1    0.91%    passed     99.62%
+  11  GCA_050516665.1    0.87%    passed     99.39%
+  12  GCF_053117675.1    1.32%    passed     98.21%
+  13  GCA_050506685.1    0.91%    passed     99.59%
+  14  GCA_050474485.1    0.75%    passed     95.75%
+  15  GCF_906464925.1    1.04%    passed     98.47%
+  16  GCA_050481685.1    0.90%    passed     99.35%
+  17  GCA_050506905.1    1.16%    passed     99.88%
+  18  GCA_050474495.1    1.13%    passed     99.70%
+  19  GCA_050486715.1    1.42%    passed     98.83%
+  20  GCF_053117575.1    0.81%    passed     99.59%
+  21  GCA_050471105.1    1.39%    passed     98.09%
+  22  GCA_050506755.1    1.04%    passed     98.97%
+  23  GCA_050491685.1    1.06%    passed     99.81%
+  24  GCA_050506815.1    0.88%    passed     98.85%
+  25  GCA_050506735.1    0.89%    passed     99.87%
+  26  GCA_050505635.1    0.82%    passed     98.65%
+  27  GCA_050506915.1    1.00%    passed     99.62%
+  28  GCA_029011535.1    4.45%    passed     82.53%
+  29  GCF_053117655.1    1.09%    passed     99.47%
+  30  GCA_050516645.1    1.02%    passed     99.83%
+  31  GCF_053117585.1    0.70%    passed     98.60%
+  32  GCF_053117685.1    0.97%    passed     99.90%
+  33  GCA_050506745.1    1.01%    passed     99.31%
+  34  GCA_050485045.1    0.96%    passed     99.42%
+  35  GCA_029011395.1    3.91%    passed     77.54%
+  36  GCA_050472755.1    1.21%    passed     90.01%
+  37  GCA_050472745.1    1.12%    passed     99.65%
+  38  GCA_029011745.1    8.10%    passed     33.93%
+  39  GCA_050481695.1    0.96%    passed     99.60%
+  40  GCA_050491675.1    1.07%    passed     99.84%
+  41  GCA_050506765.1    0.88%    passed     98.90%
+  42  GCA_029011255.1    1.11%    passed     99.74%
+  43  GCA_050486705.1    0.87%    passed     99.05%
+  44  GCA_050492135.1    2.01%    passed     90.97%
+  45  GCA_050505645.1    0.82%    passed     98.39%
+  46  GCA_050506665.1    0.73%    passed     99.71%
+  47  GCA_050506775.1    0.97%    passed     99.98%
+  48  GCA_050507075.1    0.98%    passed     99.99%
+  49  GCF_053117665.1    0.92%    passed     97.50%
+  50  GCF_049262565.1    1.28%    passed     98.18%
+  51  GCA_050507105.1    0.98%    passed     99.99%
+  52  GCA_050506935.1    0.99%    passed     99.44%
+  53  GCA_050482265.1    0.97%    passed     99.59%
+  54  GCA_050506695.1    0.91%    passed     99.59%
+  55  GCA_050516675.1    0.84%    passed     99.41%
+  56  GCA_050481115.1    0.90%    passed     99.35%
+  57  GCA_050481105.1    0.81%    passed     99.00%
+  58  GCA_050507065.1    0.83%    passed     99.67%
+  59  GCA_050506725.1    0.88%    passed     99.87%
+  60  GCA_050506865.1    0.74%    passed     99.42%
+  61  GCA_050469755.1    1.03%    passed     99.35%
+  62  GCA_050473355.1    0.94%    passed     98.65%
+  63  GCA_050506985.1    0.99%    passed     99.46%
+  64  GCA_050506675.1    0.73%    passed     99.71%
+  65  GCA_050475565.1    0.82%    passed     98.14%
+  66  GCA_050476085.1    0.99%    passed     99.90%
+  67  GCA_050492125.1    2.01%    passed     90.97%
+  68  GCA_050506875.1    1.88%    passed     92.18%
+  69  GCA_050516655.1    1.03%    passed     99.79%
+  70  GCA_050473905.1    1.02%    passed     98.48%
+  71  GCF_053117705.1    0.81%    passed     99.65%
+  72  GCA_050475575.1    0.86%    passed     99.15%
+****  TOTAL              1.20%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: minimal branch length is reduced to 0.000000047202 for long alignment
+NOTE: GCA_050492125.1 is identical to GCA_050492135.1 but kept for subsequent analysis
+NOTE: GCA_050506675.1 is identical to GCA_050506665.1 but kept for subsequent analysis
+NOTE: GCA_050507105.1 is identical to GCA_050507075.1 but kept for subsequent analysis
+Checking for duplicate sequences: done in 0.0160348 secs using 220% CPU
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.519 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 20337)...
+
+NOTE: 516 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -4398504.706
+2. Current log-likelihood: -4223870.810
+3. Current log-likelihood: -4221454.704
+4. Current log-likelihood: -4221453.149
+5. Current log-likelihood: -4221452.784
+6. Current log-likelihood: -4221452.469
+7. Current log-likelihood: -4221452.176
+8. Current log-likelihood: -4221451.914
+9. Current log-likelihood: -4221451.663
+10. Current log-likelihood: -4221451.434
+11. Current log-likelihood: -4221451.210
+12. Current log-likelihood: -4221451.004
+13. Current log-likelihood: -4221450.799
+14. Current log-likelihood: -4221450.610
+15. Current log-likelihood: -4221450.421
+16. Current log-likelihood: -4221450.245
+17. Current log-likelihood: -4221450.068
+18. Current log-likelihood: -4221449.904
+19. Current log-likelihood: -4221449.738
+20. Current log-likelihood: -4221449.583
+21. Current log-likelihood: -4221449.427
+22. Current log-likelihood: -4221449.282
+Optimal log-likelihood: -4221449.277
+Rate parameters:  A-C: 1.28827  A-G: 4.71763  A-T: 0.60722  C-G: 0.85120  C-T: 8.27531  G-T: 1.00000
+Base frequencies:  A: 0.325  C: 0.174  G: 0.213  T: 0.288
+Gamma shape alpha: 0.020
+Parameters optimization took 22 rounds (37.918 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.125201 secs using 389.6% CPU
+Computing ML distances took 0.132192 sec (of wall-clock time) 0.512949 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 0.00012517 secs using 323.6% CPU
+Constructing RapidNJ tree: done in 0.00581503 secs using 187.4% CPU
+Computing RapidNJ tree took 0.006068 sec (of wall-clock time) 0.011458 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -4224237.459
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 54.199 second
+Computing log-likelihood of 98 initial trees ... 25.373 seconds
+Current best score: -4221273.173
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -4221190.831
+Iteration 10 / LogL: -4221192.498 / Time: 0h:3m:5s
+Iteration 20 / LogL: -4221190.956 / Time: 0h:3m:46s
+Finish initializing candidate tree set (8)
+Current best tree score: -4221190.831 / CPU time: 183.487
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -4221191.164 / Time: 0h:4m:42s (0h:11m:30s left)
+Iteration 40 / LogL: -4221192.644 / Time: 0h:5m:39s (0h:8m:50s left)
+Iteration 50 / LogL: -4228286.403 / Time: 0h:6m:36s (0h:6m:51s left)
+Log-likelihood cutoff on original alignment: -4221492.810
+Iteration 60 / LogL: -4221191.147 / Time: 0h:7m:33s (0h:5m:14s left)
+Iteration 70 / LogL: -4221192.649 / Time: 0h:8m:29s (0h:3m:48s left)
+Iteration 80 / LogL: -4221191.050 / Time: 0h:9m:26s (0h:2m:30s left)
+Iteration 90 / LogL: -4221191.580 / Time: 0h:10m:20s (0h:1m:16s left)
+Iteration 100 / LogL: -4221208.332 / Time: 0h:11m:16s (0h:0m:6s left)
+Log-likelihood cutoff on original alignment: -4221492.025
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.999
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:11m:27s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -4221190.831
+2. Current log-likelihood: -4221190.746
+3. Current log-likelihood: -4221190.667
+4. Current log-likelihood: -4221190.582
+5. Current log-likelihood: -4221190.504
+6. Current log-likelihood: -4221190.416
+7. Current log-likelihood: -4221190.336
+8. Current log-likelihood: -4221190.245
+9. Current log-likelihood: -4221190.162
+10. Current log-likelihood: -4221190.068
+11. Current log-likelihood: -4221189.980
+12. Current log-likelihood: -4221189.880
+13. Current log-likelihood: -4221189.788
+14. Current log-likelihood: -4221189.681
+15. Current log-likelihood: -4221189.582
+16. Current log-likelihood: -4221189.464
+17. Current log-likelihood: -4221189.355
+18. Current log-likelihood: -4221189.268
+19. Current log-likelihood: -4221188.979
+20. Current log-likelihood: -4221188.814
+21. Current log-likelihood: -4221188.707
+22. Current log-likelihood: -4221188.666
+Optimal log-likelihood: -4221188.666
+Rate parameters:  A-C: 1.31776  A-G: 4.82324  A-T: 0.61486  C-G: 0.87050  C-T: 8.47891  G-T: 1.00000
+Base frequencies:  A: 0.325  C: 0.174  G: 0.213  T: 0.288
+Gamma shape alpha: 0.020
+Parameters optimization took 22 rounds (29.768 sec)
+BEST SCORE FOUND : -4221188.666
+Creating bootstrap support values...
+Split supports printed to NEXUS file analysis/core_genome/iqtree_primary_runs/full_core_72_gtrg4_20260819T042202Z.splits.nex
+Total tree length: 0.119
+
+Total number of iterations: 102
+CPU time used for tree search: 2316.559 sec (0h:38m:36s)
+Wall-clock time used for tree search: 644.810 sec (0h:10m:44s)
+Total CPU time used: 2569.678 sec (0h:42m:49s)
+Total wall-clock time used: 717.819 sec (0h:11m:57s)
+
+Computing bootstrap consensus tree...
+Reading input file analysis/core_genome/iqtree_primary_runs/full_core_72_gtrg4_20260819T042202Z.splits.nex...
+72 taxa and 215 splits.
+Consensus tree written to analysis/core_genome/iqtree_primary_runs/full_core_72_gtrg4_20260819T042202Z.contree
+Reading input trees file analysis/core_genome/iqtree_primary_runs/full_core_72_gtrg4_20260819T042202Z.contree
+Log-likelihood of consensus tree: -4221191.105
+
+Analysis results written to: 
+  IQ-TREE report:                analysis/core_genome/iqtree_primary_runs/full_core_72_gtrg4_20260819T042202Z.iqtree
+  Maximum-likelihood tree:       analysis/core_genome/iqtree_primary_runs/full_core_72_gtrg4_20260819T042202Z.treefile
+  Likelihood distances:          analysis/core_genome/iqtree_primary_runs/full_core_72_gtrg4_20260819T042202Z.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          analysis/core_genome/iqtree_primary_runs/full_core_72_gtrg4_20260819T042202Z.splits.nex
+  Consensus tree:                analysis/core_genome/iqtree_primary_runs/full_core_72_gtrg4_20260819T042202Z.contree
+  Screen log file:               analysis/core_genome/iqtree_primary_runs/full_core_72_gtrg4_20260819T042202Z.log
+
+Date and Time: Wed Aug 19 04:38:51 2026

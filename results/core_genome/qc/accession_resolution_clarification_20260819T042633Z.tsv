@@ -1,0 +1,6 @@
+item	statement	evidence
+dataset_membership_GCA_029011395.1	Genuine genome in 72-genome dataset (YES)	Alignment FASTA header + selected_72_accessions.tsv
+dataset_membership_GCA_029011745.1	Genuine genome in 72-genome dataset (YES)	Alignment FASTA header + selected_72_accessions.tsv
+nine_locus_disrupted_yqiL_recA_accession	GCA_029011395.1	Reviewed findings/primary findings/decision record for observed disrupted loci
+core_alignment_91_904710432073_percent_accession	GCA_029011745.1	Computed from full core alignment missingness; no SNP-only filtering
+documentation_error_interpretation	Likely historical misattribution/linkage of GCA_029011745.1 to the nine-locus anomaly, not an error in accession existence	Early aroE mention vs later consistent disrupted-locus evidence

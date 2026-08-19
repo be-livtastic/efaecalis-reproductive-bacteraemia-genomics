@@ -1,0 +1,7 @@
+question	finding	evidence
+A_is_GCA_029011395.1_in_72_genomes	YES	Alignment FASTA headers and selected_72_accessions.tsv include GCA_029011395.1
+B_is_GCA_029011745.1_in_72_genomes	YES	Alignment FASTA headers and selected_72_accessions.tsv include GCA_029011745.1
+C_accession_associated_with_nine_locus_disrupted_locus_review	GCA_029011395.1	Reviewed/primary findings and observed span overrides list disrupted yqiL/recA for GCA_029011395.1
+D_accession_with_approximately_91_9_percent_non_missing_core_alignment	GCA_029011745.1 (91.904710432073%)	Computed from full core alignment missingness per genome
+E_source_group_for_below_threshold_genome	Reproductive	From curated_metadata_72_genomes.csv reproductive_bacteraemia_category
+F_was_later_accession_a_transcription_or_documentation_error	YES_LIKELY	Workflow text has one early GCA_029011745.1 aroE mention, while final reviewed disrupted-locus evidence consistently points to GCA_029011395.1

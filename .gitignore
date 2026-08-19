@@ -120,3 +120,8 @@ Thumbs.db
 **/*ethics*
 **/*risk_assessment*
 **/*student_number*
+
+# Core-genome validated release artefacts to keep under version control
+!/results/core_genome/iqtree_primary/*.log
+!/results/core_genome/iqtree_primary/*.mldist
+!/results/core_genome/iqtree_primary/*.splits.nex

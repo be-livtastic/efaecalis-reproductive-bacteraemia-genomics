@@ -1,0 +1,212 @@
+{
+  "prefix": "analysis/core_genome/iqtree_primary_runs/full_core_72_gtrg4_20260819T042202Z",
+  "git_commit": "c2726ff242eec2091935ba48b2e25dc2aa61c959",
+  "alignment_path": "analysis/core_genome/panaroo_strict_core95/core_gene_alignment.aln",
+  "alignment_sha256": "904bd6aec7ef086419abcc86b1aeee0ee400727d529e6a33c123040606b31079",
+  "taxa": 72,
+  "alignment_length": 2118553,
+  "model": "GTR+F+G4",
+  "threads": 4,
+  "requested_UFBoot_replicates": 1000,
+  "completion_evidence": {
+    "type_of_analysis_line": "tree reconstruction + ultrafast bootstrap (1000 replicates)",
+    "consensus_from_bootstrap_trees": "1000",
+    "consensus_tree_written_line": "analysis/core_genome/iqtree_primary_runs/full_core_72_gtrg4_20260819T042202Z.contree"
+  },
+  "best_ML_log_likelihood": "-4221188.6659",
+  "consensus_tree_log_likelihood": "-4221191.104588700",
+  "tree_length": "0.1188",
+  "tree_search_iterations": "102",
+  "tree_search_wall_time": "644.810 sec",
+  "total_wall_time_seconds": "719.0424058",
+  "total_cpu_time_seconds": "2569.678447",
+  "treefile_path": "analysis/core_genome/iqtree_primary_runs/full_core_72_gtrg4_20260819T042202Z.treefile",
+  "contree_path": "analysis/core_genome/iqtree_primary_runs/full_core_72_gtrg4_20260819T042202Z.contree",
+  "iqtree_report_path": "analysis/core_genome/iqtree_primary_runs/full_core_72_gtrg4_20260819T042202Z.iqtree",
+  "mldist_path": "analysis/core_genome/iqtree_primary_runs/full_core_72_gtrg4_20260819T042202Z.mldist",
+  "splits_path": "analysis/core_genome/iqtree_primary_runs/full_core_72_gtrg4_20260819T042202Z.splits.nex",
+  "checkpoint_path": "analysis/core_genome/iqtree_primary_runs/full_core_72_gtrg4_20260819T042202Z.ckp.gz",
+  "warnings": [
+    "WARNING: 60 sites contain only gaps or ambiguous characters.",
+    "NOTE: minimal branch length is reduced to 0.000000047202 for long alignment",
+    "NOTE: GCA_050492125.1 is identical to GCA_050492135.1 but kept for subsequent analysis",
+    "NOTE: GCA_050506675.1 is identical to GCA_050506665.1 but kept for subsequent analysis",
+    "NOTE: GCA_050507105.1 is identical to GCA_050507075.1 but kept for subsequent analysis",
+    "NOTE: 516 MB RAM (0 GB) is required!",
+    "NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.999",
+    "WARNING: 6 near-zero internal branches (<0.0000) should be treated with caution",
+    "NOTE: Tree is UNROOTED although outgroup taxon 'GCF_053117695.1' is drawn at root"
+  ],
+  "duplicate_sequence_pairs": [
+    {
+      "taxon_1": "GCA_050492125.1",
+      "taxon_2": "GCA_050492135.1",
+      "iqtree_note": "NOTE: GCA_050492125.1 is identical to GCA_050492135.1 but kept for subsequent analysis"
+    },
+    {
+      "taxon_1": "GCA_050506675.1",
+      "taxon_2": "GCA_050506665.1",
+      "iqtree_note": "NOTE: GCA_050506675.1 is identical to GCA_050506665.1 but kept for subsequent analysis"
+    },
+    {
+      "taxon_1": "GCA_050507105.1",
+      "taxon_2": "GCA_050507075.1",
+      "iqtree_note": "NOTE: GCA_050507105.1 is identical to GCA_050507075.1 but kept for subsequent analysis"
+    }
+  ],
+  "GCA_029011745.1_retention_status": "RETAINED_BELOW_THRESHOLD",
+  "file_status": {
+    "treefile": {
+      "size_bytes": 3314,
+      "mtime_epoch": 1787114331.741418
+    },
+    "contree": {
+      "size_bytes": 3314,
+      "mtime_epoch": 1787114331.740418
+    },
+    "iqtree": {
+      "size_bytes": 25031,
+      "mtime_epoch": 1787114331.759418
+    },
+    "log": {
+      "size_bytes": 12396,
+      "mtime_epoch": 1787114331.858418
+    },
+    "mldist": {
+      "size_bytes": 63435,
+      "mtime_epoch": 1787113654.3983865
+    },
+    "splits": {
+      "size_bytes": 5755,
+      "mtime_epoch": 1787114330.5024178
+    },
+    "checkpoint": {
+      "size_bytes": 52884,
+      "mtime_epoch": 1787114331.764418
+    },
+    "launcher_log": {
+      "size_bytes": 12396,
+      "mtime_epoch": 1787114331.858418
+    }
+  },
+  "tree_validation": {
+    "treefile": {
+      "tip_count": 72,
+      "unique_tip_count": 72,
+      "duplicate_tip_labels": [],
+      "missing_input_taxa": [],
+      "unexpected_extra_taxa": []
+    },
+    "contree": {
+      "tip_count": 72,
+      "unique_tip_count": 72,
+      "duplicate_tip_labels": [],
+      "missing_input_taxa": [],
+      "unexpected_extra_taxa": []
+    },
+    "presence_checks": {
+      "GCA_029011395.1_in_treefile": true,
+      "GCA_029011745.1_in_treefile": true,
+      "GCA_029011395.1_in_contree": true,
+      "GCA_029011745.1_in_contree": true
+    }
+  },
+  "support_value_bins_contree": {
+    "ge_95": 57,
+    "80_94": 5,
+    "50_79": 4,
+    "lt_50": 3,
+    "without_support_labels": 1,
+    "internal_nodes_total": 70
+  },
+  "terminal_branch_lengths_tsv": "analysis/core_genome/qc/output/core_tree_terminal_branch_lengths_20260819T044911Z.tsv",
+  "duplicate_pairs_tsv": "analysis/core_genome/qc/output/core_tree_duplicate_sequence_pairs_20260819T044911Z.tsv",
+  "target_terminal_branches": {
+    "GCA_029011745.1": {
+      "rank_longest_to_shortest": 17,
+      "terminal_branch_length": 0.000304759
+    },
+    "GCA_029011395.1": {
+      "rank_longest_to_shortest": 19,
+      "terminal_branch_length": 0.0001630573
+    },
+    "GCA_050472755.1": {
+      "rank_longest_to_shortest": 1,
+      "terminal_branch_length": 0.0077601355
+    }
+  },
+  "top10_longest_terminal_branches": [
+    {
+      "rank": 1,
+      "taxon": "GCA_050472755.1",
+      "terminal_branch_length": 0.0077601355
+    },
+    {
+      "rank": 2,
+      "taxon": "GCA_050506775.1",
+      "terminal_branch_length": 0.00581323
+    },
+    {
+      "rank": 3,
+      "taxon": "GCA_029011255.1",
+      "terminal_branch_length": 0.0053246801
+    },
+    {
+      "rank": 4,
+      "taxon": "GCA_050475565.1",
+      "terminal_branch_length": 0.0052589215
+    },
+    {
+      "rank": 5,
+      "taxon": "GCA_050506885.1",
+      "terminal_branch_length": 0.003637753
+    },
+    {
+      "rank": 6,
+      "taxon": "GCF_906464925.1",
+      "terminal_branch_length": 0.0034390883
+    },
+    {
+      "rank": 7,
+      "taxon": "GCF_053117695.1",
+      "terminal_branch_length": 0.0033906708
+    },
+    {
+      "rank": 8,
+      "taxon": "GCF_049262565.1",
+      "terminal_branch_length": 0.0033493347
+    },
+    {
+      "rank": 9,
+      "taxon": "GCA_050506875.1",
+      "terminal_branch_length": 0.0031414031
+    },
+    {
+      "rank": 10,
+      "taxon": "GCA_050485635.1",
+      "terminal_branch_length": 0.0020375379
+    }
+  ],
+  "validation_status": "PASS",
+  "fatal_log_lines": [],
+  "linked_pre_run_manifest_path": "analysis/core_genome/qc/output/iqtree_pre_run_manifest_20260819T042633Z.json",
+  "tree_search_cpu_time": "2316.559 sec",
+  "final_model_parameters": {
+    "model_of_substitution": "GTR+F+G4",
+    "rate_parameters": {
+      "A-C": "1.3178",
+      "A-G": "4.8232",
+      "A-T": "0.6149",
+      "C-G": "0.8705",
+      "C-T": "8.4789",
+      "G-T": "1.0000"
+    },
+    "state_frequencies": {
+      "A": "0.3248",
+      "C": "0.1739",
+      "G": "0.2129",
+      "T": "0.2884"
+    },
+    "gamma_shape_alpha": "0.02004"
+  }
+}

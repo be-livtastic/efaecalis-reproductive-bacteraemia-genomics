@@ -1,0 +1,6 @@
+support_category	node_count
+>=95	57
+80-94	5
+50-79	4
+<50	3
+unlabelled	1

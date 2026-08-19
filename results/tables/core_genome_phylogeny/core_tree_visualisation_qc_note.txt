@@ -1,0 +1,4 @@
+phylogram = quantitative branch lengths retained from the validated IQ-TREE ML tree
+cladogram = topology retained while branch-length scaling is suppressed for readability
+GCA_050472755.1 remains present with unmodified branch lengths in phylograms
+No independent subgroup tree inference was performed; subgroup trees were obtained by deterministic tip pruning.

@@ -1,0 +1,2 @@
+accession	observed_non_missing_percent	threshold_percent	status	no_imputation_repair_or_fabrication	primary_analysis_genome_count
+GCA_029011745.1	91.904710432073	95	RETAINED_BELOW_THRESHOLD	Confirmed	72
