@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -uo pipefail
 
+# Default prefix tracks the current handoff commit and can be overridden.
 expected_prefix="${1:-ffa0b93}"
 alignment_path="analysis/core_genome/panaroo_strict_core95/core_gene_alignment.aln"
 declare -a blockers=()
