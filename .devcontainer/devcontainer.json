@@ -5,6 +5,9 @@
   "containerEnv": {
     "MAMBA_ROOT_PREFIX": "/opt/conda"
   },
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
   "postCreateCommand": "bash .devcontainer/setup-core-environment.sh",
   "shutdownAction": "stopContainer"
 }
