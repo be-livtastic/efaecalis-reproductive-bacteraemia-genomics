@@ -2,7 +2,10 @@
   "name": "E. faecalis core-genome environment",
   "image": "mambaorg/micromamba:2.3.2",
   "features": {
-    "ghcr.io/devcontainers/features/git:1": {}
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/sshd:1": {
+      "version": "latest"
+    }
   },
   "remoteUser": "mambauser",
   "containerEnv": {
