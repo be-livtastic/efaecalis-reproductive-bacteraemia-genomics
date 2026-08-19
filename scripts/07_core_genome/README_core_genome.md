@@ -15,6 +15,14 @@ The existing environment is not modified. Four threads are used because the curr
 
 The 2026-08-17 implementation run created this environment and confirmed the exact installed versions recorded in `environment/core_genome_software_versions.tsv`. The solver decision is documented in `environment/core_genome_environment_decision.md`.
 
+Before any alignment transfer into `analysis/core_genome/panaroo_strict_core95`, run the hard pre-transfer gate:
+
+```bash
+bash scripts/07_core_genome/validate_pretransfer_environment.sh
+```
+
+Proceed only if the script returns `READY_FOR_ALIGNMENT_TRANSFER`.
+
 ## Stages and checkpoints
 
 ```bash
