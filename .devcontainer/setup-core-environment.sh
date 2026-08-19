@@ -8,6 +8,11 @@ mamba_root_prefix="${MAMBA_ROOT_PREFIX:-/opt/conda}"
 
 export MAMBA_ROOT_PREFIX="${mamba_root_prefix}"
 
+current_home_mode="$(stat -c '%a' "${HOME}")"
+if [ "${current_home_mode}" != "755" ]; then
+  chmod 755 "${HOME}"
+fi
+
 if ! command -v micromamba >/dev/null 2>&1; then
   printf 'micromamba is required but was not found in PATH.\n' >&2
   exit 1
