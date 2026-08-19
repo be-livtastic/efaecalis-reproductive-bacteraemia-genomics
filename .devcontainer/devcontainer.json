@@ -1,6 +1,9 @@
 {
   "name": "E. faecalis core-genome environment",
   "image": "mambaorg/micromamba:2.3.2",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
   "remoteUser": "mambauser",
   "containerEnv": {
     "MAMBA_ROOT_PREFIX": "/opt/conda"
