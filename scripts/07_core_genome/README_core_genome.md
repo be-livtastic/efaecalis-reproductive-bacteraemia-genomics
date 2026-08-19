@@ -13,6 +13,8 @@ export EFAECALIS_CORE_ENV=efaecalis_core_genome
 
 The existing environment is not modified. Four threads are used because the current machine has eight CPUs but only about 3.7 GiB RAM.
 
+The same environment file now also pins the R/Bioconductor plotting stack used by `scripts/07_core_genome/08_visualise_core_genome_tree.R` (`r-base`, `r-ape`, `r-ggplot2`, `r-dplyr`, `r-readr`, `r-stringr`, `r-tibble`, `bioconductor-ggtree`, `bioconductor-treeio`, `r-svglite`) so fresh recreations can run both core-genome inference and final tree visualisation.
+
 The 2026-08-17 implementation run created this environment and confirmed the exact installed versions recorded in `environment/core_genome_software_versions.tsv`. The solver decision is documented in `environment/core_genome_environment_decision.md`.
 
 Before any alignment transfer into `analysis/core_genome/panaroo_strict_core95`, run the hard pre-transfer gate:
