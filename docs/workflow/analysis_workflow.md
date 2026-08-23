@@ -99,10 +99,9 @@ It reports `aggregation_substance_family_detected` as the primary broad binary
 feature and `asa1_specific` as a secondary lower-confidence breakdown. The
 `GCA_029011395.1` `cylA` call is retained as accepted with copy number two.
 Unresolved counts and maximum-possible uncertainty bounds are shown before
-Fisher results. Optional integration with a core-genome tree remains pending
-because no accepted core tree exists yet.
+Fisher results.
 
-## 6. Panaroo core-genome analysis — A0/A1 complete; A2 review hold
+## 6. Panaroo core-genome analysis — completed and organised
 
 The staged pipeline under `scripts/07_core_genome/` complements rather than
 replaces the nine-locus tree. Panaroo 1.8.0 ran with strict cleaning, MAFFT and
@@ -115,19 +114,15 @@ successfully on 2026-08-17:
 - 72 taxa in `core_gene_alignment.aln`;
 - concatenated alignment length 2,118,553 nt.
 
-Panaroo QC passed exact accession and 14/58 reconciliation. Alignment QC found
-81,093 variable and 59,907 parsimony-informative sites, no ambiguous bases, and
-one prespecified gate failure: `GCA_029011745.1` has 91.9047% non-missing
-sequence (171,503 gaps), below the 95% minimum. The genome remains in the
-alignment; it has not been silently excluded. IQ-TREE, SNP distances and
-core/nine-locus tree comparison have not been run pending an explicit review
-decision.
+Panaroo QC passed exact accession and 14/58 reconciliation. Validated
+core-genome IQ-TREE outputs are now organised as:
 
-When that gate is resolved, the intended computationally bounded tree setting
-is a fixed `GTR+G4` model with 1,000 ultrafast bootstrap replicates and four
-threads, without ModelFinder or SH-aLRT. This setting must be confirmed before
-execution; a fast fixed-model tree without bootstrap is the documented
-time-constrained fallback.
+- full working run artefacts in `analysis/core_genome/iqtree_primary_runs/`;
+- detailed QC/audit working outputs in `analysis/core_genome/qc/output/`;
+- compact final IQ-TREE outputs in `results/core_genome/iqtree_primary/`;
+- reusable derived trees in `results/core_genome/trees/`;
+- final core-tree figures in `results/figures/core_genome_phylogeny/`;
+- final core-tree tables in `results/tables/core_genome_phylogeny/`.
 
 ## 7. Environments and reproducibility
 

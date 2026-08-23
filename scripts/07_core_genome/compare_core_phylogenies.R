@@ -56,7 +56,7 @@ nearest_rows <- function(tree, metadata, tree_name) {
 main <- function() {
   args <- parse_args()
   root <- find_root()
-  core_path <- file.path(root, "analysis/core_genome/iqtree/core_gene_alignment.treefile")
+  core_path <- file.path(root, "results/core_genome/iqtree_primary/full_core_72_gtrg4_20260819T042202Z.treefile")
   nine_path <- file.path(root, "analysis/phylogenomics/72_genomes_9_locus_observed_indels/iqtree/efaecalis_72_genomes_9_locus_observed_indels.treefile")
   metadata_path <- file.path(root, "results/tables/mlst_amr_phylogeny/integrated_genome_mlst_amr_72.csv")
   core <- read.tree(core_path)
@@ -124,7 +124,7 @@ main <- function() {
          subtitle = "Midpoint rooted for display only; all analyses use the unrooted topology",
          color = "Source", shape = "HLGR-associated genotype proxy") +
     theme_tree2() + theme(legend.position = "bottom")
-  figure_dir <- file.path(root, "results/figures/core_genome")
+  figure_dir <- file.path(root, "results/figures/core_genome_phylogeny")
   dir.create(figure_dir, recursive = TRUE, showWarnings = FALSE)
   png_path <- file.path(figure_dir, "core_genome_source_st_hlgr_display_72.png")
   pdf_path <- file.path(figure_dir, "core_genome_source_st_hlgr_display_72.pdf")

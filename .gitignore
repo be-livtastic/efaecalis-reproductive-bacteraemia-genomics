@@ -1,5 +1,6 @@
 # Local archives and original/private source material
 /local_archive/
+/backups/**
 human_e_faecalis_complete_genomes.xlsx
 **/human_e_faecalis_complete_genomes.xlsx
 
@@ -125,3 +126,11 @@ Thumbs.db
 !/results/core_genome/iqtree_primary/*.log
 !/results/core_genome/iqtree_primary/*.mldist
 !/results/core_genome/iqtree_primary/*.splits.nex
+
+# Core-genome working-run and local reconciliation artefacts
+/analysis/core_genome/iqtree_primary_runs/**
+/analysis/core_genome/qc/output/**
+/analysis/core_genome/qc/archive/**
+/backups/core_genome_20260819/extracted_staging/**
+/backups/core_genome_20260819/source_archives/**
+/backups/repository_cleanup_20260819/**

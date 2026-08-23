@@ -43,7 +43,7 @@ bash scripts/07_core_genome/run_core_genome_pipeline.sh --stage pangenome-summar
 bash scripts/07_core_genome/run_core_genome_pipeline.sh --stage comparison
 ```
 
-Every stage refuses existing outputs unless `--overwrite` is supplied. Computational outputs are stored under `analysis/core_genome`, final tables under `results/tables/core_genome`, figures under `results/figures/core_genome`, and runtime logs under `analysis/logs/core_genome`.
+Every stage refuses existing outputs unless `--overwrite` is supplied. Computational outputs are stored under `analysis/core_genome` (including `iqtree_primary_runs/` and `qc/output/`), compact final IQ-TREE deliverables under `results/core_genome/iqtree_primary/`, final tables under `results/tables/core_genome` and `results/tables/core_genome_phylogeny`, core-tree figures under `results/figures/core_genome_phylogeny/`, and runtime logs under `analysis/logs/core_genome`.
 
 Core families are present in at least 69 of 72 genomes; families present in fewer genomes are accessory. Additional frequency categories are reported only when Panaroo supplies them directly. Distances are called **pairwise SNP distances derived from the concatenated core-gene alignment**, never whole-genome SNP distances. Default `snp-dists` ignores gaps and ambiguous bases.
 

@@ -57,10 +57,12 @@ NCBI retrieval → metadata curation → genome selection → AMRFinderPlus → 
 → nine-locus phylogeny → formal MLST/HLGR-proxy integration → targeted
 virulence/adherence analysis → statistical comparison and R visualisation.
 
-A parallel Panaroo core-genome workflow has completed Panaroo and exact
-72-genome QC. It is currently held at alignment QC because
-`GCA_029011745.1` has 91.90% non-missing sequence, below the prespecified 95%
-minimum; no core-genome IQ-TREE run has been started.
+A parallel Panaroo core-genome workflow has now been reconciled with validated
+IQ-TREE outputs. Full working artefacts are retained locally under
+`analysis/core_genome/iqtree_primary_runs/` and `analysis/core_genome/qc/`,
+with compact reportable outputs under `results/core_genome/`,
+`results/figures/core_genome_phylogeny/` and
+`results/tables/core_genome_phylogeny/`.
 
 
 ## Software
