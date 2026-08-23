@@ -1,13 +1,13 @@
-Gene,Comparison_role,Reproductive_count,Reproductive_total,Reproductive_percent,Bacteraemia_count,Bacteraemia_total,Bacteraemia_percent,Prevalence_difference_percentage_points,Odds_ratio,Raw_p_value,BH_adjusted_p_value,Significant_q_lt_0.05
-asa1_specific,Secondary lower-confidence narrow breakdown,5,14,35.71,8,58,13.79,21.92,3.397626350493531,0.11352100031027959,0.8288415823045486,FALSE
-esp,Other targeted determinant,9,14,64.29,24,58,41.38,22.91,2.516462482871144,0.14512181314890416,0.8288415823045486,FALSE
-cylA,Other targeted determinant,9,14,64.29,25,58,43.1,21.18,2.3473487744886183,0.23317791994744758,0.8288415823045486,FALSE
-aggregation_substance_family_detected,Primary aggregation-substance comparison,13,14,92.86,45,58,77.59,15.27,3.7040893255150897,0.27628052743484954,0.8288415823045486,FALSE
-sprE,Other targeted determinant,11,14,78.57,49,58,84.48,-5.91,0.67748229819305406,0.6909298297724664,1,FALSE
-gelE,Other targeted determinant,11,14,78.57,48,58,82.76,-4.19,0.7669050861693717,0.7077882026939682,1,FALSE
-ace,Other targeted determinant,14,14,100,58,58,100,0,0,1,1,FALSE
-efaA,Other targeted determinant,14,14,100,58,58,100,0,0,1,1,FALSE
-ebpA,Other targeted determinant,14,14,100,58,58,100,0,0,1,1,FALSE
-ebpB,Other targeted determinant,14,14,100,58,58,100,0,0,1,1,FALSE
-ebpC,Other targeted determinant,14,14,100,58,58,100,0,0,1,1,FALSE
-Ebp_operon_complete,Other targeted determinant,14,14,100,58,58,100,0,0,1,1,FALSE
+Gene,Comparison_role,Reproductive_count,Reproductive_total,Reproductive_percent,Bacteraemia_count,Bacteraemia_total,Bacteraemia_percent,Prevalence_difference_percentage_points,Odds_ratio,Raw_p_value,BH_adjusted_q_value,BH_adjusted_p_value,Significant_q_lt_0.05
+asa1_specific,Secondary lower-confidence narrow breakdown,5,14,35.71,8,58,13.79,21.92,3.397626350493531,0.11352100031027962,0.8288415823045486,0.8288415823045486,FALSE
+esp,Other targeted determinant,9,14,64.29,24,58,41.38,22.91,2.516462482871144,0.14512181314890416,0.8288415823045486,0.8288415823045486,FALSE
+cylA,Other targeted determinant,9,14,64.29,25,58,43.1,21.18,2.3473487744886183,0.23317791994744758,0.8288415823045486,0.8288415823045486,FALSE
+aggregation_substance_family_detected,Primary aggregation-substance comparison,13,14,92.86,45,58,77.59,15.27,3.7040893255150897,0.27628052743484954,0.8288415823045486,0.8288415823045486,FALSE
+sprE,Other targeted determinant,11,14,78.57,49,58,84.48,-5.91,0.67748229819305406,0.6909298297724664,1,1,FALSE
+gelE,Other targeted determinant,11,14,78.57,48,58,82.76,-4.19,0.766905086169372,0.7077882026939682,1,1,FALSE
+ace,Other targeted determinant,14,14,100,58,58,100,0,0,1,1,1,FALSE
+efaA,Other targeted determinant,14,14,100,58,58,100,0,0,1,1,1,FALSE
+ebpA,Other targeted determinant,14,14,100,58,58,100,0,0,1,1,1,FALSE
+ebpB,Other targeted determinant,14,14,100,58,58,100,0,0,1,1,1,FALSE
+ebpC,Other targeted determinant,14,14,100,58,58,100,0,0,1,1,1,FALSE
+Ebp_operon_complete,Other targeted determinant,14,14,100,58,58,100,0,0,1,1,1,FALSE

@@ -1,4 +1,4 @@
-Gene,Source,Accepted_present_count,Total,Accepted_percent,Flagged_partial_count,Review_required_count,Ambiguous_multiple_hit_count,Not_detected_count,Maximum_possible_count,Maximum_possible_percent_if_all_unresolved_confirmed,Unresolved_excluded_from_binary_presence,Comparison_role
-asa1_specific,Bacteraemia,8,58,13.79,3,34,0,13,42,72.41,34,Secondary lower-confidence narrow breakdown
-asa1_specific,Reproductive,5,14,35.71,1,7,0,1,12,85.71,7,Secondary lower-confidence narrow breakdown
-gelE,Bacteraemia,48,58,82.76,1,0,0,9,48,82.76,0,Other targeted determinant
+Gene,Source,Accepted_present_count,Total,Accepted_percent,Flagged_partial_count,Review_required_count,Ambiguous_multiple_hit_count,Not_detected_count,Maximum_possible_count,Maximum_possible_percent_if_all_unresolved_confirmed,Unresolved_excluded_from_binary_presence,Comparison_role,Accepted_percent_Bacteraemia,Accepted_percent_Reproductive,Maximum_possible_percent_if_all_unresolved_confirmed_Bacteraemia,Maximum_possible_percent_if_all_unresolved_confirmed_Reproductive,Near_universal_status
+asa1_specific,Bacteraemia,8,58,13.79,3,34,0,13,45,77.59,37,Secondary lower-confidence narrow breakdown,13.79,35.71,77.59,92.86,Not near-universal
+asa1_specific,Reproductive,5,14,35.71,1,7,0,1,13,92.86,8,Secondary lower-confidence narrow breakdown,13.79,35.71,77.59,92.86,Not near-universal
+gelE,Bacteraemia,48,58,82.76,1,0,0,9,49,84.48,1,Other targeted determinant,82.76,78.57,84.48,78.57,Not near-universal

@@ -1,0 +1,13 @@
+Gene,Source,Accepted_present_count,Flagged_partial_count,Review_required_count,Ambiguous_multiple_hit_count,Maximum_possible_count
+aggregation_substance_family_detected,Reproductive,13,0,0,0,13
+aggregation_substance_family_detected,Bacteraemia,45,0,0,0,45
+asa1_specific,Reproductive,5,1,7,0,13
+asa1_specific,Bacteraemia,8,3,34,0,45
+cylA,Reproductive,9,0,0,0,9
+cylA,Bacteraemia,25,0,0,0,25
+esp,Reproductive,9,0,0,0,9
+esp,Bacteraemia,24,0,0,0,24
+gelE,Reproductive,11,0,0,0,11
+gelE,Bacteraemia,48,1,0,0,49
+sprE,Reproductive,11,0,0,0,11
+sprE,Bacteraemia,49,0,0,0,49

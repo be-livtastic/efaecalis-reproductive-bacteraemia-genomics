@@ -1,25 +1,25 @@
-Gene,Source,Accepted_present_count,Total,Accepted_percent,Flagged_partial_count,Review_required_count,Ambiguous_multiple_hit_count,Not_detected_count,Maximum_possible_count,Maximum_possible_percent_if_all_unresolved_confirmed,Unresolved_excluded_from_binary_presence,Comparison_role
-ace,Bacteraemia,58,58,100,0,0,0,0,58,100,0,Other targeted determinant
-ace,Reproductive,14,14,100,0,0,0,0,14,100,0,Other targeted determinant
-aggregation_substance_family_detected,Bacteraemia,45,58,77.59,0,0,0,13,45,77.59,0,Primary aggregation-substance comparison
-aggregation_substance_family_detected,Reproductive,13,14,92.86,0,0,0,1,13,92.86,0,Primary aggregation-substance comparison
-asa1_specific,Bacteraemia,8,58,13.79,3,34,0,13,42,72.41,34,Secondary lower-confidence narrow breakdown
-asa1_specific,Reproductive,5,14,35.71,1,7,0,1,12,85.71,7,Secondary lower-confidence narrow breakdown
-cylA,Bacteraemia,25,58,43.1,0,0,0,33,25,43.1,0,Other targeted determinant
-cylA,Reproductive,9,14,64.29,0,0,0,5,9,64.29,0,Other targeted determinant
-Ebp_operon_complete,Bacteraemia,58,58,100,0,0,0,0,58,100,0,Other targeted determinant
-Ebp_operon_complete,Reproductive,14,14,100,0,0,0,0,14,100,0,Other targeted determinant
-ebpA,Bacteraemia,58,58,100,0,0,0,0,58,100,0,Other targeted determinant
-ebpA,Reproductive,14,14,100,0,0,0,0,14,100,0,Other targeted determinant
-ebpB,Bacteraemia,58,58,100,0,0,0,0,58,100,0,Other targeted determinant
-ebpB,Reproductive,14,14,100,0,0,0,0,14,100,0,Other targeted determinant
-ebpC,Bacteraemia,58,58,100,0,0,0,0,58,100,0,Other targeted determinant
-ebpC,Reproductive,14,14,100,0,0,0,0,14,100,0,Other targeted determinant
-efaA,Bacteraemia,58,58,100,0,0,0,0,58,100,0,Other targeted determinant
-efaA,Reproductive,14,14,100,0,0,0,0,14,100,0,Other targeted determinant
-esp,Bacteraemia,24,58,41.38,0,0,0,34,24,41.38,0,Other targeted determinant
-esp,Reproductive,9,14,64.29,0,0,0,5,9,64.29,0,Other targeted determinant
-gelE,Bacteraemia,48,58,82.76,1,0,0,9,48,82.76,0,Other targeted determinant
-gelE,Reproductive,11,14,78.57,0,0,0,3,11,78.57,0,Other targeted determinant
-sprE,Bacteraemia,49,58,84.48,0,0,0,9,49,84.48,0,Other targeted determinant
-sprE,Reproductive,11,14,78.57,0,0,0,3,11,78.57,0,Other targeted determinant
+Gene,Source,Accepted_present_count,Total,Accepted_percent,Flagged_partial_count,Review_required_count,Ambiguous_multiple_hit_count,Not_detected_count,Maximum_possible_count,Maximum_possible_percent_if_all_unresolved_confirmed,Unresolved_excluded_from_binary_presence,Comparison_role,Accepted_percent_Bacteraemia,Accepted_percent_Reproductive,Maximum_possible_percent_if_all_unresolved_confirmed_Bacteraemia,Maximum_possible_percent_if_all_unresolved_confirmed_Reproductive,Near_universal_status
+ace,Bacteraemia,58,58,100,0,0,0,0,58,100,0,Other targeted determinant,100,100,100,100,Near-universal
+ace,Reproductive,14,14,100,0,0,0,0,14,100,0,Other targeted determinant,100,100,100,100,Near-universal
+aggregation_substance_family_detected,Bacteraemia,45,58,77.59,0,0,0,13,45,77.59,0,Primary aggregation-substance comparison,77.59,92.86,77.59,92.86,Not near-universal
+aggregation_substance_family_detected,Reproductive,13,14,92.86,0,0,0,1,13,92.86,0,Primary aggregation-substance comparison,77.59,92.86,77.59,92.86,Not near-universal
+asa1_specific,Bacteraemia,8,58,13.79,3,34,0,13,45,77.59,37,Secondary lower-confidence narrow breakdown,13.79,35.71,77.59,92.86,Not near-universal
+asa1_specific,Reproductive,5,14,35.71,1,7,0,1,13,92.86,8,Secondary lower-confidence narrow breakdown,13.79,35.71,77.59,92.86,Not near-universal
+cylA,Bacteraemia,25,58,43.1,0,0,0,33,25,43.1,0,Other targeted determinant,43.1,64.29,43.1,64.29,Not near-universal
+cylA,Reproductive,9,14,64.29,0,0,0,5,9,64.29,0,Other targeted determinant,43.1,64.29,43.1,64.29,Not near-universal
+Ebp_operon_complete,Bacteraemia,58,58,100,0,0,0,0,58,100,0,Other targeted determinant,100,100,100,100,Near-universal
+Ebp_operon_complete,Reproductive,14,14,100,0,0,0,0,14,100,0,Other targeted determinant,100,100,100,100,Near-universal
+ebpA,Bacteraemia,58,58,100,0,0,0,0,58,100,0,Other targeted determinant,100,100,100,100,Near-universal
+ebpA,Reproductive,14,14,100,0,0,0,0,14,100,0,Other targeted determinant,100,100,100,100,Near-universal
+ebpB,Bacteraemia,58,58,100,0,0,0,0,58,100,0,Other targeted determinant,100,100,100,100,Near-universal
+ebpB,Reproductive,14,14,100,0,0,0,0,14,100,0,Other targeted determinant,100,100,100,100,Near-universal
+ebpC,Bacteraemia,58,58,100,0,0,0,0,58,100,0,Other targeted determinant,100,100,100,100,Near-universal
+ebpC,Reproductive,14,14,100,0,0,0,0,14,100,0,Other targeted determinant,100,100,100,100,Near-universal
+efaA,Bacteraemia,58,58,100,0,0,0,0,58,100,0,Other targeted determinant,100,100,100,100,Near-universal
+efaA,Reproductive,14,14,100,0,0,0,0,14,100,0,Other targeted determinant,100,100,100,100,Near-universal
+esp,Bacteraemia,24,58,41.38,0,0,0,34,24,41.38,0,Other targeted determinant,41.38,64.29,41.38,64.29,Not near-universal
+esp,Reproductive,9,14,64.29,0,0,0,5,9,64.29,0,Other targeted determinant,41.38,64.29,41.38,64.29,Not near-universal
+gelE,Bacteraemia,48,58,82.76,1,0,0,9,49,84.48,1,Other targeted determinant,82.76,78.57,84.48,78.57,Not near-universal
+gelE,Reproductive,11,14,78.57,0,0,0,3,11,78.57,0,Other targeted determinant,82.76,78.57,84.48,78.57,Not near-universal
+sprE,Bacteraemia,49,58,84.48,0,0,0,9,49,84.48,0,Other targeted determinant,84.48,78.57,84.48,78.57,Not near-universal
+sprE,Reproductive,11,14,78.57,0,0,0,3,11,78.57,0,Other targeted determinant,84.48,78.57,84.48,78.57,Not near-universal

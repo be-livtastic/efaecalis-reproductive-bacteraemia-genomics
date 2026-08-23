@@ -675,73 +675,9 @@ save_plot <- function(plot_object, filename, width = 11, height = 7) {
   )
 }
 
-plot_drug_classes <- function(data, dataset_label, filename) {
-  plot_data <- data |>
-    filter(
-      functional_amr_hit,
-      !is.na(drug_class_std),
-      drug_class_std != ""
-    ) |>
-    distinct(genome_id, drug_class_std) |>
-    count(drug_class_std, sort = TRUE, name = "genome_count") |>
-    mutate(drug_class_std = forcats::fct_reorder(drug_class_std, genome_count))
-  
-  p <- ggplot(plot_data, aes(x = drug_class_std, y = genome_count)) +
-    geom_col() +
-    coord_flip() +
-    labs(
-      title = paste0("AMR drug-class distribution: ", dataset_label),
-      subtitle = "Each drug class is counted once per genome",
-      x = "AMR drug class",
-      y = "Number of genomes"
-    ) +
-    theme_minimal(base_size = 11) +
-    theme(panel.grid.major.y = element_blank())
-  
-  save_plot(p, filename)
-}
-
 # ------------------------------
 # 9. Create retained graphs
 # ------------------------------
-plot_drug_classes(
-  reproductive_clean,
-  "14 reproductive genomes",
-  "reproductive_14_amr_drug_classes.png"
-)
-
-plot_drug_classes(
-  bacteraemia_clean,
-  "58 bacteraemia genomes",
-  "bacteraemia_58_amr_drug_classes.png"
-)
-
-plot_drug_classes(
-  combined_clean,
-  "combined 72 genomes",
-  "combined_72_amr_drug_classes.png"
-)
-
-# Compare unique AMR gene burden between the two source groups.
-p_comparison <- combined_summary |>
-  ggplot(aes(x = dataset, y = unique_amr_gene_count)) +
-  geom_boxplot(outlier.shape = NA) +
-  geom_jitter(width = 0.15, alpha = 0.65) +
-  labs(
-    title = "Functional AMR gene burden by dataset",
-    subtitle = "Each point represents one genome; INTERNAL_STOP hits are excluded",
-    x = "Dataset",
-    y = "Number of unique functional AMR genes per genome"
-  ) +
-  theme_minimal(base_size = 11) +
-  theme(panel.grid.major.x = element_blank())
-
-save_plot(
-  p_comparison,
-  "combined_72_amr_gene_burden_dataset_comparison.png",
-  width = 8,
-  height = 6
-)
 
 # Presence of the requested AMR gene categories by dataset.
 category_presence <- combined_summary |>

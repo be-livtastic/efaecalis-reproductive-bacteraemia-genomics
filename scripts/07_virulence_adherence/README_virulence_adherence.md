@@ -36,7 +36,7 @@ bash scripts/07_virulence_adherence/run_virulence_adherence_pipeline.sh --stage 
 
 The post-screen aggregation review compares every accepted explicit-`asa1` query locus competitively with the retained `prgB/asc10`, `EF0149` and `EF0485` VFDB references at the same coordinates. It writes locus-level evidence and genome-level recommendations but deliberately does not rewrite B3 statuses. Review and approve those recommendations before creating a resolved input for prevalence or Fisher testing.
 
-The approved resolved layer reports `aggregation_substance_family_detected` as the primary binary comparison and `asa1_specific` as a secondary, lower-confidence breakdown. The complete rationale is recorded in `docs/decisions/virulence_aggregation_substance_classification.md`.
+The approved resolved layer reports `aggregation_substance_family_detected` as the primary binary comparison and `asa1_specific` as a secondary, lower-confidence breakdown. The rationale is retained in the staged analysis notes and the project’s QC records rather than in a standalone docs folder.
 
 Every target/source prevalence row reports accepted, partial, review-required, ambiguous and not-detected counts. It also reports a maximum possible percentage if all unresolved calls were confirmed; this is an uncertainty bound, not another prevalence estimate. Figures label unresolved counts directly, and a Results-ready summary precedes statistical interpretation.
 

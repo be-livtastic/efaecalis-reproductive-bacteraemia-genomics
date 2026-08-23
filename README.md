@@ -41,7 +41,6 @@ in `data/accession_lists/selected_72_accessions.tsv`.
 - `environment/`: pinned software environment and recorded versions.
 - `scripts/`: ordered retrieval, analysis and visualisation scripts.
 - `results/`: selected compact tables and figures.
-- `docs/`: workflow, decisions and troubleshooting documentation.
 - `local_archive/`: ignored local-only raw inputs, legacy material and large outputs.
 
 `data/raw/`, `data/interim/`, bulk annotations and current phylogeny work are
@@ -82,9 +81,9 @@ Two independent staged extensions are documented in
 pipeline complements rather than replaces the validated nine-locus tree. The
 targeted virulence pipeline reports unresolved and ambiguous calls alongside
 accepted-detection prevalence so they cannot be mistaken for ordinary absence.
-Its approved aggregation-substance decision is recorded in
-`docs/decisions/virulence_aggregation_substance_classification.md`: the broad
-family call is primary and the narrow `asa1_specific` call is secondary.
+Its approved aggregation-substance decision keeps the broad family call as the
+primary comparison and the narrow `asa1_specific` call as a secondary,
+lower-confidence breakdown.
 
 ## Reproduction
 
@@ -101,7 +100,8 @@ family call is primary and the narrow `asa1_specific` call is secondary.
    existing outputs require deliberate review before using `--overwrite`.
 7. Annotate genomes with `bash scripts/04_annotation/run_prokka.sh`.
 8. Run the remaining scripts from their documented stage in numerical order,
-   observing every manual QC checkpoint in `docs/workflow/analysis_workflow.md`.
+   observing every manual QC checkpoint described in the relevant stage READMEs
+   and validation outputs.
 9. Review input and output paths in `config/paths.example.yml`.
 
 Scripts refuse to replace existing outputs by default. Personal absolute paths

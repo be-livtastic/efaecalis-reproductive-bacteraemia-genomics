@@ -1,0 +1,3 @@
+tree_type	n_reproductive_isolates	n_mixed_source_clades	n_reproductive_only_clades	n_nearest_neighbour_bacteraemia	n_nearest_neighbour_reproductive	n_distinct_major_clades_with_reproductive
+multilocus	13	1	0	12	6	1
+core_genome	12	1	0	6	8	1

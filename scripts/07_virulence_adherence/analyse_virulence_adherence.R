@@ -50,8 +50,9 @@ main <- function() {
   if (!all(statuses$Detection_status %in% allowed)) stop("Unknown detection status", call. = FALSE)
   source_counts <- integrated |> count(Source)
   observed_counts <- setNames(source_counts$n, source_counts$Source)
-  if (!identical(unname(observed_counts[c("Reproductive", "Bacteraemia")]), c(14L, 58L))) {
-    stop("Frozen source groups must contain exactly 14 reproductive and 58 bacteraemia genomes", call. = FALSE)
+  required_sources <- c("Reproductive", "Bacteraemia")
+  if (length(intersect(required_sources, names(observed_counts))) != 2L || !all(required_sources %in% names(observed_counts))) {
+    stop("The integrated metadata must include both Reproductive and Bacteraemia source groups.", call. = FALSE)
   }
   expected_targets <- c("ace", "efaA", "ebpA", "ebpB", "ebpC", "aggregation_substance_family_detected", "asa1_specific", "gelE", "sprE", "esp", "cylA")
   if (nrow(statuses) != 72L * length(expected_targets) ||
@@ -84,7 +85,7 @@ main <- function() {
     ungroup()
   analysis_status <- bind_rows(statuses, ebp)
   feature_order <- c(expected_targets, "Ebp_operon_complete")
-  denominators <- tibble(Source = c("Reproductive", "Bacteraemia"), Total = c(14L, 58L))
+  denominators <- tibble(Source = required_sources, Total = as.integer(observed_counts[required_sources]))
   counts <- analysis_status |>
     count(Target_gene, Source, Detection_status) |>
     complete(Target_gene = feature_order, Source = denominators$Source,
@@ -95,9 +96,9 @@ main <- function() {
   if (any(counts$Status_sum != counts$Total)) stop("Final status counts do not reconcile to group denominators", call. = FALSE)
   prevalence <- counts |>
     mutate(Accepted_percent = round(100 * accepted_present / Total, 2),
-           Maximum_possible_count = accepted_present + review_required + ambiguous_multiple_hit,
+           Maximum_possible_count = accepted_present + flagged_partial + review_required + ambiguous_multiple_hit,
            Maximum_possible_percent_if_all_unresolved_confirmed = round(100 * Maximum_possible_count / Total, 2),
-           Unresolved_excluded_from_binary_presence = review_required + ambiguous_multiple_hit,
+           Unresolved_excluded_from_binary_presence = flagged_partial + review_required + ambiguous_multiple_hit,
            Comparison_role = case_when(Target_gene == "aggregation_substance_family_detected" ~ "Primary aggregation-substance comparison",
                                        Target_gene == "asa1_specific" ~ "Secondary lower-confidence narrow breakdown",
                                        TRUE ~ "Other targeted determinant")) |>
@@ -107,6 +108,32 @@ main <- function() {
            Not_detected_count = not_detected, Maximum_possible_count,
            Maximum_possible_percent_if_all_unresolved_confirmed,
            Unresolved_excluded_from_binary_presence, Comparison_role)
+
+  prevalence <- prevalence |>
+    left_join(
+      prevalence |>
+        select(Gene, Source, Accepted_percent, Maximum_possible_percent_if_all_unresolved_confirmed) |>
+        pivot_wider(names_from = Source, values_from = c(Accepted_percent, Maximum_possible_percent_if_all_unresolved_confirmed), names_sep = "_"),
+      by = "Gene"
+    )
+
+  gene_summary <- prevalence |>
+    select(Gene, Accepted_percent_Reproductive, Accepted_percent_Bacteraemia,
+          Maximum_possible_percent_if_all_unresolved_confirmed_Reproductive,
+          Maximum_possible_percent_if_all_unresolved_confirmed_Bacteraemia) |>
+    distinct() |>
+    mutate(
+      Near_universal_status = case_when(
+        Accepted_percent_Reproductive >= 95 & Accepted_percent_Bacteraemia >= 95 ~ "Near-universal",
+        (Accepted_percent_Reproductive < 95 & Maximum_possible_percent_if_all_unresolved_confirmed_Reproductive >= 95) |
+         (Accepted_percent_Bacteraemia < 95 & Maximum_possible_percent_if_all_unresolved_confirmed_Bacteraemia >= 95) ~
+         "Potentially near-universal pending unresolved calls",
+        TRUE ~ "Not near-universal"
+      )
+    ) |>
+    select(Gene, Near_universal_status)
+
+  prevalence <- prevalence |> left_join(gene_summary, by = "Gene")
 
   # Construct the 72-row binary matrix from accepted calls only.
   matrix <- analysis_status |>
@@ -118,24 +145,28 @@ main <- function() {
   if (nrow(matrix) != 72L || anyDuplicated(matrix$Genome)) stop("Binary matrix must contain 72 unique genomes", call. = FALSE)
 
   # Run gene-level Fisher tests after the accepted binary matrix has been built.
+  n_rep <- denominators$Total[denominators$Source == "Reproductive"]
+  n_bac <- denominators$Total[denominators$Source == "Bacteraemia"]
   fisher_rows <- lapply(feature_order, function(gene) {
     rep_present <- sum(matrix[[gene]][matrix$Source == "Reproductive"])
     bac_present <- sum(matrix[[gene]][matrix$Source == "Bacteraemia"])
     total_present <- rep_present + bac_present
     if (total_present < 2L) return(NULL)
-    test <- fisher.test(base::matrix(c(rep_present, 14L - rep_present, bac_present, 58L - bac_present), nrow = 2, byrow = TRUE), alternative = "two.sided")
+    test <- fisher.test(base::matrix(c(rep_present, n_rep - rep_present, bac_present, n_bac - bac_present), nrow = 2, byrow = TRUE), alternative = "two.sided")
     tibble(Gene = gene, Comparison_role = case_when(gene == "aggregation_substance_family_detected" ~ "Primary aggregation-substance comparison",
-                                                   gene == "asa1_specific" ~ "Secondary lower-confidence narrow breakdown",
-                                                   TRUE ~ "Other targeted determinant"),
-           Reproductive_count = rep_present, Reproductive_total = 14L,
-           Reproductive_percent = round(100 * rep_present / 14, 2),
-           Bacteraemia_count = bac_present, Bacteraemia_total = 58L,
-           Bacteraemia_percent = round(100 * bac_present / 58, 2),
-           Prevalence_difference_percentage_points = round(100 * rep_present / 14 - 100 * bac_present / 58, 2),
-           Odds_ratio = unname(test$estimate), Raw_p_value = test$p.value)
+                                                  gene == "asa1_specific" ~ "Secondary lower-confidence narrow breakdown",
+                                                  TRUE ~ "Other targeted determinant"),
+          Reproductive_count = rep_present, Reproductive_total = n_rep,
+          Reproductive_percent = round(100 * rep_present / n_rep, 2),
+          Bacteraemia_count = bac_present, Bacteraemia_total = n_bac,
+          Bacteraemia_percent = round(100 * bac_present / n_bac, 2),
+          Prevalence_difference_percentage_points = round(100 * rep_present / n_rep - 100 * bac_present / n_bac, 2),
+          Odds_ratio = unname(test$estimate), Raw_p_value = test$p.value)
   })
   fisher <- bind_rows(fisher_rows) |>
-    mutate(BH_adjusted_p_value = p.adjust(Raw_p_value, method = "BH"), Significant_q_lt_0.05 = BH_adjusted_p_value < 0.05) |>
+    mutate(BH_adjusted_q_value = p.adjust(Raw_p_value, method = "BH"),
+          BH_adjusted_p_value = BH_adjusted_q_value,
+          Significant_q_lt_0.05 = BH_adjusted_q_value < 0.05) |>
     arrange(Raw_p_value)
   insufficient <- tibble(Gene = feature_order, Total_accepted_occurrences = vapply(feature_order, function(x) sum(matrix[[x]]), integer(1))) |>
     filter(Total_accepted_occurrences < 2L) |>
@@ -150,8 +181,8 @@ main <- function() {
     group_by(ST) |>
     filter(n() >= 2L) |>
     summarise(Genome_count = n(), Reproductive_count = sum(Source == "Reproductive"),
-              Bacteraemia_count = sum(Source == "Bacteraemia"),
-              across(all_of(feature_order), list(count = sum, percent = ~round(100 * mean(.x), 2))), .groups = "drop")
+             Bacteraemia_count = sum(Source == "Bacteraemia"),
+             across(all_of(feature_order), list(count = sum, percent = ~round(100 * mean(.x), 2))), .groups = "drop")
 
   table_dir <- file.path(root, "results/tables/virulence_adherence")
   safe_write(matrix, file.path(table_dir, "virulence_adherence_presence_absence_72.csv"), args$overwrite)
@@ -162,31 +193,79 @@ main <- function() {
   safe_write(integrated_output, file.path(table_dir, "integrated_genome_mlst_amr_virulence_72.csv"), args$overwrite)
   safe_write(st_summary, file.path(table_dir, "virulence_prevalence_by_st_72.csv"), args$overwrite)
 
-  # Show accepted prevalence and the unresolved upper bound with explicit counts on every affected bar.
+  # Show accepted prevalence as the main estimate and the unresolved upper bound as a capped uncertainty interval.
+  near_universal_summary <- prevalence |>
+    filter(Near_universal_status == "Near-universal") |>
+    select(
+      Gene,
+      Accepted_percent_Reproductive,
+      Accepted_percent_Bacteraemia,
+      Maximum_possible_percent_if_all_unresolved_confirmed_Reproductive,
+      Maximum_possible_percent_if_all_unresolved_confirmed_Bacteraemia
+    ) |>
+    distinct() |>
+    arrange(Gene)
+  safe_write(near_universal_summary, file.path(table_dir, "virulence_near_universal_genes_72.csv"), args$overwrite)
+
+  variable_genes <- prevalence |>
+    filter(Near_universal_status != "Near-universal") |>
+    pull(Gene) |>
+    unique()
+
+  variable_unresolved <- prevalence |>
+    filter(Near_universal_status != "Near-universal") |>
+    select(Gene, Source, Accepted_present_count, Flagged_partial_count, Review_required_count, Ambiguous_multiple_hit_count, Maximum_possible_count) |>
+    arrange(Gene, factor(Source, levels = c("Reproductive", "Bacteraemia")))
+  safe_write(variable_unresolved, file.path(table_dir, "virulence_variable_genes_unresolved_calls_72.csv"), args$overwrite)
+
   plot_data <- prevalence |>
-    mutate(Gene = factor(Gene, levels = rev(feature_order)),
-           Unresolved_label = if_else(Review_required_count + Ambiguous_multiple_hit_count + Flagged_partial_count > 0,
-             paste0("review=", Review_required_count, "; ambiguous=", Ambiguous_multiple_hit_count,
-                    "; partial=", Flagged_partial_count), ""))
-  plot <- ggplot(plot_data, aes(Accepted_percent, Gene, fill = Source)) +
-    geom_col(position = position_dodge(width = 0.75), width = 0.65) +
+    filter(Near_universal_status != "Near-universal") |>
+    left_join(
+      fisher |>
+        filter(Significant_q_lt_0.05 == TRUE) |>
+        select(Gene, BH_adjusted_q_value, Significant_q_lt_0.05),
+      by = "Gene"
+    ) |>
+    mutate(
+      Gene = factor(Gene, levels = unique(Gene[order(-abs(Accepted_percent_Reproductive - Accepted_percent_Bacteraemia))])),
+      Source = factor(Source, levels = c("Reproductive", "Bacteraemia")),
+      y_base = as.numeric(Gene),
+      y_num = y_base + if_else(Source == "Reproductive", 0.12, -0.12),
+      Has_interval = Maximum_possible_percent_if_all_unresolved_confirmed > Accepted_percent,
+      significance_marker = if_else(Significant_q_lt_0.05 == TRUE & Source == "Reproductive", "*", NA_character_)
+    )
+
+  plot <- ggplot(plot_data, aes(x = Accepted_percent, y = y_num, colour = Source, shape = Source)) +
     geom_segment(aes(x = Accepted_percent, xend = Maximum_possible_percent_if_all_unresolved_confirmed,
-                     yend = Gene, color = Source), linewidth = 1.1, position = position_dodge(width = 0.75)) +
-    geom_text(aes(label = Unresolved_label), position = position_dodge(width = 0.75),
-              hjust = -0.05, size = 2.6, color = "black") +
-    scale_fill_manual(values = c(Reproductive = "#B2182B", Bacteraemia = "#2166AC")) +
-    scale_color_manual(values = c(Reproductive = "#B2182B", Bacteraemia = "#2166AC"), guide = "none") +
-    scale_x_continuous(limits = c(0, 125), breaks = seq(0, 100, 20), expand = expansion(mult = c(0, 0))) +
-    labs(title = "Accepted-detection prevalence of targeted virulence/adherence determinants",
-         subtitle = "Thin extensions show the maximum possible percentage if all unresolved calls were confirmed",
-         caption = "Review-required and ambiguous calls are excluded from binary presence; accepted prevalence may therefore underestimate genomic prevalence pending review.",
-         x = "Accepted-detection prevalence (%)", y = NULL, fill = "Source") +
-    theme_minimal(base_size = 11) + theme(legend.position = "bottom", plot.caption = element_text(hjust = 0))
+                    y = y_num, yend = y_num), linewidth = 1.1, alpha = 0.75) +
+    geom_point(size = 3.5) +
+    geom_text(data = plot_data |> filter(!is.na(significance_marker)),
+              aes(label = significance_marker, x = pmax(Accepted_percent, 0) + 2),
+              vjust = 0.5, size = 4, colour = "black") +
+    scale_colour_manual(values = c(Reproductive = "#D55E00", Bacteraemia = "#0072B2"), name = "Source") +
+    scale_shape_manual(values = c(Reproductive = 15, Bacteraemia = 17), name = "Source") +
+    scale_y_continuous(
+      breaks = seq_along(levels(plot_data$Gene)),
+      labels = levels(plot_data$Gene),
+      limits = c(0.5, length(levels(plot_data$Gene)) + 0.5)
+    ) +
+    scale_x_continuous(limits = c(0, 120), breaks = seq(0, 100, 20), expand = expansion(mult = c(0.02, 0.08))) +
+    labs(
+      title = "Accepted virulence prevalence among variable genes",
+      subtitle = paste0("Reproductive (n = ", denominators$Total[denominators$Source == "Reproductive"], "); Bacteraemia (n = ", denominators$Total[denominators$Source == "Bacteraemia"], ")"),
+      caption = "Point = accepted prevalence; horizontal capped interval = accepted prevalence to maximum possible prevalence if all unresolved calls are ultimately accepted.",
+      x = "Prevalence (%)",
+      y = NULL,
+      colour = "Source",
+      shape = "Source"
+    ) +
+    theme_minimal(base_size = 11) +
+    theme(legend.position = "bottom", plot.caption = element_text(hjust = 0), axis.text.y = element_text(size = 9))
   figure_dir <- file.path(root, "results/figures/virulence_adherence")
   dir.create(figure_dir, recursive = TRUE, showWarnings = FALSE)
-  png <- file.path(figure_dir, "virulence_prevalence_with_unresolved_72.png")
-  pdf <- file.path(figure_dir, "virulence_prevalence_with_unresolved_72.pdf")
-  if ((!args$overwrite) && (file.exists(png) || file.exists(pdf))) stop("Refusing to overwrite prevalence figure", call. = FALSE)
+  png <- file.path(figure_dir, "virulence_prevalence_variable_genes_72.png")
+  pdf <- file.path(figure_dir, "virulence_prevalence_variable_genes_72.pdf")
+  if ((!args$overwrite) && (file.exists(png) || file.exists(pdf))) stop("Refusing to overwrite variable-gene prevalence figure", call. = FALSE)
   ggsave(png, plot, width = 12, height = 7, dpi = 300)
   ggsave(pdf, plot, width = 12, height = 7)
 

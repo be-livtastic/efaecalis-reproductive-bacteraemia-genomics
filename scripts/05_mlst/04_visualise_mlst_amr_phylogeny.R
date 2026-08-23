@@ -37,17 +37,15 @@ save_pair <- function(plot, stem, output_dir, overwrite, width, height) {
   ggsave(paths[[2]], plot, width = width, height = height, bg = "white")
 }
 
-# Create tree and aligned metadata displays while keeping midpoint rooting presentation-only.
+# Create the presentation-only MLST tree display while keeping midpoint rooting non-analytical.
 main <- function() {
   args <- parse_args(); root <- get_project_root()
   integrated_path <- file.path(root, "results", "tables", "mlst_amr_phylogeny", "integrated_genome_mlst_amr_72.csv")
-  amr_path <- file.path(root, "results", "tables", "amr", "amr_gene_presence_absence.csv")
   tree_path <- file.path(root, "analysis", "phylogenomics", "72_genomes_9_locus_observed_indels", "iqtree", "efaecalis_72_genomes_9_locus_observed_indels.treefile")
-  if (!all(file.exists(c(integrated_path, amr_path, tree_path)))) stop("Integrated table, frozen AMR matrix, or tree is missing", call. = FALSE)
+  if (!all(file.exists(c(integrated_path, tree_path)))) stop("Integrated table or tree is missing", call. = FALSE)
   output_dir <- file.path(root, "results", "figures", "mlst_amr_phylogeny")
   dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
   metadata <- read_csv(integrated_path, col_types = cols(.default = col_character(), AMR_burden = col_double()))
-  amr <- read_csv(amr_path, col_types = cols(Genome = col_character(), Source = col_character(), .default = col_integer()))
   tree <- read.tree(tree_path)
   if (length(tree$tip.label) != 72L || !setequal(tree$tip.label, metadata$Genome)) stop("Tree/integration accession mismatch", call. = FALSE)
 
@@ -69,34 +67,6 @@ main <- function() {
   tree_plot <- tree_plot + xlim(NA, max(tree_plot$data$x, na.rm = TRUE) * 1.72)
   save_pair(tree_plot, "mlst_hlgr_proxy_midpoint_display_tree_72", output_dir, args$overwrite, 18, 13)
 
-  tip_order <- tree_plot$data |> filter(isTip) |> arrange(y) |> pull(label)
-  tracks <- metadata |>
-    left_join(amr |> select(Genome, dfrF, gyrA_S83I, parC_S80I), by = "Genome") |>
-    mutate(
-      Genome = factor(Genome, levels = tip_order),
-      Source_display = Source, Study_ID_display = Study_ID,
-      ST_display = if_else(ST == "Unassigned", "Unassigned", paste0("ST", ST)),
-      Proxy_display = if_else(str_detect(HLGR_proxy, " proxy detected$"), "Detected", "Not detected"),
-      AMR_burden_display = as.character(AMR_burden), dfrF_display = as.character(dfrF),
-      gyrA_S83I_display = as.character(gyrA_S83I), parC_S80I_display = as.character(parC_S80I)
-    ) |>
-    select(Genome, Source, Source_display, Study_ID_display, ST_display, Proxy_display,
-           AMR_burden_display, dfrF_display, gyrA_S83I_display, parC_S80I_display) |>
-    pivot_longer(ends_with("_display"), names_to = "Track", values_to = "Value") |>
-    mutate(
-      Track = factor(Track, levels = c("Source_display", "Study_ID_display", "ST_display", "Proxy_display", "AMR_burden_display", "dfrF_display", "gyrA_S83I_display", "parC_S80I_display"),
-                     labels = c("Source", "Study ID", "ST", "HLGR proxy", "AMR burden", "dfrF", "gyrA S83I", "parC S80I"))
-    )
-  track_plot <- ggplot(tracks, aes(x = Track, y = Genome)) +
-    geom_tile(aes(fill = Source), colour = "white", linewidth = 0.15, alpha = 0.22) +
-    geom_text(aes(label = Value), size = 2.05) +
-    scale_fill_manual(values = c(Reproductive = "#0072B2", Bacteraemia = "#D55E00"), guide = "none") +
-    scale_x_discrete(position = "top") +
-    labs(title = "Genome metadata tracks in midpoint-display tip order", x = NULL, y = "Genome accession") +
-    theme_minimal(base_size = 9) +
-    theme(panel.grid = element_blank(), axis.text.x = element_text(angle = 45, hjust = 0), axis.text.y = element_text(size = 5.8))
-  save_pair(track_plot, "mlst_amr_metadata_tracks_72", output_dir, args$overwrite, 13, 15)
-
   # Record the exact R session and reproducible command sequence used for this analysis layer.
   log_dir <- file.path(root, "analysis", "logs", "mlst_amr_phylogeny")
   dir.create(log_dir, recursive = TRUE, showWarnings = FALSE)
@@ -111,7 +81,7 @@ main <- function() {
     "Rscript scripts/05_mlst/04_visualise_mlst_amr_phylogeny.R",
     "", capture.output(sessionInfo())
   ), session_path)
-  message("Generated presentation-only tree and metadata-track figures in ", output_dir)
+  message("Generated presentation-only MLST tree figure in ", output_dir)
 }
 
 # Run only during a deliberate Rscript invocation.

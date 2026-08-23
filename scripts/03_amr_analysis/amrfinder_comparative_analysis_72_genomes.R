@@ -181,6 +181,9 @@ output_registry <- function(config) {
     amr_drug_class_prevalence_comparison_72 = file.path(
       config$figure_output_dir, "amr_drug_class_prevalence_comparison_72.png"
     ),
+    amr_shared_and_dataset_only_determinants_72 = file.path(
+      config$figure_output_dir, "amr_shared_and_dataset_only_determinants_72.png"
+    ),
     amrfinder_comparative_analysis_72_log = file.path(
       config$log_output_dir, "amrfinder_comparative_analysis_72.log"
     )
@@ -1402,6 +1405,58 @@ plot_drug_class_prevalence <- function(drug_class_summary) {
     ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 35, hjust = 1))
 }
 
+plot_shared_and_dataset_only_determinants <- function(classifications) {
+  plot_data <- classifications |>
+    dplyr::filter(.data$Classification != "not detected in either dataset") |>
+    dplyr::mutate(
+      Category = dplyr::case_when(
+        stringr::str_detect(.data$Classification, "Shared") ~ "Shared",
+        stringr::str_detect(.data$Classification, "reproductive") ~ "Reproductive-only",
+        stringr::str_detect(.data$Classification, "bacteraemia") ~ "Bacteraemia-only",
+        TRUE ~ .data$Classification
+      ),
+      Category = factor(
+        .data$Category,
+        levels = c("Shared", "Reproductive-only", "Bacteraemia-only")
+      )
+    ) |>
+    dplyr::arrange(.data$Category, dplyr::desc(.data$Total_count), .data$Gene)
+
+  gene_lists <- plot_data |>
+    dplyr::group_by(.data$Category) |>
+    dplyr::summarise(
+      Gene_list = paste(.data$Gene, collapse = ", "),
+      .groups = "drop"
+    )
+
+  ggplot2::ggplot(
+    plot_data,
+    ggplot2::aes(x = .data$Category, y = .data$Total_count, fill = .data$Category)
+  ) +
+    ggplot2::geom_col(width = 0.75) +
+    ggplot2::labs(
+      title = "AMR determinants shared versus restricted to each dataset",
+      subtitle = "Counts are based on the accepted functional AMR determinants present in at least one genome",
+      x = "Determinant class",
+      y = "Number of determinants",
+      fill = "Determinant class"
+    ) +
+    ggplot2::scale_y_continuous(expand = ggplot2::expansion(mult = c(0, 0.15))) +
+    ggplot2::theme_minimal(base_size = 11) +
+    ggplot2::theme(
+      panel.grid.major.x = ggplot2::element_blank(),
+      axis.text.x = ggplot2::element_text(angle = 20, hjust = 1)
+    ) +
+    ggplot2::labs(
+      caption = paste(
+        "Shared:", gene_lists$Gene_list[gene_lists$Category == "Shared"],
+        "\nReproductive-only:", gene_lists$Gene_list[gene_lists$Category == "Reproductive-only"],
+        "\nBacteraemia-only:", gene_lists$Gene_list[gene_lists$Category == "Bacteraemia-only"]
+      )
+    ) +
+    ggplot2::theme(plot.caption = ggplot2::element_text(size = 8, hjust = 0))
+}
+
 safe_write_csv <- function(data, path, overwrite) {
   if (file.exists(path) && !overwrite) {
     stop("Refusing to overwrite existing output: ", path, call. = FALSE)
@@ -1434,6 +1489,7 @@ write_outputs <- function(objects, plots, paths, overwrite) {
     "amr_presence_absence_heatmap_clustered_72",
     "amr_presence_absence_heatmap_clustering_audit_72",
     "amr_drug_class_prevalence_comparison_72",
+    "amr_shared_and_dataset_only_determinants_72",
     "amrfinder_comparative_analysis_72_log"
   ))
   missing_objects <- setdiff(csv_names, names(objects))
@@ -1466,6 +1522,10 @@ write_outputs <- function(objects, plots, paths, overwrite) {
   )
   safe_save_plot(
     plots$drug_class, paths[["amr_drug_class_prevalence_comparison_72"]],
+    overwrite, width = 10, height = 7
+  )
+  safe_save_plot(
+    plots$shared_determinants, paths[["amr_shared_and_dataset_only_determinants_72"]],
     overwrite, width = 10, height = 7
   )
 }
@@ -1620,7 +1680,8 @@ main <- function() {
       matrix, prevalence, functional, strain_metadata
     ),
     presence_absence_clustered = clustered_heatmap$plot,
-    drug_class = plot_drug_class_prevalence(drug_classes)
+    drug_class = plot_drug_class_prevalence(drug_classes),
+    shared_determinants = plot_shared_and_dataset_only_determinants(classifications)
   )
 
   # Write all registered outputs only after every transformation succeeds.
