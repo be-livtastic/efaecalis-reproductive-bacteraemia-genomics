@@ -1,0 +1,3 @@
+analysis	excluded_ST	total_denominator	reproductive_denominator	reproductive_proxy_positive	reproductive_proxy_negative	reproductive_prevalence	bacteraemia_denominator	bacteraemia_proxy_positive	bacteraemia_proxy_negative	bacteraemia_prevalence	prevalence_difference_reproductive_minus_bacteraemia	odds_ratio_reproductive_vs_bacteraemia	odds_ratio_95ci_lower	odds_ratio_95ci_upper	odds_ratio_ci_method	fisher_exact_two_sided_p
+Full dataset	None	72	14	5	9	0.3571428571	58	24	34	0.4137931034	-0.05665024631	0.787037037	0.2342934278	2.643809959	Woolf log-odds interval	0.7694901686
+ST6 excluded	ST6	59	14	5	9	0.3571428571	45	11	34	0.2444444444	0.1126984127	1.717171717	0.4739195775	6.221896807	Woolf log-odds interval	0.4953821492

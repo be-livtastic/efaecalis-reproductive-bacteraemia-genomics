@@ -2,9 +2,6 @@
 
 suppressPackageStartupMessages({
   library(ggplot2)
-  if (requireNamespace("ggrepel", quietly = TRUE)) {
-    library(ggrepel)
-  }
 })
 
 args <- commandArgs(trailingOnly = TRUE)
@@ -38,11 +35,6 @@ plot_data$source_group <- factor(
   plot_data$reproductive_bacteraemia_category,
   levels = c("Reproductive", "Bacteraemia")
 )
-plot_data$label <- ifelse(
-  plot_data$reproductive_bacteraemia_category == "Reproductive",
-  plot_data$strain,
-  NA_character_
-)
 
 label_var <- function(component) {
   variance_row <- variance[variance$component == component, , drop = FALSE]
@@ -50,7 +42,7 @@ label_var <- function(component) {
   sprintf("%s (%0.1f%%)", component, 100 * pct)
 }
 
-make_plot <- function(x, y, stem, label_reproductive_only = TRUE) {
+make_plot <- function(x, y, stem) {
   x_label <- label_var(x)
   y_label <- label_var(y)
 
@@ -65,7 +57,7 @@ make_plot <- function(x, y, stem, label_reproductive_only = TRUE) {
       x = x_label,
       y = y_label,
       title = "Nine-locus PCA by source group",
-      subtitle = "Reproductive isolates are labelled; bacteraemia-associated isolates remain unlabelled."
+      subtitle = "Sample identifiers are retained in the accompanying PCA score table."
     ) +
     theme_minimal(base_size = 11) +
     theme(
@@ -78,31 +70,6 @@ make_plot <- function(x, y, stem, label_reproductive_only = TRUE) {
       plot.subtitle = element_text(size = 10, colour = "#374151")
     )
 
-  if (label_reproductive_only && any(!is.na(plot_data$label))) {
-    label_df <- subset(plot_data, !is.na(label))
-    if (requireNamespace("ggrepel", quietly = TRUE)) {
-      gg <- gg + geom_text_repel(
-        data = label_df,
-        aes(label = .data$label),
-        color = "#111827",
-        size = 3.1,
-        box.padding = 0.35,
-        point.padding = 0.2,
-        segment.alpha = 0.7,
-        max.overlaps = Inf,
-        force = 1.2
-      )
-    } else {
-      gg <- gg + geom_text(
-        data = label_df,
-        aes(label = .data$label),
-        color = "#111827",
-        size = 3.1,
-        vjust = -0.6
-      )
-    }
-  }
-
   ggsave(file.path(out, paste0(stem, ".png")), gg, width = 10, height = 8, dpi = 300, bg = "white")
   ggsave(file.path(out, paste0(stem, ".pdf")), gg, width = 10, height = 8, bg = "white")
   gg
@@ -111,35 +78,4 @@ make_plot <- function(x, y, stem, label_reproductive_only = TRUE) {
 make_plot("PC1", "PC2", "pca_pc1_pc2")
 make_plot("PC1", "PC3", "pca_pc1_pc3")
 
-# Export a concise PCA summary table with ST information where available.
-project_root <- normalizePath(file.path(dirname(scores_path), "..", "..", "..", ".."), mustWork = TRUE)
-integrated_path <- file.path(
-  project_root,
-  "results",
-  "tables",
-  "mlst_amr_phylogeny",
-  "integrated_genome_mlst_amr_72.csv"
-)
-if (file.exists(integrated_path)) {
-  mlst <- read.csv(integrated_path, check.names = FALSE, stringsAsFactors = FALSE)
-  mlst_table <- mlst[, c("Genome", "ST")]
-  names(mlst_table)[1] <- "assembly_accession"
-  pca_table <- merge(
-    plot_data[, c("assembly_accession", "strain", "reproductive_bacteraemia_category", "PC1", "PC2", "PC3")],
-    mlst_table,
-    by = "assembly_accession",
-    all.x = TRUE,
-    sort = FALSE
-  )
-  pca_table <- pca_table[, c("assembly_accession", "strain", "reproductive_bacteraemia_category", "PC1", "PC2", "PC3", "ST")]
-  write.table(
-    pca_table,
-    file.path(dirname(scores_path), "pca_scores_with_metadata_72.tsv"),
-    sep = "\t",
-    row.names = FALSE,
-    quote = FALSE,
-    na = ""
-  )
-}
-
-message("PCA plots written for ", nrow(scores), " genomes with reproductive-only labels and source-group colouring")
+message("PCA plots written for ", nrow(scores), " genomes without point labels; sample identifiers remain unchanged in the input score table")

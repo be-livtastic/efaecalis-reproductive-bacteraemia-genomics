@@ -1,0 +1,3 @@
+# Plotting dependency for scripts/08_hlgr_sensitivity and scripts/09_plasmid_context.
+# Scientific/tabular dependencies are already pinned in environment/environment.yml.
+matplotlib==3.10.8

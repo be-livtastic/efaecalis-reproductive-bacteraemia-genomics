@@ -23,10 +23,17 @@ while (($#)); do
 done
 [[ -n "$stage" ]] || { usage; exit 2; }
 
-mamba_bin=${MAMBA_EXE:-/home/belivtastic/miniforge3/bin/mamba}
-[[ -x "$mamba_bin" ]] || { echo "ERROR: Mamba executable not found: $mamba_bin" >&2; exit 127; }
-env_prefix=${EFAECALIS_CORE_ENV_PREFIX:-/home/belivtastic/miniforge3/envs/$core_env}
-main_prefix=${EFAECALIS_MAIN_ENV_PREFIX:-/home/belivtastic/miniforge3/envs/efaecalis_phylogeny}
+mamba_bin=${MAMBA_EXE:-}
+if [[ -z "$mamba_bin" ]]; then
+  mamba_bin=$(command -v mamba || command -v micromamba || true)
+fi
+[[ -n "$mamba_bin" && -x "$mamba_bin" ]] || {
+  echo "ERROR: Mamba was not found. Activate Miniforge or set MAMBA_EXE." >&2
+  exit 127
+}
+mamba_root=${MAMBA_ROOT_PREFIX:-$(cd "$(dirname "$mamba_bin")/.." && pwd)}
+env_prefix=${EFAECALIS_CORE_ENV_PREFIX:-$mamba_root/envs/$core_env}
+main_prefix=${EFAECALIS_MAIN_ENV_PREFIX:-$mamba_root/envs/efaecalis_phylogeny}
 py=("$env_prefix/bin/python" "$script_dir/core_genome_analysis.py")
 rscript=("$main_prefix/bin/Rscript")
 [[ -x "${py[0]}" ]] || { echo "ERROR: Core environment Python is unavailable: ${py[0]}" >&2; exit 127; }

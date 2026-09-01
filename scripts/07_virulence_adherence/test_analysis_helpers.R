@@ -2,8 +2,9 @@
 
 # Load helper functions without creating any analysis output.
 Sys.setenv(EFAECALIS_SKIP_MAIN = "1")
-source(file.path(dirname(commandArgs(trailingOnly = FALSE)[grepl("^--file=", commandArgs(trailingOnly = FALSE))][1] |> sub("^--file=", "", x = _)),
-                 "analyse_virulence_adherence.R"))
+script_arg <- commandArgs(trailingOnly = FALSE)[grepl("^--file=", commandArgs(trailingOnly = FALSE))][1]
+script_path <- sub("^--file=", "", script_arg)
+source(file.path(dirname(script_path), "analyse_virulence_adherence.R"))
 
 # Check conservative Ebp propagation and accepted-only completeness.
 stopifnot(composite_ebp_status("accepted_present", "accepted_present", "accepted_present") == "accepted_present")

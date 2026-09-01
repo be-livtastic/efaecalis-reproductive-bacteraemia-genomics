@@ -1,0 +1,120 @@
+ M .devcontainer/devcontainer.json
+ M .devcontainer/setup-core-environment.sh
+M  .dockerignore
+M  .gitignore
+M  README.md
+ M analysis/logs/mlst_amr_phylogeny/mlst_amr_phylogeny_session_info_72.txt
+D  analysis/virulence_adherence/pilot_initial_failed_consolidation/blast_pilot/GCA_029011255.1.tsv
+D  analysis/virulence_adherence/pilot_initial_failed_consolidation/blast_pilot/GCA_050469755.1.tsv
+D  analysis/virulence_adherence/pilot_initial_failed_consolidation/blast_pilot/GCA_050471105.1.tsv
+D  analysis/virulence_adherence/pilot_initial_failed_consolidation/blast_pilot/GCF_053117575.1.tsv
+D  analysis/virulence_adherence/pilot_initial_failed_consolidation/virulence_blast_hsp_audit_pilot.csv
+D  analysis/virulence_adherence/pilot_initial_failed_consolidation/virulence_blast_runtime_pilot.csv
+D  analysis/virulence_adherence/pilot_initial_failed_consolidation/virulence_consolidated_candidates_pilot.csv
+D  analysis/virulence_adherence/pilot_initial_failed_consolidation/virulence_pilot_status_qc.csv
+D  analysis/virulence_adherence/pilot_initial_failed_consolidation/virulence_target_status_by_genome_pilot.csv
+ M data/metadata/plasmid_status_by_genome_72.tsv
+ M environment/core_genome.yml
+ M environment/core_genome_software_versions.tsv
+ M results/core_genome/iqtree_primary/full_core_72_gtrg4_20260819T042202Z.contree
+ M results/core_genome/iqtree_primary/full_core_72_gtrg4_20260819T042202Z.iqtree
+ M results/core_genome/iqtree_primary/full_core_72_gtrg4_20260819T042202Z.log
+ M results/core_genome/iqtree_primary/full_core_72_gtrg4_20260819T042202Z.mldist
+ M results/core_genome/iqtree_primary/full_core_72_gtrg4_20260819T042202Z.splits.nex
+ M results/core_genome/iqtree_primary/full_core_72_gtrg4_20260819T042202Z.treefile
+ M results/core_genome/qc/core_alignment_missingness_per_genome_20260819T042124Z.tsv
+ M results/core_genome/qc/core_alignment_qc_summary_20260819T042124Z.json
+ M results/core_genome/qc/core_alignment_site_statistics_20260819T042124Z.tsv
+ M results/core_genome/qc/iqtree_completion_manifest_20260819T044911Z.json
+ M results/core_genome/qc/iqtree_pre_run_manifest_20260819T042202Z.json
+ M results/core_genome/qc/iqtree_pre_run_manifest_20260819T042633Z.json
+ M results/core_genome/trees/core_14_reproductive_pruned_unrooted.treefile
+ M results/core_genome/trees/core_58_bacteraemia_pruned_unrooted.treefile
+ M results/core_genome/trees/core_72_combined_unrooted.treefile
+ M results/figures/core_genome_phylogeny/bacteraemia_58_pruned_unrooted_cladogram.svg
+ M results/figures/core_genome_phylogeny/bacteraemia_58_pruned_unrooted_phylogram.svg
+ M results/figures/core_genome_phylogeny/combined_72_unrooted_cladogram.svg
+ M results/figures/core_genome_phylogeny/combined_72_unrooted_cladogram_support_overlay.svg
+ M results/figures/core_genome_phylogeny/combined_72_unrooted_phylogram.svg
+ M results/figures/core_genome_phylogeny/combined_72_unrooted_phylogram_presentation.svg
+ M results/figures/core_genome_phylogeny/reproductive_14_pruned_unrooted_cladogram.svg
+ M results/figures/core_genome_phylogeny/reproductive_14_pruned_unrooted_phylogram.svg
+A  results/figures/hlgr_sensitivity/hlgr_odds_ratio_forest_st6_sensitivity.png
+A  results/figures/hlgr_sensitivity/hlgr_prevalence_before_after_st6_exclusion.png
+A  results/figures/hlgr_sensitivity/hlgr_st_proxy_dotplot.png
+A  results/figures/hlgr_sensitivity/hlgr_st_proxy_grouped_bar.png
+M  results/figures/phylogeny_72_genomes_9_locus_observed_indels/pca/pca_pc1_pc2.pdf
+M  results/figures/phylogeny_72_genomes_9_locus_observed_indels/pca/pca_pc1_pc2.png
+D  results/figures/phylogeny_72_genomes_9_locus_observed_indels/pca/pca_pc1_pc2_assembly_accession_labels.pdf
+D  results/figures/phylogeny_72_genomes_9_locus_observed_indels/pca/pca_pc1_pc2_assembly_accession_labels.png
+M  results/figures/phylogeny_72_genomes_9_locus_observed_indels/pca/pca_pc1_pc3.pdf
+M  results/figures/phylogeny_72_genomes_9_locus_observed_indels/pca/pca_pc1_pc3.png
+D  results/figures/phylogeny_72_genomes_9_locus_observed_indels/pca/pca_pc1_pc3_assembly_accession_labels.pdf
+D  results/figures/phylogeny_72_genomes_9_locus_observed_indels/pca/pca_pc1_pc3_assembly_accession_labels.png
+A  results/figures/plasmid_context/amr_burden_by_gene_class_and_localisation_72.png
+A  results/figures/plasmid_context/amr_hit_localisation_by_source_72.png
+A  results/figures/plasmid_context/hlgr_proxy_localisation_by_source_72.png
+A  results/figures/plasmid_context/plasmid_amr_gene_by_replicon_heatmap_72.png
+D  results/phylogeny/.gitkeep
+ M results/tables/core_genome_phylogeny/core_tree_figure_output_paths.tsv
+ M results/tables/core_genome_phylogeny/core_tree_figure_source_table.tsv
+ M results/tables/core_genome_phylogeny/core_tree_support_qc.tsv
+ M results/tables/core_genome_phylogeny/core_tree_support_qc_summary.tsv
+ M results/tables/core_genome_phylogeny/core_tree_support_source_qc.tsv
+ M results/tables/core_genome_phylogeny/core_tree_tip_audit.tsv
+ M results/tables/core_genome_phylogeny/core_tree_tip_membership.tsv
+ M results/tables/core_genome_phylogeny/core_tree_visualisation_manifest.tsv
+ M results/tables/core_genome_phylogeny/core_tree_visualisation_qc_note.txt
+A  results/tables/hlgr_sensitivity/hlgr_source_comparison_sensitivity.tsv
+A  results/tables/hlgr_sensitivity/hlgr_source_prevalence_sensitivity.tsv
+A  results/tables/hlgr_sensitivity/hlgr_st_proxy_prevalence.tsv
+ M results/tables/phylogeny_72_genomes_9_locus_observed_indels/assembly_qc_summary.tsv
+ M results/tables/phylogeny_72_genomes_9_locus_observed_indels/gene_hit_summary.tsv
+ M results/tables/phylogeny_72_genomes_9_locus_observed_indels/gene_presence_qc.tsv
+ M results/tables/phylogeny_72_genomes_9_locus_observed_indels/pca/pca_scores_with_metadata_72.tsv
+ M results/tables/phylogeny_72_genomes_9_locus_observed_indels/protein_reference_qc.tsv
+ M results/tables/phylogeny_72_genomes_9_locus_observed_indels/pubmlst_locus_qc.tsv
+D  results/tables/phylogeny_9_locus/gene_hit_summary.tsv
+D  results/tables/phylogeny_9_locus/gene_presence_qc.tsv
+D  results/tables/phylogeny_9_locus/phylogeny_9_locus_run_summary.md
+A  results/tables/plasmid_context/accepted_amr_hit_replicon_context_72.tsv
+A  results/tables/plasmid_context/amr_burden_by_gene_class_and_localisation_72.tsv
+A  results/tables/plasmid_context/amr_gene_by_replicon_matrix_72.tsv
+A  results/tables/plasmid_context/plasmid_context_qc_summary.tsv
+A  results/tables/plasmid_context/st6_hlgr_replicon_context_13.tsv
+A  results/tables/repository_cleanup_audit/README.md
+A  results/tables/repository_cleanup_audit/cleanup_delta.tsv
+A  results/tables/repository_cleanup_audit/cleanup_path_mappings.tsv
+A  results/tables/repository_cleanup_audit/cleanup_summary.tsv
+A  results/tables/repository_cleanup_audit/post_cleanup_git_diff_stat.txt
+A  results/tables/repository_cleanup_audit/post_cleanup_git_status.txt
+AM results/tables/repository_cleanup_audit/post_cleanup_manifest.tsv
+A  results/tables/repository_cleanup_audit/pre_cleanup_baseline.txt
+A  results/tables/repository_cleanup_audit/pre_cleanup_git_diff_stat.txt
+A  results/tables/repository_cleanup_audit/pre_cleanup_git_status.txt
+A  results/tables/repository_cleanup_audit/pre_cleanup_manifest.tsv
+A  results/tables/repository_cleanup_audit/retention_decisions.tsv
+ M results/tables/virulence_adherence/virulence_results_summary_72.md
+A  scripts/00_setup/build_repository_manifest.py
+A  scripts/00_setup/compare_repository_manifests.py
+M  scripts/00_setup/setup_project.R
+D  scripts/03_amr_analysis/amrfinder_analysis_72_genomes.R
+D  scripts/03_amr_analysis/isolate_summary.py
+ M scripts/03_amr_analysis/plasmid_source_van_by_strain_72.R
+M  scripts/06_phylogenomics/10_plot_alignment_pca.R
+ M scripts/07_core_genome/08_visualise_core_genome_tree.R
+ M scripts/07_core_genome/09_source_lineage_comparison_72.R
+M  scripts/07_core_genome/README_core_genome.md
+M  scripts/07_core_genome/run_core_genome_pipeline.sh
+ M scripts/07_core_genome/validate_pretransfer_environment.sh
+M  scripts/07_virulence_adherence/README_virulence_adherence.md
+M  scripts/07_virulence_adherence/run_virulence_adherence_pipeline.sh
+M  scripts/07_virulence_adherence/test_analysis_helpers.R
+A  scripts/08_hlgr_sensitivity/README.md
+A  scripts/08_hlgr_sensitivity/hlgr_sensitivity.py
+A  scripts/08_hlgr_sensitivity/plot_st_proxy_dotplot.py
+A  scripts/08_hlgr_sensitivity/plot_st_proxy_grouped_bar.py
+R  scripts/00_setup/quick_dataset_overview.R -> scripts/08_visualisation/quick_dataset_overview.R
+A  scripts/09_plasmid_context/README.md
+A  scripts/09_plasmid_context/plasmid_context.py
+A  scripts/downstream_requirements.txt

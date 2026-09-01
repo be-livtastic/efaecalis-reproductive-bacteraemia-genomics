@@ -1,0 +1,14 @@
+path	decision	reason
+local_archive/	retained	User explicitly instructed that local_archive files must not be deleted
+local_archive/large_outputs/Phylogeny_project/phylogeny_work/01_annotations/	retained	Dependency-bearing upstream Prokka provenance containing 72 canonical GFF files
+local_archive/large_outputs/Phylogeny_project/phylogeny_work/02_rpob_fastas/	retained	Legacy phylogenetic alignment protected by the instruction not to alter phylogenetic alignments or tree results
+local_archive/large_outputs/Phylogeny_project/phylogeny_work/03_clustalo/	retained	Legacy phylogenetic alignment protected by the instruction not to alter phylogenetic alignments or tree results
+local_archive/large_outputs/Phylogeny_project/phylogeny_work/04_iqtree/	retained	Legacy tree outputs protected by the instruction not to alter tree topology or phylogenetic results
+backups/core_genome_20260819/	retained	Two non-identical checksum-verified provenance archives and their transfer-reconciliation staging
+analysis/core_genome/panaroo_strict_core95/	retained	Active working state consumed by core-genome QC and downstream stages
+analysis/core_genome/iqtree_primary_runs/	retained	Active provenance referenced by core-genome manifests and visualisation defaults
+analysis/core_genome/qc/output/	retained	Active validated QC provenance referenced by completion manifests
+analysis/virulence_adherence/blast_pilot/	retained	Required scientific pilot checkpoint despite overlap with the completed 72-genome screen
+results/tables/phylogeny_72_genomes_9_locus_observed_indels/tree_metadata_join_qc.tsv	retained	Validated QC filename retained to avoid rewriting frozen QC
+results/tables/phylogeny_72_genomes_9_locus_observed_indels/tip_to_metadata_qc.tsv	retained	Validated QC alias retained to avoid rewriting frozen QC
+local_archive/local_session/	removed_before_retention_instruction	Thirteen temporary RStudio session-state files were removed before the later instruction to retain all local_archive files; no byte-identical recovery copies exist and no biological data were involved

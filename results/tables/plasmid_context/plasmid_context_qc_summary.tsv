@@ -1,0 +1,11 @@
+metric	value
+canonical_genomes	72
+sequence_reports	72
+sequence_report_replicons	204
+accepted_AMR_hits	486
+accepted_hits_with_resolved_replicon	486
+chromosome_localised_hits	339
+plasmid_localised_hits	147
+ST6_genomes	13
+ST6_proxy_hits_on_plasmids	0
+optional_similar_plasmid_candidate_pairs	0

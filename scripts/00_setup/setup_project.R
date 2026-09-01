@@ -16,8 +16,7 @@ directories <- file.path(project_root, c(
   "analysis",
   "results/figures",
   "results/tables/annotation_qc",
-  "results/tables/metadata_qc",
-  "manuscript/supplementary"
+  "results/tables/metadata_qc"
 ))
 
 # --- Create missing paths safely ---

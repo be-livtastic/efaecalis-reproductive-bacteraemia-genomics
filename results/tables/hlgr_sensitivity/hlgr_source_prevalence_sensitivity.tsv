@@ -1,0 +1,5 @@
+analysis	source	denominator	proxy_positive	proxy_negative	prevalence	prevalence_percent
+Full dataset	Reproductive	14	5	9	0.3571428571	35.71428571
+Full dataset	Bacteraemia	58	24	34	0.4137931034	41.37931034
+ST6 excluded	Reproductive	14	5	9	0.3571428571	35.71428571
+ST6 excluded	Bacteraemia	45	11	34	0.2444444444	24.44444444

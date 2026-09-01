@@ -1,0 +1,10 @@
+Captured before cleanup edits
+git_diff_binary_sha256	0b3f45d1335f7361a4b639aaa667232293e7e398e63dd925d10640abdc52eb7d
+frozen_input_bundle_sha256	0ecb4dd352593f44950b1809de650516960c51fef046bdd40698b0582098b66f
+pca_scores_sha256	e05f4a0f09193e363dc97f88c37833fd37452a4450a13ef04fa2915df359a007
+pca_explained_variance_sha256	65fe86bc39cafb811c9239d7fbe69a2cde9113b579498f96f679fc61cd85868c
+
+The pre-cleanup manifest was generated after the PCA plotting edit began. Its
+five affected PCA paths therefore use their clean Git HEAD blobs, as recorded
+in the manifest's content_source column. All other hashes use the working tree
+that existed before deletion or relocation began.

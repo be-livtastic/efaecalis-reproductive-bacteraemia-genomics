@@ -2,6 +2,10 @@
 
 This workflow screens only `ace`, `efaA`, `ebpA`, `ebpB`, `ebpC`, explicit `asa1`, `gelE`, `sprE`, `esp`, and `cylA`. It reads canonical FNA assemblies and frozen MLST/AMR/HLGR outputs. It does not reopen raw AMRFinderPlus files or infer phenotype.
 
+The launcher discovers `mamba` or `micromamba` from `MAMBA_EXE` or `PATH` and
+derives environments from `MAMBA_ROOT_PREFIX`. Non-standard installations can
+set `EFAECALIS_VIRULENCE_ENV_PREFIX` and `EFAECALIS_MAIN_ENV_PREFIX` explicitly.
+
 ## Reference and detection policy
 
 The reference is the official VFDB core Set A nucleotide release dated 2026-02-06. The raw archive, retrieval date, URL, SHA-256 checksums, selected sequences and symbol mapping are pinned under `references/virulence`. Explicit `asa1` is accepted; other aggregation-substance family members remain contextual/review-required. Additional cytolysin components remain visible without implying a complete operon or cytolytic phenotype.

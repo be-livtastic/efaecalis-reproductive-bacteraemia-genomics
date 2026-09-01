@@ -1,0 +1,62 @@
+ M .devcontainer/devcontainer.json
+ M .devcontainer/setup-core-environment.sh
+ M .gitignore
+ M README.md
+ M analysis/logs/mlst_amr_phylogeny/mlst_amr_phylogeny_session_info_72.txt
+ M data/metadata/plasmid_status_by_genome_72.tsv
+ M environment/core_genome.yml
+ M environment/core_genome_software_versions.tsv
+ M results/core_genome/iqtree_primary/full_core_72_gtrg4_20260819T042202Z.contree
+ M results/core_genome/iqtree_primary/full_core_72_gtrg4_20260819T042202Z.iqtree
+ M results/core_genome/iqtree_primary/full_core_72_gtrg4_20260819T042202Z.log
+ M results/core_genome/iqtree_primary/full_core_72_gtrg4_20260819T042202Z.mldist
+ M results/core_genome/iqtree_primary/full_core_72_gtrg4_20260819T042202Z.splits.nex
+ M results/core_genome/iqtree_primary/full_core_72_gtrg4_20260819T042202Z.treefile
+ M results/core_genome/qc/core_alignment_missingness_per_genome_20260819T042124Z.tsv
+ M results/core_genome/qc/core_alignment_qc_summary_20260819T042124Z.json
+ M results/core_genome/qc/core_alignment_site_statistics_20260819T042124Z.tsv
+ M results/core_genome/qc/iqtree_completion_manifest_20260819T044911Z.json
+ M results/core_genome/qc/iqtree_pre_run_manifest_20260819T042202Z.json
+ M results/core_genome/qc/iqtree_pre_run_manifest_20260819T042633Z.json
+ M results/core_genome/trees/core_14_reproductive_pruned_unrooted.treefile
+ M results/core_genome/trees/core_58_bacteraemia_pruned_unrooted.treefile
+ M results/core_genome/trees/core_72_combined_unrooted.treefile
+ M results/figures/core_genome_phylogeny/bacteraemia_58_pruned_unrooted_cladogram.svg
+ M results/figures/core_genome_phylogeny/bacteraemia_58_pruned_unrooted_phylogram.svg
+ M results/figures/core_genome_phylogeny/combined_72_unrooted_cladogram.svg
+ M results/figures/core_genome_phylogeny/combined_72_unrooted_cladogram_support_overlay.svg
+ M results/figures/core_genome_phylogeny/combined_72_unrooted_phylogram.svg
+ M results/figures/core_genome_phylogeny/combined_72_unrooted_phylogram_presentation.svg
+ M results/figures/core_genome_phylogeny/reproductive_14_pruned_unrooted_cladogram.svg
+ M results/figures/core_genome_phylogeny/reproductive_14_pruned_unrooted_phylogram.svg
+ M results/tables/core_genome_phylogeny/core_tree_figure_output_paths.tsv
+ M results/tables/core_genome_phylogeny/core_tree_figure_source_table.tsv
+ M results/tables/core_genome_phylogeny/core_tree_support_qc.tsv
+ M results/tables/core_genome_phylogeny/core_tree_support_qc_summary.tsv
+ M results/tables/core_genome_phylogeny/core_tree_support_source_qc.tsv
+ M results/tables/core_genome_phylogeny/core_tree_tip_audit.tsv
+ M results/tables/core_genome_phylogeny/core_tree_tip_membership.tsv
+ M results/tables/core_genome_phylogeny/core_tree_visualisation_manifest.tsv
+ M results/tables/core_genome_phylogeny/core_tree_visualisation_qc_note.txt
+ M results/tables/phylogeny_72_genomes_9_locus_observed_indels/assembly_qc_summary.tsv
+ M results/tables/phylogeny_72_genomes_9_locus_observed_indels/gene_hit_summary.tsv
+ M results/tables/phylogeny_72_genomes_9_locus_observed_indels/gene_presence_qc.tsv
+ M results/tables/phylogeny_72_genomes_9_locus_observed_indels/pca/pca_scores_with_metadata_72.tsv
+ M results/tables/phylogeny_72_genomes_9_locus_observed_indels/protein_reference_qc.tsv
+ M results/tables/phylogeny_72_genomes_9_locus_observed_indels/pubmlst_locus_qc.tsv
+ M results/tables/phylogeny_9_locus/gene_hit_summary.tsv
+ M results/tables/phylogeny_9_locus/gene_presence_qc.tsv
+ M results/tables/virulence_adherence/virulence_results_summary_72.md
+ M scripts/00_setup/quick_dataset_overview.R
+ M scripts/03_amr_analysis/plasmid_source_van_by_strain_72.R
+ M scripts/07_core_genome/08_visualise_core_genome_tree.R
+ M scripts/07_core_genome/09_source_lineage_comparison_72.R
+ M scripts/07_core_genome/README_core_genome.md
+ M scripts/07_core_genome/validate_pretransfer_environment.sh
+?? results/figures/hlgr_sensitivity/
+?? results/figures/plasmid_context/
+?? results/tables/hlgr_sensitivity/
+?? results/tables/plasmid_context/
+?? scripts/08_hlgr_sensitivity/
+?? scripts/09_plasmid_context/
+?? scripts/downstream_requirements.txt

@@ -40,6 +40,7 @@ in `data/accession_lists/selected_72_accessions.tsv`.
 - `analysis/`: regenerable analysis intermediates retained only where useful.
 - `environment/`: pinned software environment and recorded versions.
 - `scripts/`: ordered retrieval, analysis and visualisation scripts.
+- `scripts/08_visualisation/`: repository-relative descriptive plotting utilities.
 - `results/`: selected compact tables and figures.
 - `local_archive/`: ignored local-only raw inputs, legacy material and large outputs.
 
@@ -67,13 +68,11 @@ with compact reportable outputs under `results/core_genome/`,
 ## Software
 
 The canonical reproducible environment is pinned in
-`environment/environment.yml`, with an exact direct-package mirror in
-`environment/software_versions.tsv`. Historical run versions are kept
-separately in `environment/recorded_analysis_versions.tsv` and the recorded
-session files; AMRFinderPlus database provenance is in
+`environment/environment.yml`. Recorded run-specific software details remain
+in the analysis session logs, and AMRFinderPlus database provenance is in
 `environment/amrfinderplus_version.tsv`. The isolated Panaroo environment is
-defined in `environment/core_genome.yml`, with its solver decision and exact
-versions recorded in adjacent environment files.
+defined in `environment/core_genome.yml`, with exact installed versions in
+`environment/core_genome_software_versions.tsv`.
 
 Two independent staged extensions are documented in
 `scripts/07_core_genome/README_core_genome.md` and
@@ -84,6 +83,39 @@ accepted-detection prevalence so they cannot be mistaken for ordinary absence.
 Its approved aggregation-substance decision keeps the broad family call as the
 primary comparison and the narrow `asa1_specific` call as a secondary,
 lower-confidence breakdown.
+
+## Downstream sensitivity and plasmid-context modules
+
+Two read-only downstream modules extend the validated results without rerunning
+or modifying the frozen metadata, AMRFinderPlus, MLST or phylogeny pipelines:
+
+- `scripts/08_hlgr_sensitivity/` compares reproductive and bacteraemia HLGR
+  proxy prevalence before and after exclusion of all 13 ST6 genomes. Its tables
+  and figures are written to `results/tables/hlgr_sensitivity/` and
+  `results/figures/hlgr_sensitivity/`, including a grouped reproductive-versus-
+  bacteraemia prevalence chart and an ST × proxy dot plot with source-specific
+  denominators.
+- `scripts/09_plasmid_context/` maps accepted AMRFinderPlus contig IDs to the
+  existing canonical NCBI sequence reports, reports chromosome/plasmid context
+  and AMR cargo, and provides a dedicated ST6 table. Its class-coloured plasmid
+  cargo heatmap and chromosome-versus-plasmid burden chart use five documented
+  display classes while preserving the canonical detailed AMR class in the
+  machine-readable hit table. Outputs are under `results/tables/plasmid_context/`
+  and `results/figures/plasmid_context/`.
+
+Run them from the repository root with:
+
+```bash
+python3 -m pip install -r scripts/downstream_requirements.txt
+python3 scripts/08_hlgr_sensitivity/hlgr_sensitivity.py
+python3 scripts/09_plasmid_context/plasmid_context.py
+```
+
+Both scripts refuse to replace outputs unless `--overwrite` is supplied. The
+plasmid-context script reads the existing ignored sequence reports beneath
+`local_archive/large_outputs/`; use `--sequence-reports-root PATH` if that
+canonical NCBI download has been relocated. Module-specific assumptions and
+output definitions are documented in each module's README.
 
 ## Reproduction
 
@@ -102,7 +134,8 @@ lower-confidence breakdown.
 8. Run the remaining scripts from their documented stage in numerical order,
    observing every manual QC checkpoint described in the relevant stage READMEs
    and validation outputs.
-9. Review input and output paths in `config/paths.example.yml`.
+9. Review the repository-relative input and output paths documented in each
+   stage or module README before running that workflow.
 
 Scripts refuse to replace existing outputs by default. Personal absolute paths
 are not required.
